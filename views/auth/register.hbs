@@ -1,1 +1,26 @@
-hello!
+<h1>Registration Page</h1>
+
+<form action="/register" method="POST">
+    <label>First Name:
+        <input type="text" name="first-name" placeholder="First Name" />
+    </label>
+    <label>Last Name
+        <input type="text" name="last-name" placeholder="Last Name" />
+    </label>
+    <label>Date of Birth:
+        <input type="date" name="date-birth" placeholder="MM/DD/YYYY" />
+    </label>
+    <label>Email:
+        <input type="email" name="email" placeholder="username@email.com" />
+    </label>
+    <label>Password:
+        <input type="password" name="password" placeholder="******" />
+    </label>
+    <br>
+    <button>I'm flying to space!</button>
+</form>
+<br>
+{{#if errorMessage}}
+<p class="error">{{errorMessage}}</p>
+{{/if}}
+</form>
