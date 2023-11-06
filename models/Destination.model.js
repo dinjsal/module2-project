@@ -6,16 +6,47 @@ const destinationSchema = new Schema(
     name: {
       type: String,
       unique: true,
+      required: true,
     },
-    moon: {
-      type: Boolean,
-    },
-    planet: {
+
+    distance: {
       type: String,
+      required: true,
     },
+
+    travelTime: {
+      type: String,
+      required: true,
+    },
+
+    description: {
+      type: String,
+      required: true,
+    },
+
+    attractions: [{
+      type: String,
+      
+    }],
+
+
+    imageUrl: {
+      type: String,
+      required: true,
+    },
+
+    ticketPrice: {
+      type: String,
+      required: true,
+    },
+
     specialFeature: {
       type: String,
     },
+
+    accommodation:[accomSchema]
+
+
   },
   {
     timestamps: true,
