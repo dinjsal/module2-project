@@ -1,4 +1,8 @@
 const { Schema, model } = require("mongoose");
+const accommSchema = require('./Accomm.model');
+
+
+
 
 // TODO: Please make sure you edit the model to whatever makes sense in this case
 const destinationSchema = new Schema(
@@ -44,7 +48,7 @@ const destinationSchema = new Schema(
       type: String,
     },
 
-    accommodation:[accomSchema]
+    accommodation:[accommSchema]
 
 
   },

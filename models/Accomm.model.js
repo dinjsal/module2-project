@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
+
 const accommSchema = new Schema({
     name:{
         type: String,
@@ -26,4 +27,4 @@ const accommSchema = new Schema({
 });
 
 //this schema is used as a subdocument in the destination model
-Module.exports = accommSchema
+module.exports = accommSchema;
