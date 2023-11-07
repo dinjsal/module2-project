@@ -5,7 +5,20 @@
     <title>Sign Up Page</title>
   </head>
   <body>
-    <h1>This is the Sign Up Page</h1>
+    <h1>Experience what most can only dream</h1>
+    <br />
+
+    <form action="/auth/signup" method="POST">
+      <label for="firstName">First Name:</label>
+      <input type="text" name="firstName" required />
+      <label for="lastName">Last Name:</label>
+      <input type="text" name="firstName" required />
+      <label for="email">Email:</label>
+      <input type="email" name="email" required />
+      <label for="password">Password:</label>
+      <input type="password" name="password" required />
+      <button type="submit">Log In</button>
+    </form>
 
   </body>
 </html>
