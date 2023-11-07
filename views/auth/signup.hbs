@@ -1,10 +1,10 @@
-<h1>Registration Page</h1>
+<h1>Sign up with us!</h1>
 
-<form action="/register" method="POST">
+<form action="/auth/signup" method="POST">
     <label>First Name:
         <input type="text" name="first-name" placeholder="First Name" />
     </label>
-    <label>Last Name
+    <label>Last Name:
         <input type="text" name="last-name" placeholder="Last Name" />
     </label>
     <label>Date of Birth:
@@ -17,7 +17,7 @@
         <input type="password" name="password" placeholder="******" />
     </label>
     <br>
-    <button>I'm flying to space!</button>
+    <button>I'm flying to space</button>
 </form>
 <br>
 {{#if errorMessage}}
