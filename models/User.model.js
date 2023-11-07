@@ -32,28 +32,7 @@ const userSchema = new Schema({
 });
 
 
-// //encrypt password before saving
-// userSchema.pre('save', async function(next){
-//     if(!this.isModified('password'))
-//         next();
-//     try{
-//         const salt = bcrypt.genSaltSync(10);
-//         this.password = bcrypt.hashSync(this.password, salt);
-//         next();
-//     } catch(error){
-//         next(error);
-//     }
-// });
 
-
-// //compare passwords
-// userSchema.methods.comparePasswords = async function(password){
-//     try{
-//         return await bcrypt.compare(password, this.password);
-//     } catch(error){
-//         throw new Error(error);
-//     }
-// };
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;

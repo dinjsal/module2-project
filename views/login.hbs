@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User LogIn Page</title>
+  </head>
+  <body>
+    <h1>Log In to Your account</h1>
+    {{#if errorMessage}}
+      <div class="error-message">{{errorMessage}}</div>
+    {{/if}}
+
+    <form action="/auth/login" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" name="email" required />
+      <label for="password">Password:</label>
+      <input type="password" name="password" required />
+      <button type="submit">Log In</button>
+    </form>
+
+  </body>
+</html>

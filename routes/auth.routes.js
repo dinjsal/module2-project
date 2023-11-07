@@ -7,14 +7,18 @@ const User = require("../models/User.model");
 
 // GET routes
 
-router.get("/register", (req, res, next) => {
-    res.render("auth/register"); // auth folder, register.hbs
-});
+// router.get("/register", (req, res, next) => {
+//     res.render("auth/register"); // auth folder, register.hbs
+// });
 
 // only made login.hbs, now it's still empty
-
 router.get("/login", (req, res, next) => {
-    res.render("auth/login"); // auth folder, login.hbs
+    res.render("login"); 
+});
+
+
+router.get('/signup', (req, res, next) => {
+    res.render('signup')
 });
 
 
@@ -67,7 +71,7 @@ router.post('/login', async(req, res, next) => {
                 req.session.currentUser = user;
                 res.redirect('/profile');
             } else {
-                res.render('auth/login', { errorMessage: 'Incorrect password' });
+                res.render('auth/login', { errorMessage: 'Incorrect credentials, please try again' });
             }
         }
     }
@@ -78,5 +82,16 @@ router.post('/login', async(req, res, next) => {
 });
 
 
+router.get('/profile', (req, res, next) => {
+    if (req.session.currentUser) {
+        res.render('profile', { user: req.session.currentUser });
+    } else {
+        // Redirect to login if not logged in
+        res.redirect('/login');
+    }
+});
+
+
+    
 
 module.exports = router;
