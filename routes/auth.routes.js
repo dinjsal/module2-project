@@ -8,7 +8,7 @@ const User = require("../models/User.model");
 
 // only made login.hbs, now it's still empty
 router.get("/login", (req, res, next) => {
-  res.render("login");
+  res.render("auth/login");
 });
 
 router.get("/signup", (req, res, next) => {
