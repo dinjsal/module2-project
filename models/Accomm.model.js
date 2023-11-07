@@ -26,5 +26,7 @@ const accommSchema = new Schema({
 
 });
 
-//this schema is used as a subdocument in the destination model
+/*since we will automatically have an accommodation in every destination,
+this schema is used as a subdocument in the destination model
+*/
 module.exports = accommSchema;
