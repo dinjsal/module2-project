@@ -48,11 +48,12 @@ router.post("/signup", async (req, res, next) => {
     //save this new user
     await newUser.save();
 
-    res.send("User successfully registered");
+    res.render("auth/login");
   } catch (error) {
     next(error);
   }
 });
+
 
 // Login POST route, when existing User logs in
 router.post("/login", async (req, res, next) => {
@@ -65,8 +66,7 @@ router.post("/login", async (req, res, next) => {
         user.password
       );
       if (passwordCorrect) {
-        req.session.currentUser = user;
-        res.redirect("/profile");
+        res.redirect("/auth/profile");
       } else {
         res.render("auth/login", {
           errorMessage: "Incorrect credentials, please try again",
@@ -79,12 +79,13 @@ router.post("/login", async (req, res, next) => {
 });
 
 router.get("/profile", (req, res, next) => {
-  if (req.session.currentUser) {
-    res.render("profile", { user: req.session.currentUser });
-  } else {
-    // Redirect to login if not logged in
-    res.redirect("/login");
-  }
+  res.render("auth/profile");
 });
+
+
+
+
+
+
 
 module.exports = router;
