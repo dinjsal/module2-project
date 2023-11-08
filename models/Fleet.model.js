@@ -32,7 +32,7 @@ const FleetSchema = new Schema({
 });
 
 
-const Fleet = mongoose.model('Fleet', FleetSchema);
+const Fleet = model("Fleet", FleetSchema);
 module.exports = Fleet;
 
 

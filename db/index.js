@@ -7,6 +7,8 @@ const mongoose = require("mongoose");
 
 const MONGO_URI = process.env.MONGODB_URI;
 
+
+//to connect directly to database name: space_travel
 mongoose
   .connect(MONGO_URI, {dbName: 'space_travel'})
   .then((x) => {

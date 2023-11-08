@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100% ;
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  
 }
 
 a {
   color: #00b7ff;
 }
 
+
 h1 {
-  color: 15px;
+  font-size: 15px;
 }
 
 .error {
@@ -19,3 +27,117 @@ h1 {
   padding: 20px;
   width: 100%;
 }
+
+
+.vid-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+/* just to make sure the content of the page is on top of the vid */
+.content {
+  position: relative;
+  z-index: 1;
+  
+}
+
+
+
+#indexp{
+  text-align:center;
+}
+
+
+
+/* animation for landing page's texts */
+
+#indexh1 h1 {
+  animation: showup 15s forwards;
+  color:#fff;
+  text-align: center;
+  margin-top: 15%;
+}
+
+
+#indexp span, 
+#indexp p {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: showup 15s forwards;
+  color:#fff;
+  font-size: 125%;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+@keyframes showup {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  100% {opacity: 1;} 
+}
+
+@keyframes reveal {
+  0% { width: 0; }
+  30% { width: 0; opacity: 0; }
+  35% { width: 100%; opacity: 1; }
+  100% { width: 100%; opacity: 1; } 
+}
+
+
+/* just to make sure the animation starts at the same time */
+#indexp span,
+#indexp p {
+  animation-delay: 0s;
+}
+
+
+p{
+  margin-top: 1em;
+}
+
+
+
+
+.button {
+  background-color: #ffffff78;
+  border: 0 solid #e2e8f0;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: auto;
+  max-width: 200px;
+  align-items: center;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  border-radius: 60px ;
+  
+}
+
+.button:hover {
+  background-color:#182eb8;
+  color: #fff;
+  transform: scale(1.15);
+}
+
+
+
+
