@@ -1,14 +1,15 @@
-<h1>Sign up with us!</h1>
+<h3>EXPERIENCE WHAT MOST CAN ONLY DREAM</h3>
+<br>
 
 <form action="/auth/signup" method="POST">
     <label>First Name:
-        <input type="text" name="first-name" placeholder="First Name" />
+        <input type="text" name="firstName" placeholder="First Name" />
     </label>
     <label>Last Name:
-        <input type="text" name="last-name" placeholder="Last Name" />
+        <input type="text" name="lastName" placeholder="Last Name" />
     </label>
     <label>Date of Birth:
-        <input type="date" name="date-birth" placeholder="MM/DD/YYYY" />
+        <input type="date" name="birthDate" placeholder="MM/DD/YYYY" />
     </label>
     <label>Email:
         <input type="email" name="email" placeholder="username@email.com" />
@@ -19,6 +20,10 @@
     <br>
     <button>I'm flying to space</button>
 </form>
+<br>
+<a href="/">Home</a>
+
+
 <br>
 {{#if errorMessage}}
 <p class="error">{{errorMessage}}</p>

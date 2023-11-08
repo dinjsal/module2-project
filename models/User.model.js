@@ -14,6 +14,11 @@ const userSchema = new Schema(
       required: [true, "Please enter your last name"],
     },
 
+    birthDate: {
+      type: Date,
+      required: [true, "Please enter your birthdate"],
+    },
+
     email: {
       type: String,
       required: true,
