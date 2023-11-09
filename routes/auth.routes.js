@@ -5,7 +5,6 @@ const bcrypt = require("bcryptjs");
 const User = require("../models/User.model");
 
 // GET routes
-
 router.get("/login", (req, res, next) => {
   res.render("auth/login");
 });
@@ -89,7 +88,12 @@ router.post("/login", async (req, res, next) => {
         res.render("auth/login", {
           errorMessage: "Incorrect credentials, please try again",
         });
-      }
+      } 
+      //in case the user is not found in the database
+    } else {
+      res.render("auth/login", {
+        errorMessage: "credentials not found, please try again",
+      });
     }
   } catch (error) {
     next(error);
