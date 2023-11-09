@@ -89,7 +89,7 @@ router.post("/login", async (req, res, next) => {
           errorMessage: "Incorrect credentials, please try again",
         });
       } 
-      //in case the user is not found in the database
+      //handling for when the user is not founf in the database
     } else {
       res.render("auth/login", {
         errorMessage: "credentials not found, please try again",
