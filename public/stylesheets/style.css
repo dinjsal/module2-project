@@ -153,7 +153,7 @@ p{
 /* navbar */
 
 .logout{
-  height: 30px;
+  height: 25px;
   width: auto;
 }
 
@@ -189,7 +189,6 @@ p{
   font-size: 18px;
   text-align: center;
   text-decoration: none;
-  padding: 5px;
   
 }
 
@@ -197,7 +196,7 @@ ul li a {
     display: block;
     cursor:pointer;
     text-decoration: none;
-    margin-top:15px;
+    margin-top:25px;
     margin-right: 50px;
     margin-left: 45px;
 }
