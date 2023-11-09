@@ -16,8 +16,15 @@ router.get("/signup", (req, res, next) => {
 
 // POST routes
 router.post("/signup", async (req, res, next) => {
-  const { firstName, lastName, email, password } = req.body;
-  if (req.body.email === "" || req.body.password === "") {
+  const { firstName, lastName, birthDate, email, password } = req.body;
+  // this is too verbose, will edit again
+  if (
+    req.body.email === "" ||
+    req.body.password === "" ||
+    req.body.birthDate === "" ||
+    req.body.firstName === "" ||
+    req.body.lastName === ""
+  ) {
     res.render("auth/signup", {
       errorMessage:
         "All fields are mandatory. Please provide your first and last name, birth date, email and password.",
@@ -28,6 +35,7 @@ router.post("/signup", async (req, res, next) => {
   // regex test for passwords
 
   const regex = /(?=(.*\d){2})/;
+  // const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
   if (!regex.test(req.body.password)) {
     res.status(500).render("auth/signup", {
       errorMessage: "Password needs to have at least 2 digits.",
@@ -51,9 +59,9 @@ router.post("/signup", async (req, res, next) => {
     const newUser = new User({
       firstName,
       lastName,
+      birthDate,
       email,
       password: hashedPassword,
-      birthDate: req.body.birthDate,
     });
 
     //save this new user
