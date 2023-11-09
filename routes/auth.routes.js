@@ -20,7 +20,18 @@ router.post("/signup", async (req, res, next) => {
   if (req.body.email === "" || req.body.password === "") {
     res.render("auth/signup", {
       errorMessage:
-        "All fields are mandatory. Please provide your first and last name, date, email and password.",
+        "All fields are mandatory. Please provide your first and last name, birth date, email and password.",
+    });
+    return;
+  }
+
+  // regex test for passwords
+
+  const regex = /(?=(.*\d){2})/;
+  if (!regex.test(req.body.password)) {
+    res.status(500).render("auth/signup", {
+      errorMessage: "Password needs to have at least 2 digits.",
+      // "Password needs to have at least 8 chars and must contain at least one number, one lowercase and one uppercase letter.",
     });
     return;
   }
@@ -54,7 +65,6 @@ router.post("/signup", async (req, res, next) => {
   }
 });
 
-
 // Login POST route, when existing User logs in
 router.post("/login", async (req, res, next) => {
   try {
@@ -81,11 +91,5 @@ router.post("/login", async (req, res, next) => {
 router.get("/profile", (req, res, next) => {
   res.render("auth/profile");
 });
-
-
-
-
-
-
 
 module.exports = router;
