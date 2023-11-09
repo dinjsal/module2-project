@@ -120,7 +120,7 @@ p{
   margin: auto;
   max-width: 200px;
   align-items: center;
-  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1;
@@ -140,4 +140,73 @@ p{
 
 
 
+.background-image {
+  background-image: url('../images/profbackground.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+
+/* navbar */
+
+.logout{
+  height: 30px;
+  width: auto;
+}
+
+.logo{
+  height: 50px;
+  width: auto;
+}
+
+
+.bar
+{
+  color: white;
+  margin:15px auto;
+  margin-left: 165px;
+  font-family: 'Roboto', sans-serif;
+    
+}
+
+.bar ul 
+{
+  float: left;
+  list-style: none;
+  display: block;
+  padding:0;
+  margin:0;
+  display:flex;
+    
+}
+.bar ul li 
+{
+  list-style: none;
+  background-color:#182db861;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px;
+  
+}
+
+ul li a {
+    display: block;
+    cursor:pointer;
+    text-decoration: none;
+    margin-top:15px;
+    margin-right: 50px;
+    margin-left: 45px;
+}
+
+
+ul li a:hover
+{
+    display: block;
+    color: white;
+    transform: scale(1.15);
+}
 
