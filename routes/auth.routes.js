@@ -19,11 +19,11 @@ router.post("/signup", async (req, res, next) => {
   const { firstName, lastName, birthDate, email, password } = req.body;
   // this is too verbose, will edit again
   if (
-    req.body.email === "" ||
-    req.body.password === "" ||
-    req.body.birthDate === "" ||
-    req.body.firstName === "" ||
-    req.body.lastName === ""
+    !req.body.email ||
+    !req.body.password ||
+    !req.body.birthDate ||
+    !req.body.firstName ||
+    !req.body.lastName
   ) {
     res.render("auth/signup", {
       errorMessage:
