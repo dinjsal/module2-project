@@ -43,6 +43,18 @@ h1 {
 }
 
 
+.vid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+
+}
+
+
 /* just to make sure the content of the page is on top of the vid */
 .content {
   position: relative;
@@ -54,6 +66,31 @@ h1 {
 
 #indexp{
   text-align:center;
+}
+
+#indexp span {
+  font-size: small;
+}
+
+
+.header-container{
+  text-align: center;
+  padding: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.brand img {
+  width: 25%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: 38%;
+  margin-bottom: 0;
+  padding:0;
+  display: block;
+
 }
 
 
@@ -77,6 +114,7 @@ h1 {
   font-size: 125%;
   font-family: 'Roboto', sans-serif;
 }
+
 
 
 
