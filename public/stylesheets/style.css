@@ -60,11 +60,11 @@ h1 {
 
 /* animation for landing page's texts */
 
-#indexh1 h1 {
+#indexh1 h1{
   animation: showup 15s forwards;
   color:#fff;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 10px;
 }
 
 
@@ -98,11 +98,6 @@ h1 {
 #indexp span,
 #indexp p {
   animation-delay: 0s;
-}
-
-
-p{
-  margin-top: 1em;
 }
 
 
@@ -148,64 +143,3 @@ p{
   background-repeat: no-repeat;
   overflow: hidden;
 }
-
-
-/* navbar */
-
-.logout{
-  height: 25px;
-  width: auto;
-}
-
-.logo{
-  height: 50px;
-  width: auto;
-}
-
-
-.bar
-{
-  color: white;
-  margin:15px auto;
-  margin-left: 165px;
-  font-family: 'Roboto', sans-serif;
-    
-}
-
-.bar ul 
-{
-  float: left;
-  list-style: none;
-  display: block;
-  padding:0;
-  margin:0;
-  display:flex;
-    
-}
-.bar ul li 
-{
-  list-style: none;
-  background-color:#182db861;
-  font-size: 18px;
-  text-align: center;
-  text-decoration: none;
-  
-}
-
-ul li a {
-    display: block;
-    cursor:pointer;
-    text-decoration: none;
-    margin-top:25px;
-    margin-right: 50px;
-    margin-left: 45px;
-}
-
-
-ul li a:hover
-{
-    display: block;
-    color: white;
-    transform: scale(1.15);
-}
-
