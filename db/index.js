@@ -7,10 +7,9 @@ const mongoose = require("mongoose");
 
 const MONGO_URI = process.env.MONGODB_URI;
 
-
 //to connect directly to database name: space_travel
 mongoose
-  .connect(MONGO_URI, {dbName: 'space_travel'})
+  .connect(MONGO_URI, { dbName: "space_travel" })
   .then((x) => {
     const databaseName = x.connections[0].name;
     console.log(`Connected to Mongo! Database name: "${databaseName}"`);
