@@ -18,7 +18,7 @@ nav ul li a {
     padding: 15px;
     text-decoration: none;
     color: whitesmoke;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -155,44 +155,42 @@ nav.fill ul li a:hover:after {
     height: 55px;
     background-color: pink;
     border-radius: 50%;
-    p {
-      color: rgb(100, 9, 9);
-      font-size: 1.7em;
-      margin: 0;
-      margin-top: 5px;
-    }
+    margin-left: 20%;
+    
 }
   
 .vertical-menu li {
     list-style-type: none;
     color: dark;
     margin: 0;
+    width: 312.5px;
     padding-bottom: 25px;
     padding-top: 25px;
     text-transform: uppercase;
     font-size: .8em;
     letter-spacing: 1px;
     cursor: pointer;
-    &:hover {
-      background: rgba(255, 255, 255, 0.474);
-      color: navy;
-      transition: ease;
-    }
+    transition: font-size .5s ease;
+    
+}
+
+.vertical-menu li:hover {
+    background: #11249daf;
+    color: whitesmoke;
+    transition: ease;
+    font-size:large;
 }
   
-.active {
+.vertical-menu li.active {
     background: whitesmoke;
     color: blue;
-    width: 250px;
-    margin-left: -10px;
+    width: 312.5px;
+    margin-left: -5px;
     box-shadow: 1px 1px 3px rgba(dark, .3);
     transition: ease;
-    &:hover {
-      background: rgb(255, 255, 255);
-      color: dark;
-      transition: ease;
-    }
 }
+
+
   
 h1 {
     margin: 0;
