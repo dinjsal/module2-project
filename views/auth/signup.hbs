@@ -11,9 +11,13 @@
     <link href="../stylesheets/signup.style.css" rel="stylesheet"/>
 </head>
 <body>
+    <section class="showcase">
+        
     <h3>EXPERIENCE WHAT MOST CAN ONLY DREAM</h3>
-<br>
-
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+    {{/if}}
+<div class="content">
 <form action="/auth/signup" method="POST">
     <label>First Name:
         <input type="text" name="firstName" placeholder="First Name" />
@@ -31,14 +35,10 @@
         <input type="password" name="password" placeholder="********" />
     </label>
     <br>
-    <button>I'm flying to space</button>
+    <button class="btn">Sign me up!</button>
+    <a class="btn" href="/">Home</a>
+    </section>
 </form>
-<br>
-<a href="/">Home</a>
-<br>
-{{#if errorMessage}}
-<p class="error">{{errorMessage}}</p>
-{{/if}}
-</form>
+</div>
 </body>
 </html>
