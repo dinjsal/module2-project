@@ -98,7 +98,7 @@ h1 {
 }
 
 .content {
-    z-index: 10;
+    z-index: 1;
     color: #fff;
     font-size: 20px;
     padding: 100px;
@@ -131,3 +131,10 @@ label {
     display: inline-block;
     text-align: center;
 }
+
+/* .back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+} */
