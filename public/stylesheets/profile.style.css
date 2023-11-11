@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400|PT+Mono&display=swap');
+
+/* horizontal navbar*/
+
+nav ul {
+    list-style: none;
+    text-align:end;
+    background-color: #11249d43;
+}
+
+nav ul li {
+    display: inline-block;
+    padding-top: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+  
+  
+nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #333;
+    height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+  
+nav.fill ul li a {
+    transition: all 2s;
+}
+  
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill ul li a:hover {
+    color: #023f1c;
+    z-index: 1;
+  
+}
+
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    opacity: 1;
+}
+  
+.navbar-logo{
+    margin:0;
+    height: 40px;
+    width:auto;
+    padding-right: 790px;
+}
+  
+.header-container{
+    text-align: center;
+}
+  
+  
+.brand {
+    width: 20%;
+    height: auto;
+    text-align: center;
+    margin-left: 580px;
+    margin-top: 50px;
+}
+  
+.brand img {
+    width: 100%;
+    height: auto;
+}
+  
+  
+/* vertical navbar */
+
+.color-box {
+    position: absolute;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    margin: 8px;
+}
+  
+#dashboard-container {
+    background-color: rgba(245, 245, 245, 0.439);
+    position: relative;
+    margin: 2% auto;
+    width: 1250px;
+    height: 650px;
+    border: 1px solid light;
+}
+  
+.leftside-menu {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: light;
+    box-shadow: 2px 2px 15px rgba(dark, .3);
+    text-align: center;
+}
+  
+.avatar {
+    margin-top: 25%;
+    margin-bottom: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      color: dark;
+      font-size: .8em;
+      margin-top: 5px;
+    }
+}
+  
+  
+.icon {
+    width: 55px;
+    height: 55px;
+    background-color: pink;
+    border-radius: 50%;
+    margin-left: 20%;
+    
+}
+  
+.vertical-menu li {
+    list-style-type: none;
+    color: dark;
+    margin: 0;
+    width: 312.5px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: font-size .5s ease;
+    
+}
+
+.vertical-menu li:hover {
+    background: #11249daf;
+    color: whitesmoke;
+    transition: ease;
+    font-size:large;
+}
+  
+.vertical-menu li.active {
+    background: whitesmoke;
+    color: blue;
+    width: 312.5px;
+    margin-left: -5px;
+    box-shadow: 1px 1px 3px rgba(dark, .3);
+    transition: ease;
+}
+
+
+  
+h1 {
+    margin: 0;
+    font-size: 1.15em;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+p {
+    color: navy;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+}
+  
+a {
+    cursor: pointer;
+    padding: 3px;
+    &:hover {
+      background: pale;
+      color: white;
+      transition: ease;
+    }
+}
+  
+.time {
+    font-size: 1.8em;
+    font-family: mono;
+    margin-top: -30px;
+    margin-bottom: 25px;
+    color: pale;
+    background: white;
+    padding: 7px;
+}
+  
+.main-grid {
+    margin-top: 3.5%;
+    width: 70%;
+    margin-left: 25%;
+    background: white;
+    height: 95%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+   grid-template-areas: 
+    "one four"
+    "one five"
+    "two five"
+    "two five"
+    "three six"
+    "three six"
+    "three six";
+}
+  
+.item {
+    border: 1px solid light;
+}
+  
+  /* 
+  time */
+  
+.one {
+    grid-area: one;
+    grid-column: 1 / 2;
+    background: pale;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+      margin-bottom: -40px
+    }
+}
+  
+ 
+  
+.fill {
+    background-color: pale;
+    width: 40%;
+    height: 0.3rem;
+    border-radius: 2px;
+}
+  
+

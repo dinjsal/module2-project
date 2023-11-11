@@ -43,6 +43,18 @@ h1 {
 }
 
 
+.vid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+
+}
+
+
 /* just to make sure the content of the page is on top of the vid */
 .content {
   position: relative;
@@ -56,15 +68,40 @@ h1 {
   text-align:center;
 }
 
+#indexp span {
+  font-size: small;
+}
+
+
+.header-container{
+  text-align: center;
+  padding: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.brand img {
+  width: 25%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: 38%;
+  margin-bottom: 0;
+  padding:0;
+  display: block;
+
+}
+
 
 
 /* animation for landing page's texts */
 
-#indexh1 h1 {
+#indexh1 h1{
   animation: showup 15s forwards;
   color:#fff;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 10px;
 }
 
 
@@ -77,6 +114,7 @@ h1 {
   font-size: 125%;
   font-family: 'Roboto', sans-serif;
 }
+
 
 
 
@@ -101,11 +139,6 @@ h1 {
 }
 
 
-p{
-  margin-top: 1em;
-}
-
-
 
 
 .button {
@@ -120,7 +153,7 @@ p{
   margin: auto;
   max-width: 200px;
   align-items: center;
-  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1;
@@ -140,4 +173,11 @@ p{
 
 
 
-
+.background-image {
+  background-image: url('../images/profbackground.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}

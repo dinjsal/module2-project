@@ -3,9 +3,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Profile</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400"
+      rel="stylesheet"
+    />
+    <link href="../stylesheets/profile.style.css" rel="stylesheet"/>
   </head>
-  <body>
-    <h1>This is the User Profile</h1>
+  <body class="background-image">
+
+    {{! horizontal navbar for user profile }}
+    <nav class="stroke">
+      <ul>
+        <li>
+          <img src="../images/flightlogo.png" alt="brand" class="navbar-logo" />
+        </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Crew</a></li>
+        <li><a href="#">Our Fleet</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+
+    {{! vertical navbar for user profile dashboard }}
+
+    <div id="dashboard-container">
+      <div class="leftside-menu">
+        <div class="avatar">
+          <div class="icon">
+            <p>JS</p></div>
+          <p>John Smith</p>
+        </div>
+        <nav class="vertical-menu">
+          <li onclick="makeActive(this)">flight information</li>
+          <li onclick="makeActive(this)">manage flight</li>
+          <li onclick="makeActive(this)">training status</li>
+          <li onclick="makeActive(this)">your suit</li>
+          <li onclick="makeActive(this)">manage profile</li>
+          <li onclick="makeActive(this)">support / assistance</li>
+          {{!-- <form action="/search" method="GET" class="navbar-search">
+          <input type="text" name="search" placeholder="Search...">
+          <button type="submit">Search</button></form> --}}
+
+        </nav>
+      </div>
+      <div class="main-grid">
+        <div class="item one">
+          <h1 id="time" class="time"></h1>
+          <h1 id="greeting"></h1>
+         
+        </div>
+        <div class="item three">
+          <h2><i class="fas fa-cloud-sun"></i> 57&#176;</h2>
+          <div class="weather">
+            <p>cloudy skies</p>
+            <p class="city">TOKYO, JAPAN</p>
+          </div>
+        </div>
+        <div class="item four">
+          <h1 id="date"></h1>
+          <p><a>no training today</a></p>
+        </div>
+    </div>
+
+  
+  <script src="/js/profile.js"></script>
+
   </body>
   <br />
   <a href="/">Home</a>
@@ -13,3 +76,4 @@
   <button>Logout</button>
 </form>
 </html> 
+</html>
