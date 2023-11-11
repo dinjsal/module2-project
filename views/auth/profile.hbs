@@ -17,7 +17,8 @@
         <li>
           <img src="../images/flightlogo.png" alt="brand" class="navbar-logo" />
         </li>
-        <li><a href="#">Home</a></li>
+        {{!-- linked to the index route --}}
+        <li><a href="/">Home</a></li> 
         <li><a href="#">Destinations</a></li>
         <li><a href="#">Crew</a></li>
         <li><a href="#">Our Fleet</a></li>
@@ -71,8 +72,8 @@
 
   </body>
   <br />
-  <a href="/">Home</a>
-  <form method="post" action="/auth/logout">
+  {{!-- isLoggedOut test --}}
+  <form method="post" action="/auth/logout"> 
   <button>Logout</button>
 </form>
 </html> 
