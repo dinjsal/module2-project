@@ -1,109 +1,99 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,400|PT+Mono&display=swap');
 
 /* horizontal navbar*/
-
-nav ul {
-    list-style: none;
-    text-align:end;
-    background-color: #11249d43;
-}
-
-nav ul li {
-    display: inline-block;
-    padding-top: 10px;
-}
-
-nav ul li a {
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-    color: whitesmoke;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-  nav ul li a,
-  nav ul li a:after,
-  nav ul li a:before {
-    transition: all .5s;
-}
-
-nav ul li a:hover {
-    color: #555;
-}
-  
-  
-nav.stroke ul li a,
-nav.fill ul li a {
-    position: relative;
-}
-
-nav.stroke ul li a:after,
-nav.fill ul li a:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0%;
-    content: '.';
-    color: transparent;
-    background: #333;
-    height: 1px;
-}
-
-nav.stroke ul li a:hover:after {
-    width: 100%;
-}
-  
-nav.fill ul li a {
-    transition: all 2s;
-}
-  
-nav.fill ul li a:after {
-    text-align: left;
-    content: '.';
+body, html {
     margin: 0;
-    opacity: 0;
+    padding: 0;
 }
-
-nav.fill ul li a:hover {
-    color: #023f1c;
-    z-index: 1;
-  
-}
-
-nav.fill ul li a:hover:after {
-    z-index: -10;
-    animation: fill 1s forwards;
-    opacity: 1;
-}
-  
-.navbar-logo{
-    margin:0;
-    height: 40px;
-    width:auto;
-    padding-right: 790px;
-}
-  
-.header-container{
-    text-align: center;
-}
-  
-  
 .brand {
-    width: 20%;
-    height: auto;
-    text-align: center;
-    margin-left: 580px;
-    margin-top: 50px;
+    position: absolute;
+    margin: 0;
+    left:0;
+    margin: 0;
+    height: 40px;
+    width: auto;
 }
-  
+
 .brand img {
-    width: 100%;
-    height: auto;
+    height: 150%;
+    width: auto;
+    margin-top: 25%;
 }
-  
+
+.nav-link{
+    color: white;
+    position: relative;
+    display: inline-block;
+    text-decoration: none  ;
+    transition: color 0.5s ease;
+}
+
+
+.nav-link::after {
+    content: '';
+    position:absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: white;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.nav-item {
+    color: white;
+    text-transform: uppercase;
+    margin-top: 2%;
+    margin-right: 4%;
+}
+
+
+
+.hamburger-menu {
+    display: none;
+}
+
+
+/* responsive horizontal navbar, hamburger menu */
+
+@media (max-width: 768px) {
+    .nav-item {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        top: 10px;
+        right:10px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1000;
+    }
+
+
+    .hamburger-menu div {
+        width: 25px;
+        height: 2px;
+        background-color: white;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+}
+
+
+
+
   
 /* vertical navbar */
 
@@ -121,9 +111,9 @@ nav.fill ul li a:hover:after {
 #dashboard-container {
     background-color: rgba(245, 245, 245, 0.439);
     position: relative;
-    margin: 2% auto;
+    margin: 1% auto;
     width: 1250px;
-    height: 650px;
+    height: 640px;
     border: 1px solid light;
 }
   
@@ -135,7 +125,7 @@ nav.fill ul li a:hover:after {
     box-shadow: 2px 2px 15px rgba(dark, .3);
     text-align: center;
 }
-  
+
 .avatar {
     margin-top: 25%;
     margin-bottom: 25%;
@@ -148,7 +138,6 @@ nav.fill ul li a:hover:after {
       margin-top: 5px;
     }
 }
-  
   
 .icon {
     width: 55px;
@@ -175,7 +164,7 @@ nav.fill ul li a:hover:after {
 }
 
 .vertical-menu li:hover {
-    background: #11249daf;
+    background: #06146daf;
     color: whitesmoke;
     transition: ease;
     font-size:large;
@@ -185,7 +174,6 @@ nav.fill ul li a:hover:after {
     background: whitesmoke;
     color: blue;
     width: 312.5px;
-    margin-left: -5px;
     box-shadow: 1px 1px 3px rgba(dark, .3);
     transition: ease;
 }
@@ -233,7 +221,7 @@ a {
     width: 70%;
     margin-left: 25%;
     background: white;
-    height: 95%;
+    height: 100%;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(2, 1fr);
@@ -251,8 +239,6 @@ a {
     border: 1px solid light;
 }
   
-  /* 
-  time */
   
 .one {
     grid-area: one;

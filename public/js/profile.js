@@ -11,3 +11,8 @@ const makeActive = (element) => {
     e.preventDefault();
     document.getElementById('logout').submit();
   }
+
+// to toggle nav items in hamburger menu
+document.querySelector('.hamburger-menu').addEventListener('click', () =>{document.querySelectorAll('.nav-item').forEach(item => 
+  {item.style.display = item.style.display === 'block' ? 'none' : 'block';
+});});
