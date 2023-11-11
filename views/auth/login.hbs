@@ -7,23 +7,29 @@
       href="https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400"
       rel="stylesheet"
     />
-    <link href="../stylesheets/profile.style.css" rel="stylesheet"/>
+    <link href="../stylesheets/login.style.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>Log In to Your account</h1>
-    {{#if errorMessage}}
-      <div class="error-message">{{errorMessage}}</div>
-      <br />
-    {{/if}}
-
-    <form action="/auth/login" method="POST">
-      <label for="email">Email:</label>
-      <input type="email" name="email" required />
-      <label for="password">Password:</label>
-      <input type="password" name="password" required />
-      <button type="submit">Log In</button>
-    </form>
-    <a href="/">Home</a>
-
+      <section class="showcase">
+        <div class="video-container"></div>
+          <video src="/images/spaceshipView.mp4" autoplay muted loop></video>
+        </div>
+        <div class="content">
+          <h1>Log In to Your account</h1>
+            {{#if errorMessage}}
+              <div class="error">{{errorMessage}}</div>
+              <br />
+            {{/if}}
+            <form action="/auth/login" method="POST">
+              <label for="email">Email:</label>
+              <input type="email" name="email" required />
+              <br>
+              <label for="password">Password:</label>
+              <input type="password" name="password" required />
+              <button type="submit" class="btn">Log In</button> 
+              <a href="/" class="btn">Home</a>
+            </form>
+        </div>
+      </section>
   </body>
 </html>
