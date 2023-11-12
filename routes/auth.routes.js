@@ -45,8 +45,15 @@ router.post("/signup", async (req, res, next) => {
 
       //create new user
       const newUser = new User({
-        firstName,
-        lastName,
+        firstName: {
+          type: String,
+          required: [true, "Please enter your first name"],
+        },
+
+        lastName: {
+          type: String,
+          required: [true, "Please enter your last name"],
+        },
         birthDate,
         email,
         password: hashedPassword,
