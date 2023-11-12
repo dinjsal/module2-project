@@ -19,6 +19,7 @@ router.get("/login", isLoggedOut, (req, res, next) => {
 
 // POST routes
 router.post("/signup", async (req, res, next) => {
+  const { firstName, lastName, birthDate, email, password } = req.body;
   try {
     // regex test for passwords
 
