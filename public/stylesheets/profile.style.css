@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,400|PT+Mono&display=swap');
 
 /* horizontal navbar*/
+.background-image {
+    background-image: url('../images/profbackground.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
 body, html {
     margin: 0;
     padding: 0;
@@ -297,32 +306,32 @@ a {
     font-size: large;
 }
 
-#bookNow {
+.bookNow {
     margin-left: 37%;
     background-color: #ffffff78;
-  border: 0 solid #e2e8f0;
-  box-sizing: border-box;
-  color: #0d172a;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  width: auto;
-  margin: auto;
-  max-width: 200px;
-  align-items: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none #0d172a solid;
-  transition: all .1s cubic-bezier(.4, 0, .2, 1);
-  border-radius: 60px ;
+    border: 0 solid #e2e8f0;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: auto;
+    max-width: 200px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    border-radius: 60px ;
     
 }
 
-#bookNow:hover {
+.bookNow:hover {
     background-color:#182eb8;
     color: #fff;
     transform: scale(1.15);

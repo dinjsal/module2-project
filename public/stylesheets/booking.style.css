@@ -1,0 +1,17 @@
+.background-image{
+    background-image: url('../images/starry.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat:repeat-y;
+}
+
+h1{
+    color:azure;
+}
+
+.depart img {
+    width: 450px;
+    height: auto;
+    margin-left: 70px;
+    margin-top: 70px;
+}

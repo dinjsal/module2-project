@@ -173,11 +173,3 @@ h1 {
 
 
 
-.background-image {
-  background-image: url('../images/profbackground.jpg');
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}

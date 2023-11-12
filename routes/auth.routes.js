@@ -17,6 +17,11 @@ router.get("/login", isLoggedOut, (req, res, next) => {
   res.render("auth/login");
 });
 
+
+router.get("/booking", (req, res, next) => {
+  res.render("auth/booking");
+});
+
 // POST routes
 router.post("/signup", async (req, res, next) => {
   const { firstName, lastName, birthDate, email, password } = req.body;
@@ -114,5 +119,9 @@ router.post("/logout", (req, res, next) => {
     }
   });
 });
+
+
+
+
 
 module.exports = router;
