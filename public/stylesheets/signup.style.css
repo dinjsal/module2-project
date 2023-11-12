@@ -53,7 +53,6 @@ h3 {
     line-height: 1.5;
     background: var(--primary-color);
     overflow: hidden;
-    z-index: 2;
 }
 
 .img-container {
@@ -106,6 +105,7 @@ h3 {
 
 .form-selection1 {
     margin-top: 15px;
+    background-color: rgb(205, 197, 197);
 }
 
 .form-selection {
@@ -114,6 +114,7 @@ h3 {
     margin-bottom: 20px;
     border-radius: 20px;
     padding: 20px;
+    background-color: rgb(205, 197, 197);
 }
 
 label {
