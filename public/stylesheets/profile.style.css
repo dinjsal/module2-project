@@ -205,9 +205,10 @@ h1 {
     text-transform: uppercase;
   }
 
-p {
+#usersName {
     color: white;
-    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:0;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1em;
@@ -291,7 +292,9 @@ a {
     margin-left: 25%;
     font-size: 1em;
     color: white;
-    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: large;
 }
 
 #bookNow {
