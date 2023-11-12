@@ -16,3 +16,23 @@ const makeActive = (element) => {
 document.querySelector('.hamburger-menu').addEventListener('click', () =>{document.querySelectorAll('.nav-item').forEach(item => 
   {item.style.display = item.style.display === 'block' ? 'none' : 'block';
 });});
+
+
+//disable vertical navbar buttons if no flight booked. 
+document.addEventListener('DOMContentLoaded', () => {
+  const flightBooked = false; 
+
+  if (!flightBooked) {
+      // disabling specific buttons
+    
+      document.getElementById('trainStat').classList.add('disabled');
+      document.getElementById('flightInfo').classList.add('disabled');
+      document.getElementById('manageFlight').classList.add('disabled');
+      document.getElementById('yourSuit').classList.add('disabled');
+
+      // disabling main dashboard
+      document.querySelector('.main-grid').style.display = 'none';
+  }
+});
+
+

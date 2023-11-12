@@ -51,17 +51,21 @@
         <div class="avatar">
           <div class="icon">
             <p>JS</p></div>
-          <p>John Smith</p>
+          <p><b>John Smith</b></p>
+          <hr>
         </div>
         <nav class="vertical-menu">
-          <li onclick="makeActive(this)">flight information</li>
-          <li onclick="makeActive(this)">manage flight</li>
-          <li onclick="makeActive(this)">training status</li>
-          <li onclick="makeActive(this)">your suit</li>
-          <li onclick="makeActive(this)">manage profile</li>
-          <li onclick="makeActive(this)">support / assistance</li>
-          
+          <li id="manageProf" onclick="makeActive(this)">manage profile</li>
+          <li id="trainStat" onclick="makeActive(this)">training status</li>
+          <li id="flightInfo" onclick="makeActive(this)">flight information</li>
+          <li id="manageFlight" onclick="makeActive(this)">manage flight</li>
+          <li id="yourSuit"onclick="makeActive(this)">your suit</li>
+          <li id="support" onclick="makeActive(this)">support / assistance</li>
         </nav>
+      </div>
+      <div id="noFlightBooked">
+        <p>You have no spaceflight booked, yet</p>
+        <button id="bookNow">BOOK A FLIGHT</button>
       </div>
       <div class="main-grid">
         <div class="item one">
