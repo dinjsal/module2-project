@@ -8,7 +8,6 @@
       rel="stylesheet"
     />
     <link href="../stylesheets/signup.style.css" rel="stylesheet"/>
-   
   </head>
   <body>
       <section class="showcase">
@@ -16,12 +15,12 @@
             <img src="/images/planet-1989837_1280.jpg" />
         </div>
         <div class="content">
-          <h3>EXPERIENCE WHAT MOST CAN ONLY DREAM</h3>
+          <h3>EXPERIENCE WHAT MOST CAN ONLY DREAM OF</h3>
             {{#if errorMessage}}
               <div class="error">{{errorMessage}}</div>
             {{/if}}
             <form action="/auth/signup" method="POST">
-                <label for="email">FIRST NAME</label>
+            <label for="email">FIRST NAME</label>
               <input class="form-selection form-selection1" autofocus type="text" name="first-name" placeholder="Letters only" required />
               <br>
               <label for="password">LAST NAME</label>
