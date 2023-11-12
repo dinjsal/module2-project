@@ -107,6 +107,7 @@ h1 {
 
 .form-selection1 {
     margin-top: 20px;
+    background-color: rgb(205, 197, 197);
 }
 
 .form-selection {
@@ -115,6 +116,7 @@ h1 {
     margin-bottom: 25px;
     border-radius: 20px;
     padding: 20px;
+    background-color: rgb(205, 197, 197);
 }
 
 label {
