@@ -19,34 +19,19 @@ router.get("/login", isLoggedOut, (req, res, next) => {
 
 // POST routes
 router.post("/signup", async (req, res, next) => {
-  const { firstName, lastName, birthDate, email, password } = req.body;
-  if (
-    !req.body.email ||
-    !req.body.password ||
-    !req.body.birthDate ||
-    !req.body.firstName ||
-    !req.body.lastName
-  ) {
-    res.render("auth/signup", {
-      errorMessage:
-        "All fields are mandatory. Please provide your first and last name, birth date, email and password.",
-    });
-    return;
-  }
-
-  // regex test for passwords
-
-  const regex = /(?=(.*\d){2})/;
-  // const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
-  if (!regex.test(req.body.password)) {
-    res.status(500).render("auth/signup", {
-      errorMessage: "Password needs to have at least 2 digits.",
-      // "Password needs to have at least 8 chars and must contain at least one number, one lowercase and one uppercase letter.",
-    });
-    return;
-  }
-
   try {
+    // regex test for passwords
+
+    const regex = /(?=(.*\d){2})/;
+    // const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+    if (!regex.test(req.body.password)) {
+      res.status(500).render("auth/signup", {
+        errorMessage: "Password needs to have at least 2 digits.",
+        // "Password needs to have at least 8 chars and must contain at least one number, one lowercase and one uppercase letter.",
+      });
+      return;
+    }
+
     //check if user exists in the database
     const userExists = await User.findOne({ email: req.body.email });
     if (userExists) {

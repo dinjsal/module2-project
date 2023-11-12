@@ -10,13 +10,8 @@
     padding: 0;
 }
 
-body {
-    line-height: 1.5px;
-}
-
 h3 {
     font-size: 30px;
-    line-height: 1.2;
     margin-bottom: 25px;
 }
 
@@ -84,7 +79,7 @@ h3 {
     box-sizing: border-box;
     color: #fff;
     margin: 10px auto;
-    padding: 20px;
+    padding: 15px;
     width: 100%;
   }
   
@@ -101,8 +96,10 @@ h3 {
     z-index: 1;
     color: #fff;
     font-size: 20px;
-    padding: 100px;
+    padding-top: 0px;
     overflow: hidden;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 
 .img-container img {
@@ -116,13 +113,13 @@ h3 {
 }
 
 .form-selection1 {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .form-selection {
     width: 25%;
     height: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     border-radius: 20px;
     padding: 20px;
 }
