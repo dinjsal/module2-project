@@ -6,10 +6,25 @@
     <link href="../stylesheets/booking.style.css" rel="stylesheet" />
   </head>
   <body class="background-image">
-    <h1>Book your flight here!</h1>
+    <h1>Your space adventure starts here!</h1>
 
-    <div class="depart">
-      <img src="../images/earth2.png" alt="earth" />
+    <div class="main-container">
+      <div class="usa">
+        <img src="../images/usa.png" alt="earth" />
+      </div>
+      <div id="booking-container">
+        <div id="departureLabel">Departure</div>
+        <form id="bookingForm" style="display: none;">
+          <label for="countrySelect">Choose a departure country:</label>
+          <select id="countrySelect">
+            <option value="Mumbai, India">Mumbai, India</option>
+            <option value="Texas, USA">Texas, USA</option>
+          </select>
+          <input type="submit" value="Book Flight" />
+        </form>
+
+      </div>
+
     </div>
 
   </body>
