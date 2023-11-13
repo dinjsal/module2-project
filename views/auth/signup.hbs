@@ -7,12 +7,15 @@
       href="https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400"
       rel="stylesheet"
     />
+
+    <link href="../stylesheets/passengerInfo.style.css" rel="stylesheet"/>
     <link href="../stylesheets/signup.style.css" rel="stylesheet"/>
+    
   </head>
   <body>
       <section class="showcase">
         <div class="img-container">
-            <img src="/images/planet-1989837_1280.jpg" />
+            <img src="/images/universe-4609408_1280.webp" />
         </div>
         <div class="content">
           <h3>EXPERIENCE WHAT MOST CAN ONLY DREAM OF</h3>
@@ -20,6 +23,7 @@
               <div class="error">{{errorMessage}}</div>
             {{/if}}
             <form action="/auth/signup" method="POST">
+            
             <label for="email">FIRST NAME</label>
               <input class="form-selection form-selection1" autofocus type="text" name="firstName" placeholder="Letters only" required />
               <br>
@@ -42,6 +46,14 @@
               <a href="/" class="btn">Home</a>
               <br>
             </form>
+             Number of Passengers
+    <div class="dropdown">
+  <button class="dropbtn">Select</button>
+  <div class="dropdown-content">
+    <a href="#">1</a>
+    <a href="#">2</a>
+  </div>
+</div>
         </div>
       </section>
   </body>
