@@ -9,12 +9,36 @@
     <h1>Let's secure your space</h1>
 
     <div class="main-container">
-      <div class="usa">
-        <img src="../images/usa.png" alt="earth" />
+      {{! Departure Countries }}
+      <div class="departure-section">
+        <form id="departureForm">
+          <select id="departureSelect">
+            <option value=""></option>
+            <option value="Texas, USA">Texas, USA</option>
+            <option value="Valencia, SPAIN">Valencia, SPAIN</option>
+          </select>
+        </form>
+        <div class="images-container">
+          <img id="depUsa" src="../images/usa.png" alt="usa" />
+          <img id="depSpain" src="../images/spain.png" alt="spain" />
+        </div>
       </div>
-      <div class="mars">
-        <img src="../images/mars.png" alt="mars" />
+
+      {{! Destination }}
+      <div class="destination-section">
+        <form id="destinationForm">
+          <select id="destinationSelect">
+            <option value=""></option>
+            <option value="Moon">Moon</option>
+            <option value="Mars">Mars</option>
+          </select>
+        </form>
+        <div class="images-container">
+          <img id="moon" src="../images/moon.png" alt="moon" />
+          <img id="mars" src="../images/mars.png" alt="mars" />
+        </div>
       </div>
+
       <div id="booking-container">
         <div id="departureLabel">Departure</div>
         <div id="depDate">Departure Date</div>
@@ -23,14 +47,15 @@
 
         <form id="bookingForm" style="display: none;">
           <select id="countrySelect">
-            <option value="Mumbai, India">Mumbai, India</option>
             <option value="Texas, USA">Texas, USA</option>
+            <option value="Valencia, SPAIN">Valencia, SPAIN</option>
           </select>
-          <input type="submit" value="Book Flight" />
         </form>
       </div>
-
+      <input id="submitBtn" type="button" value="Process Booking" />
     </div>
+
+    <script src="/js/booking.js"></script>
 
   </body>
 </html>

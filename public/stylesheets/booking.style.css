@@ -10,28 +10,51 @@ h1{
     text-transform: uppercase;
     font-size: 2em;
     margin-top: 3%;
-    margin-left: 38%;
+    margin-left: 37%;
 }
 
-.usa img {
-    width: 450px;
-    height: auto;
-    margin-left: 4%;
-    margin-top: 5%;
-}
-
-.mars img {
-    width: 470px;
-    height: auto;
-    margin-left: 2%;
-    margin-top: 4%;
-}
 
 .main-container {
+    position:relative;
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
+
+.departure-section, .destination-section {
+    width: 50%;
+}
+
+.images-container img{
+    position:absolute;
+    margin-left: 10%;
+}
+
+#depSpain {
+    width: 450px;
+    height: auto;
+}
+
+#depUsa {
+    width: 430px;
+    height: auto;
+    margin-top: 1.5%;
+}
+
+#moon {
+    width: 430px;
+    height: auto;
+    margin-top: 1.5%;
+}
+
+#mars {
+    width: 465px;
+    height: auto;
+    margin-left: 8.5%;
+
+}
+
+
 
 #booking-container {
     background-color:rgba(255, 255, 255, 0.095); 
@@ -39,11 +62,11 @@ h1{
     box-shadow: 0 2px 4px rgba(253, 252, 252, 0.1);
     position: absolute;
     margin: 1% auto;
-    top:75%;
+    top:2000%;
     left:50%;
     transform: translate(-50%, -50%);
     width: 1250px;
-    height: 200px;
+    height: 210px;
     border: 1px solid light;
     display: flex;
     
@@ -83,3 +106,45 @@ h1{
     margin-left: -13.5%;
 }
 
+#departureLabel:hover, 
+#destLabel:hover {
+    color: rgb(26, 26, 220);
+    cursor: pointer;
+}
+
+#depDate:hover, 
+#returnDate:hover {
+    color: rgb(189, 189, 13);
+    cursor: pointer;
+}
+
+
+
+#submitBtn {
+    position:absolute;
+    background-color: whitesmoke;
+    border: 0 solid #e2e8f0;
+    color: #0d172a;
+    cursor: pointer;
+    width: auto;
+    max-width: 200px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 10px 20px;
+    margin-top: 74%;
+    margin-left: 44%;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    border-radius: 60px;
+    text-transform: uppercase;
+}
+
+#submitBtn:hover {
+    background-color:#182eb8;
+    color: #fff;
+    transform: scale(1.15);
+}
