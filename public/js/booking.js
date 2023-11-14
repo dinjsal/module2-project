@@ -5,13 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const departureOptions = document.getElementById('departureOptions');
     const departureSelect = document.getElementById('departureSelect');
 
-    // departureLabel.addEventListener('click', () => {
-    //     if(departureSelect.style.display === 'none' || departureSelect.style.display === '') {
-    //         departureSelect.style.display = 'block';
-    //     } else {
-    //         departureSelect.style.display = 'none';
-    //     }
-    // });
 
     //converting the departure select options into a list
     departureLabel.addEventListener('click', () => {
@@ -31,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
     // to initially hide all departure images but show the default image
     document.querySelectorAll('.images-container img').forEach(img => img.style.display = 'none');
 
@@ -46,6 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('destinationSelect').addEventListener('change', event => {
         updateImageDisplay(event.target.value, 'destination-section');
     });
+
+    // for the datepicker to open when the date label is clicked
+    document.getElementById('depDate').addEventListener('click', () => {
+        document.getElementById('departureDate').click();
+    });
+
+   
+
 
     const updateImageDisplay = (selection, section) => {
 

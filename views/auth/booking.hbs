@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="../stylesheets/booking.style.css" rel="stylesheet" />
+
   </head>
   <body class="background-image">
     <h1>Let's secure your space</h1>
@@ -12,6 +13,9 @@
       {{! Departure Countries }}
       <div class="departure-section">
         <form id="departureForm">
+
+          {{! <input type="hidden" id="hiddenDepDate" name="departureDate" /> }}
+
           <select id="departureSelect">
             <option value=""></option>
             <option value="Texas, USA">Texas, USA</option>
@@ -21,6 +25,7 @@
             <option value="Stockholm, SWEDEN">Stockholm, SWEDEN</option>
           </select>
         </form>
+
         <div class="images-container">
           <img id="earth" src="../images/earthbase.png" alt="earth" />
           <img id="depUsa" src="../images/usa.png" alt="usa" />
@@ -61,16 +66,20 @@
           <li data-value="Stockholm, SWEDEN">Stockholm, SWEDEN</li>
         </ul>
 
-        <div id="depDate">Departure Date</div>
+        {{! Departure Date outside the form }}
+
+        <label id="depDate" for="departureDate">Departure Date</label>
+        <input type="date" id="departureDate" class="departure-date-picker" />
+
         <div id="destLabel">Destination</div>
         <div id="returnDate">Return Date</div>
 
-        <form id="bookingForm" style="display: none;">
+        {{! <form id="bookingForm" style="display: none;">
           <select id="countrySelect">
             <option value="Texas, USA">Texas, USA</option>
             <option value="Valencia, SPAIN">Valencia, SPAIN</option>
           </select>
-        </form>
+        </form> }}
       </div>
       <input id="submitBtn" type="button" value="Process Booking" />
     </div>
