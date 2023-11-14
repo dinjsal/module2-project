@@ -48,6 +48,11 @@ h1{
     height: auto;
 }
 
+#depPhil, #depSweden, #depIndia {
+    width: 450px;
+    height: auto;
+}
+
 #depUsa {
     width: 470px;
     height: auto;
@@ -190,10 +195,10 @@ h1{
 }
 
 .dropdown-options li {
-    padding: 8px 16px;
+    padding: 9px 16px;
     cursor: pointer;
 }
 
 .dropdown-options li:hover {
-    background-color: #182eb8;
+    background-color: #0b1d95;
 }

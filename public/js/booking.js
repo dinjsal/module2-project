@@ -49,34 +49,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateImageDisplay = (selection, section) => {
 
-       //to hide the images from this section and show default image if the selection is empty
-        document.querySelectorAll(`.${section} .images-container img`).forEach(img => img.style.display = 'none');
-
-        if(!selection) {
-            if (section === 'departure-section') {
-                document.getElementById('earth').style.display = 'block';
-            } else if (section === 'destination-section') {
-                document.getElementById('flightlogo').style.display = 'block';
-            }
-            return;
-            
-        }
-
-
-        // to determine which image to show
-        let imageId;
-        if (section === 'departure-section') {
-            imageId = selection === 'Texas, USA' ? 'depUsa' : 'depSpain';
-        } else {
+        //to hide the images from this section and show default image if the selection is empty
+         document.querySelectorAll(`.${section} .images-container img`).forEach(img => img.style.display = 'none');
+ 
+         if(!selection) {
+             if (section === 'departure-section') {
+                 document.getElementById('earth').style.display = 'block';
+             } else if (section === 'destination-section') {
+                 document.getElementById('flightlogo').style.display = 'block';
+             }
+             return;
+             
+         }
+ 
+ 
+         // to determine which image to show
+         let imageId;
+         if (section === 'departure-section') {
+             switch (selection) {
+                case 'Texas, USA':
+                    imageId = 'depUsa';
+                    break;
+                case 'Valencia, SPAIN':
+                    imageId = 'depSpain';
+                    break;
+                case 'Mumbai, INDIA':
+                    imageId = 'depIndia';
+                    break;
+                case 'Manila, PHILIPPINES':
+                    imageId = 'depPhil';
+                    break;
+                case 'Stockholm, SWEDEN':
+                    imageId = 'depSweden';
+                    break;
+             }
+         } else {
             imageId = selection.toLowerCase();
-        }
-
-        // to show selected image
-        const imageElement = document.getElementById(imageId);
-        if (imageElement) {
-            imageElement.style.display = 'block';
-        }
-    }
+         }
+ 
+         // to show selected image
+         const imageElement = document.getElementById(imageId);
+         if (imageElement) {
+             imageElement.style.display = 'block';
+         }
+     }
 });
 
 
