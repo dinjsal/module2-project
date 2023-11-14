@@ -1,4 +1,120 @@
-.dropbtn {
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 16px;
+}
+
+.container {
+    margin-top: 100px;
+    padding: 32px;
+}
+
+.select-box {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+}
+
+.select-box .options-container {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4 s;
+    border-radius: 10px;
+    overflow: hidden;
+
+    order: 1;
+}
+
+.select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    /* overflow-y: scroll; */
+}
+
+.selected {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 8px;
+    position: relative;
+    order: 0;
+
+}
+
+.selected::after {
+    content: '';
+    background: url("/metronic/theme/html/demo8/dist/assets/media/svg/icons/Navigation/Plus.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 100%;
+    right: 10px;
+    top: 5px;
+
+    transition: all 0.4s;
+}
+.select-box .option, .selected {
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.select-box .option:hover {
+    background: #182eb8;
+}
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .radio {
+    display: none;
+}
+
+/* 
+    .select {
+    padding: 8px 12px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid grey;
+    cursor: pointer;
+    border-radius: 10px;
+
+    /* replace default styling (arrow) */
+
+/*
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><polygon points="0,0 100,0 50,50" style="fill:%23182eb8;" /></svg>');
+    
+    background-position: right 18px top 50%;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    padding-right: 50px;
+}
+
+.select:focus,
+.select:hover {
+    outline: none; /*removes the default blue outline displayed*/
+    /* border: 1px solid rgb(75, 74, 74);
+}
+    
+.select option {
+    background: rgba(255, 255, 255, 0.3)
+}
+
+.select option:hover {
+    outline: none; /*removes the default blue outline displayed*/
+    /* background-color: #182eb8
+} */ 
+
+
+/* drop-down menu
+    .dropbtn {
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
     padding: 16px;
@@ -20,6 +136,12 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
+
+  .dropdown ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
   
   .dropdown-content a {
     color: black;
@@ -36,4 +158,4 @@
   
   .dropdown:hover .dropbtn {
     background-color: #182eb8;
-  }
+  } */
