@@ -16,12 +16,13 @@
             <img src="/images/universe-4609408_1280.webp" />
         </div>
         <div class="content">
-          <h3>EXPERIENCE WHAT MOST CAN ONLY DREAM OF</h3>
+          <div class="wrapper">
+            <h3 class="typing">EXPERIENCE WHAT MOST CAN ONLY DREAM OF</h3>
             {{#if errorMessage}}
               <div class="error">{{errorMessage}}</div>
             {{/if}}
+          </div>
             <form action="/auth/signup" method="POST">
-            
             <label for="firstName">FIRST NAME</label>
               <input class="form-selection form-selection1" autofocus type="text" name="firstName" placeholder="Letters only" required />
               <br>
