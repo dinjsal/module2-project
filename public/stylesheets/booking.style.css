@@ -30,15 +30,28 @@ h1{
     margin-left: 10%;
 }
 
+#earth {
+    width: 450px;
+    height: auto;
+}
+
+#flightlogo {
+    width: 700px;
+    height: auto;
+    margin-left: -3%;
+    margin-top: 2%;
+
+}
+
 #depSpain {
     width: 450px;
     height: auto;
 }
 
 #depUsa {
-    width: 430px;
+    width: 470px;
     height: auto;
-    margin-top: 1.5%;
+    margin-left: 9%;
 }
 
 #moon {
@@ -77,6 +90,20 @@ h1{
     margin-left: -55%;
 }
 
+#departure-section {
+    position:relative;
+}
+
+
+#departureSelect {
+    display: none;
+    
+}
+
+
+#departureLabel {
+    cursor: pointer;
+}
 
 
 
@@ -89,6 +116,7 @@ h1{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
 }
+
 
 #depDate, #returnDate {
     margin-left: -14.5%;
@@ -147,4 +175,25 @@ h1{
     background-color:#182eb8;
     color: #fff;
     transform: scale(1.15);
+}
+
+.dropdown-options {
+    list-style-type: none;
+    color: white;
+    margin:0;
+    padding:0;
+    background-color:rgba(255, 255, 255, 0.095); 
+    backdrop-filter: blur(2px); 
+    box-shadow: 0 2px 4px rgba(253, 252, 252, 0.1);
+    position:absolute;
+    z-index: 10;
+}
+
+.dropdown-options li {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.dropdown-options li:hover {
+    background-color: #182eb8;
 }

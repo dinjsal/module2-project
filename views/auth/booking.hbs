@@ -19,8 +19,12 @@
           </select>
         </form>
         <div class="images-container">
+          <img id="earth" src="../images/earthbase.png" alt="earth" />
           <img id="depUsa" src="../images/usa.png" alt="usa" />
           <img id="depSpain" src="../images/spain.png" alt="spain" />
+          <img id="depIndia" src="../images/india.png" alt="india" />
+          <img id="depPhil" src="../images/phil.png" alt="phil" />
+          <img id="depSweden" src="../images/sweden.png" alt="sweden" />
         </div>
       </div>
 
@@ -34,6 +38,7 @@
           </select>
         </form>
         <div class="images-container">
+          <img id="flightlogo" src="../images/flightlogo.png" alt="earth" />
           <img id="moon" src="../images/moon.png" alt="moon" />
           <img id="mars" src="../images/mars.png" alt="mars" />
         </div>
@@ -41,6 +46,18 @@
 
       <div id="booking-container">
         <div id="departureLabel">Departure</div>
+        <ul
+          id="departureOptions"
+          class="dropdown-options"
+          style="display:none;"
+        >
+          <li data-value="Texas, USA">Texas, USA</li>
+          <li data-value="Valencia, SPAIN">Valencia, SPAIN</li>
+          <li data-value="Manila, PHILIPPINES">Manila, PHILIPPINES</li>
+          <li data-value="Mumbai, INDIA">Mumbai, INDIA</li>
+          <li data-value="Stockholm, SWEDEN">Stockholm, SWEDEN</li>
+        </ul>
+
         <div id="depDate">Departure Date</div>
         <div id="destLabel">Destination</div>
         <div id="returnDate">Return Date</div>
