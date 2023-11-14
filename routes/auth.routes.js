@@ -17,9 +17,12 @@ router.get("/login", isLoggedOut, (req, res, next) => {
   res.render("auth/login");
 });
 
-
 router.get("/booking", (req, res, next) => {
   res.render("auth/booking");
+});
+
+router.get("/passenger-info", (req, res, next) => {
+  res.render("auth/passenger-info");
 });
 
 // POST routes
@@ -126,9 +129,5 @@ router.post("/logout", (req, res, next) => {
     }
   });
 });
-
-
-
-
 
 module.exports = router;

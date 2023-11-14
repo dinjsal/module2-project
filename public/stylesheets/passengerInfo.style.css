@@ -29,7 +29,7 @@ h3 {
     height: 100vh;
     background: #343f4f;
     overflow: hidden;
-    background-image: url('/public/images/starsSpace.jpg');
+    background-image: url('/images/starsSpace.jpg');
 }
 
 .error {
