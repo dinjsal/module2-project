@@ -28,8 +28,8 @@ h3 {
     position: relative;
     height: 100vh;
     background: #343f4f;
-    overflow: hidden;
     background-image: url('/images/starsSpace.jpg');
+    overflow: hidden;
 }
 
 .error {
@@ -41,25 +41,20 @@ h3 {
     width: 100%;
 }
 
-.img-container:after {
-    content: '';
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
-
 .content {
     color: #fff;
     font-size: 20px;
-    padding: 100px;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+}
+
+.content-1-passenger {
+    background: rgba(77, 75, 75, 0.3);
+    margin-right: 500px;
+    margin-left: 500px;
+    text-align: center;
+}
+
+.content-2-passengers {
+    display: none;
 }
 
 .wrapper {
@@ -78,7 +73,7 @@ h3 {
 }
 
 .wrapper:hover {
-    background-color:#182eb8;
+    background-color:rgba(24, 46, 185);
     color: #fff;
 }
 
@@ -124,4 +119,31 @@ h3 {
     background-color:#182eb8;
     color: #fff;
     transform: scale(1.15);
+}
+
+.form-selection1 {
+    background-color: rgb(205, 197, 197);
+}
+
+.label1 {
+    padding-top: 50px;
+}
+
+.form-selection {
+    width: 40%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(205, 197, 197);
+}
+
+.input:hover, input:focus {
+    background-color:rgba(24, 46, 185, 0.4);
+    color: #fff;
+}
+
+label {
+    width: 180px;
+    display: inline-block;
+    text-align: left;
 }

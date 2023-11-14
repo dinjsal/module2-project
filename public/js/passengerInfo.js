@@ -20,10 +20,6 @@ minus.addEventListener("click", () => {
   }
 });
 
-window.onload = function () {
-  passengers2.style.display = "none";
-};
-
 plus.onclick = function () {
   passengers2.style.display = "block";
   passengers1.style.display = "none";
