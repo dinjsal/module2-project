@@ -26,10 +26,9 @@ h3 {
 
 .showcase {
     position: relative;
-    height: 100vh;
+    height: 100%;
     background: #343f4f;
     background-image: url('/images/starsSpace.jpg');
-    overflow: hidden;
 }
 
 .error {
@@ -39,22 +38,28 @@ h3 {
     margin: 20px auto;
     padding: 20px;
     width: 100%;
+    overflow: hidden;
 }
 
 .content {
     color: #fff;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-1-passenger {
     background: rgba(77, 75, 75, 0.3);
-    margin-right: 500px;
-    margin-left: 500px;
+    width: 700px;
     text-align: center;
 }
 
 .content-2-passengers {
     display: none;
+    background: rgba(77, 75, 75, 0.3);
+    width: 700px;
+
 }
 
 .wrapper {

@@ -25,6 +25,10 @@ router.get("/passenger-info", (req, res, next) => {
   res.render("auth/passenger-info");
 });
 
+router.get("/payment", (req, res, next) => {
+  res.render("auth/payment");
+});
+
 // POST routes
 router.post("/signup", async (req, res, next) => {
   const { firstName, lastName, birthDate, email, password } = req.body;
@@ -114,6 +118,10 @@ router.post("/login", async (req, res, next) => {
   } catch (error) {
     next(error);
   }
+});
+
+router.post("/passenger-info", (req, res, next) => {
+  res.render("auth/payment");
 });
 
 // logout route
