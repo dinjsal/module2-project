@@ -1,8 +1,12 @@
-let minus = document.querySelector(".minus");
-let num = document.querySelector(".num");
-let plus = document.querySelector(".plus");
-let passengers1 = document.querySelector(".content-1-passengers");
-let passengers2 = document.querySelector(".content-2-passengers");
+const minus = document.querySelector(".minus");
+const num = document.querySelector(".num");
+const plus = document.querySelector(".plus");
+const content1 = document.querySelector(".content");
+const content2 = document.querySelector(".content2");
+
+window.addEventListener("load", () => {
+  content2.style.display = "none";
+});
 
 let i = 1;
 
@@ -21,11 +25,15 @@ minus.addEventListener("click", () => {
 });
 
 plus.onclick = function () {
-  passengers2.style.display = "block";
-  passengers1.style.display = "none";
+  if (content2.style.display === "none") {
+    content2.style.display = "block";
+    content1.style.display = "none";
+  }
 };
 
 minus.onclick = function () {
-  passengers2.style.display = "none";
-  passengers1.style.display = "block";
+  if (content2.style.display === "block") {
+    content2.style.display = "none";
+    content1.style.display = "block";
+  }
 };

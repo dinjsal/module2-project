@@ -33,27 +33,21 @@ router.get("/profile", (req, res, next) => {
     res.render("/profile", { loggedUser});
 });
 
-
 router.get("/booking", (req, res, next) => {
   res.render("auth/booking");
 });
-
 
 router.get("/passenger-info", (req, res, next) => {
   res.render("auth/passenger-info");
 });
 
-
 router.get("/payment", (req, res, next) => {
   res.render("auth/payment");
 });
 
-
-router.get('/our-fleet', (req, res, next) => {
-  res.render('auth/our-fleet');
+router.get("/our-fleet", (req, res, next) => {
+  res.render("auth/our-fleet");
 });
-
-
 
 // POST routes
 router.post("/signup", async (req, res, next) => {
@@ -155,7 +149,7 @@ router.post("/login", async (req, res, next) => {
 
 
 router.post("/passenger-info", (req, res, next) => {
-  res.render("auth/payment");
+  res.render("auth/booking-confirmation");
 });
 
 

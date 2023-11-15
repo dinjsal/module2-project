@@ -23,11 +23,13 @@
       </section>
     </div>
     <div class="content">
+      {{#if errorMessage}}
+            <div class="error">{{errorMessage}}</div>
+            {{/if}}
       <div class="content-1-passenger">
-        {{!-- create the POST route --}}
-      {{!-- <form action="/auth/signup" method="POST"> --}}
+            
             <label class="label1" for="firstName">First Name</label>
-              <input class="form-selection" autofocus type="text" name="firstName" placeholder="Letters only" required />
+               <input class="form-selection" autofocus type="text" name="firstName" placeholder="Letters only" required />
               <br>
               <label for="middleName">Middle Name</label>
               <input class="form-selection" type="text" name="middleName" placeholder="Letters only" required />
@@ -38,23 +40,38 @@
               <label for="birthDate">Date of Birth</label>
               <input class="form-selection" type="date" name="birthDate" required />
               <br>
-              <label for="email">Email</label>
-              <input class="form-selection" type="email" name="email" placeholder="Your email" required />
+              <label for="address">Address</label>
+              <input class="form-selection" type="text" name="address" placeholder="Your address" required />
               <br>
-              <label for="password">Password</label>
-              {{!-- 2 for now, will have to be changed to 8 * later on --}}
-              <input class="form-selection" type="password" name="password" placeholder="**" required />
+              <label for="dateFrom">Leaving From</label>
+              <input class="form-selection" type="date" name="travelDates" required />
+              <br>
+              <label for="dateTo">Coming Back on</label>
+              <input class="form-selection" type="date" name="travelDates" required />
+              <br>
+              <label for="departure">Flying out from </label>
+              <input class="form-selection" type="text" name="departure" required />
+              <br>
+              <label for="passportNumber">Passport No.</label>
+              <input class="form-selection" type="text" name="passportNumber" required />
               <br>
               <br>
+                  {{!-- create the POST route --}}
+      <form action="/auth/passenger-info" method="POST">
               <button type="submit" class="btn">Next</button> 
               <br>
             </form>
       </div>
-      <div class="content-2-passengers">
-{{!-- create the POST route --}}
-      {{!-- <form action="/auth/signup" method="POST"> --}}
+      </div>
+
+      <div class="content2">
+      {{#if errorMessage}}
+            <div class="error">{{errorMessage}}</div>
+            {{/if}}
+      <div class="content-1-passenger">
+            <section>
             <label class="label1" for="firstName">First Name</label>
-              <input class="form-selection" autofocus type="text" name="firstName" placeholder="Letters only" required />
+               <input class="form-selection" autofocus type="text" name="firstName" placeholder="Letters only" required />
               <br>
               <label for="middleName">Middle Name</label>
               <input class="form-selection" type="text" name="middleName" placeholder="Letters only" required />
@@ -65,19 +82,62 @@
               <label for="birthDate">Date of Birth</label>
               <input class="form-selection" type="date" name="birthDate" required />
               <br>
-              <label for="email">Email</label>
-              <input class="form-selection" type="email" name="email" placeholder="Your email" required />
+              <label for="address">Address</label>
+              <input class="form-selection" type="text" name="address" placeholder="Your address" required />
               <br>
-              <label for="password">Password</label>
-              {{!-- 2 for now, will have to be changed to 8 * later on --}}
-              <input class="form-selection" type="password" name="password" placeholder="**" required />
+              <label for="dateFrom">Leaving From</label>
+              <input class="form-selection" type="date" name="travelDates" required />
+              <br>
+              <label for="dateTo">Coming Back on</label>
+              <input class="form-selection" type="date" name="travelDates" required />
+              <br>
+              <label for="departure">Flying out from </label>
+              <input class="form-selection" type="text" name="departure" required />
+              <br>
+              <label for="passportNumber">Passport No.</label>
+              <input class="form-selection" type="text" name="passportNumber" required />
               <br>
               <br>
+            </section>
+            <section>
+              <label class="label1" for="firstName">First Name</label>
+               <input class="form-selection" autofocus type="text" name="firstName" placeholder="Letters only" required />
+              <br>
+              <label for="middleName">Middle Name</label>
+              <input class="form-selection" type="text" name="middleName" placeholder="Letters only" required />
+              <br>
+              <label for="lastName">Last Name</label>
+              <input class="form-selection" type="text" name="lastName" placeholder="Letters only" required />
+              <br>
+              <label for="birthDate">Date of Birth</label>
+              <input class="form-selection" type="date" name="birthDate" required />
+              <br>
+              <label for="address">Address</label>
+              <input class="form-selection" type="text" name="address" placeholder="Your address" required />
+              <br>
+              <label for="dateFrom">Leaving From</label>
+              <input class="form-selection" type="date" name="travelDates" required />
+              <br>
+              <label for="dateTo">Coming Back on</label>
+              <input class="form-selection" type="date" name="travelDates" required />
+              <br>
+              <label for="departure">Flying out from </label>
+              <input class="form-selection" type="text" name="departure" required />
+              <br>
+              <label for="passportNumber">Passport No.</label>
+              <input class="form-selection" type="text" name="passportNumber" required />
+              <br>
+              <br>
+              </section>
+                  {{!-- create the POST route --}}
+      <form action="/auth/passenger-info" method="POST">
               <button type="submit" class="btn">Next</button> 
               <br>
             </form>
       </div>
-    </div>
+      
+      </div>
+      
   </section>
     <script src="/js/passengerInfo.js"></script>
 </body>
