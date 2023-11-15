@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+h3 {
+    color: white;
+    padding-right: 30px;
+    font-size: 40px;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.showcase {
+    position: relative;
+    height: 100%;
+    background: #343f4f;
+    background-image: url('/images/starsSpace.jpg');
+}
+
+.error {
+    background: #f02b63;
+    box-sizing: border-box;
+    color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content {
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-1-passenger {
+    background: rgba(77, 75, 75, 0.3);
+    width: 700px;
+    text-align: center;
+}
+
+.content-2-passengers {
+    display: none;
+    background: rgba(77, 75, 75, 0.3);
+    width: 700px;
+
+}
+
+.wrapper {
+    height: 50px;
+    width: 100%;
+    max-width: 100px;
+    color: #0d172a;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    display:flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 0 solid #e2e8f0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper:hover {
+    background-color:rgba(24, 46, 185);
+    color: #fff;
+}
+
+.wrapper span {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.wrapper span.num {
+    font-size: 25px;
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 0 solid #e2e8f0;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin: auto;
+    width: 200px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    /* font-weight: 600; */
+    line-height: 1;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    border-radius: 60px;
+}
+
+.btn:hover {
+    background-color:#182eb8;
+    color: #fff;
+    transform: scale(1.15);
+}
+
+.form-selection1 {
+    background-color: rgb(205, 197, 197);
+}
+
+.label1 {
+    padding-top: 50px;
+}
+
+.form-selection {
+    width: 40%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(205, 197, 197);
+}
+
+.input:hover, input:focus {
+    background-color:rgba(24, 46, 185, 0.4);
+    color: #fff;
+}
+
+label {
+    width: 180px;
+    display: inline-block;
+    text-align: left;
+}

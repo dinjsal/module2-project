@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Info</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400"
+      rel="stylesheet"
+    />
+    <link href="../stylesheets/passengerInfo.style.css" rel="stylesheet"/>
+</head>
+<body>
+  <section class="showcase">
+    <div class="heading">
+      <section>
+        <h3>Number of Passengers</h3>
+      </section>
+      <section class="wrapper">
+        <span class="minus">-</span>
+        <span class="num">1</span>
+        <span class="plus">+</span>
+      </section>
+    </div>
+    <div class="content">
+      {{#if errorMessage}}
+            <div class="error">{{errorMessage}}</div>
+            {{/if}}
+      <div class="content-1-passenger">
+            
+            <label class="label1" for="firstName">First Name</label>
+              <input class="form-selection" autofocus type="text" name="firstName" placeholder="Letters only" required />
+              <br>
+              <label for="middleName">Middle Name</label>
+              <input class="form-selection" type="text" name="middleName" placeholder="Letters only" required />
+              <br>
+              <label for="lastName">Last Name</label>
+              <input class="form-selection" type="text" name="lastName" placeholder="Letters only" required />
+              <br>
+              <label for="birthDate">Date of Birth</label>
+              <input class="form-selection" type="date" name="birthDate" required />
+              <br>
+              <label for="address">Address</label>
+              <input class="form-selection" type="text" name="address" placeholder="Your address" required />
+              <br>
+              <label for="passportCountry">Passport Issuing Country</label>
+              <input class="form-selection" type="text" name="passportCountry" placeholder="" required />
+              <br>
+              <label for="passportNumber">Passport No.</label>
+              <input class="form-selection" type="text" name="passportNumber" placeholder="" required />
+              <br>
+              <br>
+                  {{!-- create the POST route --}}
+      <form action="/auth/passenger-info" method="POST">
+              <button type="submit" class="btn">Next</button> 
+              <br>
+            </form>
+      </div>
+      <div class="content-2-passengers">
+
+            <label class="label1" for="firstName">First Name</label>
+              <input class="form-selection" autofocus type="text" name="firstName" placeholder="Letters only" required />
+              <br>
+              <label for="middleName">Middle Name</label>
+              <input class="form-selection" type="text" name="middleName" placeholder="Letters only" required />
+              <br>
+              <label for="lastName">Last Name</label>
+              <input class="form-selection" type="text" name="lastName" placeholder="Letters only" required />
+              <br>
+              <label for="birthDate">Date of Birth</label>
+              <input class="form-selection" type="date" name="birthDate" required />
+              <br>
+              <label for="address">Address</label>
+              <input class="form-selection" type="text" name="address" placeholder="Your address" required />
+              <br>
+              <label for="passportCountry">Passport Issuing Country</label>
+              <input class="form-selection" type="text" name="passportCountry" placeholder="" required />
+              <br>
+              <label for="passportNumber">Passport No.</label>
+              <input class="form-selection" type="text" name="passportNumber" placeholder="" required />
+              <br>
+              <br>
+              {{!-- create the POST route --}}
+      <form action="/auth/passenger-info" method="POST">
+              <button type="submit" class="btn button-hide">Next</button> 
+              <br>
+            </form>
+      </div>
+    </div>
+  </section>
+    <script src="/js/passengerInfo.js"></script>
+</body>
+</html>
