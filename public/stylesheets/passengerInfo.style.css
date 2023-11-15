@@ -49,17 +49,19 @@ h3 {
     align-items: center;
 }
 
-.content-1-passenger {
-    background: rgba(77, 75, 75, 0.3);
-    width: 700px;
-    text-align: center;
+.content2 {
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.content-2-passengers {
-    display: none;
+.content-1-passenger {
     background: rgba(77, 75, 75, 0.3);
-    width: 700px;
-
+    width: 800px;
+    text-align: center;
 }
 
 .wrapper {
