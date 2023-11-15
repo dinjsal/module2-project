@@ -19,7 +19,6 @@ const app = express();
 require("./config")(app);
 
 // use session
-
 require("./config/session.config")(app);
 
 // default value for title local
