@@ -14,8 +14,6 @@
       <div class="departure-section">
         <form id="departureForm">
 
-          {{! <input type="hidden" id="hiddenDepDate" name="departureDate" /> }}
-
           <select id="departureSelect">
             <option value=""></option>
             <option value="Texas, USA">Texas, USA</option>
@@ -43,12 +41,18 @@
             <option value=""></option>
             <option value="Moon">Moon</option>
             <option value="Mars">Mars</option>
+            <option value="Venus">Venus</option>
+            <option value="Jupiter">Jupiter</option>
+            <option value="Lo">Lo</option>
           </select>
         </form>
         <div class="images-container">
-          <img id="flightlogo" src="../images/flightlogo.png" alt="earth" />
+          <img id="sun" src="../images/sun.png" alt="sun" />
           <img id="moon" src="../images/moon.png" alt="moon" />
           <img id="mars" src="../images/mars.png" alt="mars" />
+          <img id="venus" src="../images/venus.png" alt="venus" />
+          <img id="jupiter" src="../images/jupiter.png" alt="jupiter" />
+          <img id="lo" src="../images/lo.png" alt="lo" />
         </div>
       </div>
 
@@ -56,7 +60,7 @@
         <div id="departureLabel">Departure</div>
         <ul
           id="departureOptions"
-          class="dropdown-options"
+          class="dep-dropdown-options"
           style="display:none;"
         >
           <li data-value="Texas, USA">Texas, USA</li>
@@ -67,21 +71,42 @@
         </ul>
 
         {{! Departure Date outside the form }}
-
         <label id="depDate" for="departureDate">Departure Date</label>
         <input type="date" id="departureDate" class="departure-date-picker" />
 
         <div id="destLabel">Destination</div>
-        <div id="returnDate">Return Date</div>
+        <ul
+          id="destinationOptions"
+          class="dest-dropdown-options"
+          style="display:none;"
+        >
+          <li data-value="Moon">Moon</li>
+          <li data-value="Mars">Mars</li>
+          <li data-value="Venus">Venus</li>
+          <li data-value="Jupiter">Jupiter</li>
+          <li data-value="Lo">Lo</li>
+        </ul>
 
-        {{! <form id="bookingForm" style="display: none;">
-          <select id="countrySelect">
-            <option value="Texas, USA">Texas, USA</option>
-            <option value="Valencia, SPAIN">Valencia, SPAIN</option>
-          </select>
-        </form> }}
+        {{! Return Date outside the form }}
+        <label id="returnDate" for="returnDate">Return Date</label>
+        <input type="date" id="returnDate" class="return-date-picker" />
+
       </div>
-      <input id="submitBtn" type="button" value="Process Booking" />
+      <a
+        href="/auth/passenger-info"
+        id="submitBtn"
+        type="button"
+        class="submitBtn"
+      >Book this</a>
+    </div>
+
+    </div>
+      <a
+        href="/profile"
+        id="backBtn"
+        type="button"
+        class="backBtn"
+      >Back</a>
     </div>
 
     <script src="/js/booking.js"></script>

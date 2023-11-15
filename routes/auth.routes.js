@@ -17,17 +17,27 @@ router.get("/login", isLoggedOut, (req, res, next) => {
   res.render("auth/login");
 });
 
+
 router.get("/booking", (req, res, next) => {
   res.render("auth/booking");
 });
+
 
 router.get("/passenger-info", (req, res, next) => {
   res.render("auth/passenger-info");
 });
 
+
 router.get("/payment", (req, res, next) => {
   res.render("auth/payment");
 });
+
+
+router.get('/our-fleet', (req, res, next) => {
+  res.render('auth/our-fleet');
+});
+
+
 
 // POST routes
 router.post("/signup", async (req, res, next) => {

@@ -4,9 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const departureLabel = document.getElementById('departureLabel');
     const departureOptions = document.getElementById('departureOptions');
     const departureSelect = document.getElementById('departureSelect');
+    const destinationSelect = document.getElementById('destinationSelect');
 
 
-    //converting the departure select options into a list
+    //converting the destination select options into a list
+    destLabel.addEventListener('click', () => {
+        destinationOptions.style.display = destinationOptions.style.display === 'block' ? 'none' : 'block';
+    });
+
+    destinationOptions.querySelectorAll('li').forEach(option => {
+        option.addEventListener('click', (event) => {
+            const value = event.target.getAttribute('data-value');
+            destinationSelect.value = value;
+            destinationOptions.style.display = 'none';
+
+            const eventChange = new Event('change');
+            destinationSelect.dispatchEvent(eventChange);
+        });
+
+    });
+
+    //converting the destination select options into a list
     departureLabel.addEventListener('click', () => {
         departureOptions.style.display = departureOptions.style.display === 'block' ? 'none' : 'block';
     });
@@ -24,12 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
     // to initially hide all departure images but show the default image
     document.querySelectorAll('.images-container img').forEach(img => img.style.display = 'none');
 
     document.getElementById('earth').style.display = 'block';
 
-    document.getElementById('flightlogo').style.display = 'block';
+    document.getElementById('sun').style.display = 'block';
 
     document.getElementById('departureSelect').addEventListener('change', event => {
         updateImageDisplay(event.target.value, 'departure-section');
@@ -39,12 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
         updateImageDisplay(event.target.value, 'destination-section');
     });
 
-    // for the datepicker to open when the date label is clicked
-    document.getElementById('depDate').addEventListener('click', () => {
-        document.getElementById('departureDate').click();
-    });
+    
 
-   
 
 
     const updateImageDisplay = (selection, section) => {
@@ -99,5 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //to submit the booking form
 document.getElementById('submitBtn').addEventListener('click', function () {
     document.getElementById('bookingForm').submit();
+    //to redirect to the passenger info page
+    window.location.href = 'http://localhost:3000/auth/passenger-info';
+
 });
 
