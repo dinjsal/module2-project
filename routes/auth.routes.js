@@ -2,19 +2,35 @@ const router = require("express").Router();
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const User = require("../models/User.model");
+const session = require("express-session");
 const { isLoggedOut } = require("../middleware/route.guard");
+
+
+
+
 
 // GET routes
 
 // isLoggedOut: auth user shouldn't see the profile page
 // redirected to login page
+router.get("/", (req, res, next) => {
+  res.render("/index");
+});
+
+router.get("/login", isLoggedOut, (req, res, next) => {
+  res.render("auth/login");
+});
 
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
-router.get("/login", isLoggedOut, (req, res, next) => {
-  res.render("auth/login");
+
+router.get("/profile", (req, res, next) => {
+  const loggedUser = req.session.currentUser;
+
+  console.log("loggedUser:", loggedUser);
+    res.render("/profile", { loggedUser});
 });
 
 
@@ -112,13 +128,19 @@ router.post("/login", async (req, res, next) => {
         user.password
       );
 
-      // if password's correct
-
+    
       if (passwordCorrect) {
-        // // will only be created if the password is a match
-        // // ***** SAVE THE USER IN THE SESSION *****
+        // add the user to the session object
         req.session.currentUser = user;
+
+        req.session.save((err) => {
+          if (err) {
+              next(err);
+      } else {
+        console.log ("Session is saved", req.session);
         res.redirect("/profile");
+      }
+        });
       } else {
         res.render("auth/login", {
           errorMessage: "Incorrect credentials, please try again",
@@ -130,9 +152,13 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
+
+
 router.post("/passenger-info", (req, res, next) => {
   res.render("auth/payment");
 });
+
+
 
 // logout route
 router.post("/logout", (req, res, next) => {
