@@ -60,7 +60,7 @@ section {
     backdrop-filter: blur(5px); 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    height: 95%;
+    height: 98%;
     width: 80%;
     
 }
@@ -71,11 +71,19 @@ section {
    
 
 .form1, .form2{
-    padding-top: 7%;
+    padding-top: 5%;
     margin-left: 5%;
     margin-bottom: 5%;
-    margin-right: 10%;
-   
+    margin-right: 10%; 
+}
+
+#form2 {
+     display: none; 
+}
+
+#form1 {
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 
