@@ -40,6 +40,10 @@ router.get("/payment", (req, res, next) => {
   res.render("auth/payment");
 });
 
+router.get("/crew", (req, res, next) => {
+  res.render("auth/crew");
+});
+
 router.get("/our-fleet", (req, res, next) => {
   res.render("auth/our-fleet");
 });
