@@ -20,7 +20,7 @@ h3 {
     font-size: 30px;
     margin-bottom: 35px;
     width: 39ch;
-    animation: typing   s steps(30), blink .5s step-end infinite alternate;
+    animation: typing 4s steps(30), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
