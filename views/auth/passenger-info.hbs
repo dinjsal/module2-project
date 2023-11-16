@@ -1,144 +1,459 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Passenger Info</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400"
       rel="stylesheet"
     />
-    <link href="../stylesheets/passengerInfo.style.css" rel="stylesheet"/>
-</head>
-<body>
-  <section class="showcase">
-    <div class="heading">
-      <section>
-        <h3>Number of Passengers</h3>
-      </section>
-      <section class="wrapper">
-        <span class="minus">-</span>
-        <span class="num">1</span>
-        <span class="plus">+</span>
-      </section>
-    </div>
-    <div class="content">
-      {{#if errorMessage}}
-            <div class="error">{{errorMessage}}</div>
-            {{/if}}
-      <div class="content-1-passenger">
-            
-            <label class="label1" for="firstName">First Name</label>
-               <input class="form-selection" autofocus type="text" name="firstName" placeholder="Letters only" required />
-              <br>
-              <label for="middleName">Middle Name</label>
-              <input class="form-selection" type="text" name="middleName" placeholder="Letters only" required />
-              <br>
-              <label for="lastName">Last Name</label>
-              <input class="form-selection" type="text" name="lastName" placeholder="Letters only" required />
-              <br>
-              <label for="birthDate">Date of Birth</label>
-              <input class="form-selection" type="date" name="birthDate" required />
-              <br>
-              <label for="address">Address</label>
-              <input class="form-selection" type="text" name="address" placeholder="Your address" required />
-              <br>
-              <label for="dateFrom">Leaving From</label>
-              <input class="form-selection" type="date" name="travelDates" required />
-              <br>
-              <label for="dateTo">Coming Back on</label>
-              <input class="form-selection" type="date" name="travelDates" required />
-              <br>
-              <label for="departure">Flying out from </label>
-              <input class="form-selection" type="text" name="departure" required />
-              <br>
-              <label for="passportNumber">Passport No.</label>
-              <input class="form-selection" type="text" name="passportNumber" required />
-              <br>
-              <br>
-                  {{!-- create the POST route --}}
-      <form action="/auth/passenger-info" method="POST">
-              <button type="submit" class="btn">Next</button> 
-              <br>
-            </form>
-      </div>
-      </div>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-      <div class="content2">
-      {{#if errorMessage}}
-            <div class="error">{{errorMessage}}</div>
-            {{/if}}
-      <div class="content-1-passenger">
-            <section>
+    <link href="../stylesheets/passengerInfo.style.css" rel="stylesheet" />
+  </head>
+  <body class="background-image">
+
+    <section>
+      <h3>Number of Passengers</h3>
+      <div class="passenger-selector">
+        <button class="minus">-</button>
+        <span id="passengerNum">1</span>
+        <button class="plus">+</button>
+      </div>
+    </section>
+
+    <div class="main-container">
+
+      <div class="form-container">
+        <div id="form1" class="form1">
+          <form>
+            <div class="form-row">
+              <div class="col-12">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="John"
+                />
+              </div>
+              <div class="col-12">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Smith"
+                />
+              </div>
+              <div class="col-12">
+                <label for="birthdate">Birthdate</label>
+                <input type="date" class="form-control" id="birthDate" />
+              </div>
+              <div class="col-12">
+                <label for="Address">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="1234 Main St"
+                />
+              </div>
+              <div class="col-12">
+                <label for="departure">Departure</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="departure"
+                  placeholder="Departure location"
+                />
+              </div>
+              <div class="col-12">
+                <label for="departure">Destination</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="destination"
+                  placeholder="Destination"
+                />
+              </div>
+              <div class="col-6">
+                <label for="departureDate">Departure Date</label>
+                <input type="date" class="form-control" id="departureDate" />
+              </div>
+              <div class="col-6">
+                <label for="returnDate">Return Date</label>
+                <input type="date" class="form-control" id="returnDate" />
+              </div>
+              <div class="col-12">
+                <label for="passport">Passport No.</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Passport No."
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div id="form2" class="form2">
+          <form>
+            <div class="form-row">
+              <div class="col-12">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="John"
+                />
+              </div>
+              <div class="col-12">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Smith"
+                />
+              </div>
+              <div class="col-12">
+                <label for="birthdate">Birthdate</label>
+                <input type="date" class="form-control" id="birthDate" />
+              </div>
+              <div class="col-12">
+                <label for="Address">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="1234 Main St"
+                />
+              </div>
+              <div class="col-12">
+                <label for="departure">Departure</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="departure"
+                  placeholder="Departure location"
+                />
+              </div>
+              <div class="col-12">
+                <label for="departure">Destination</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="destination"
+                  placeholder="Destination"
+                />
+              </div>
+              <div class="col-6">
+                <label for="departureDate">Departure Date</label>
+                <input type="date" class="form-control" id="departureDate" />
+              </div>
+              <div class="col-6">
+                <label for="returnDate">Return Date</label>
+                <input type="date" class="form-control" id="returnDate" />
+              </div>
+              <div class="col-12">
+                <label for="passport">Passport No.</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Passport No."
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    {{!-- <div class="heading">
+        <section>
+          <h3>Number of Passengers</h3>
+        </section>
+        <section class="wrapper">
+          <span class="minus" onclick="changePassengerCount(-)">-</span>
+          <span class="num" id="passengerNum">1</span>
+          <span class="plus" onclick="changePassengerCount(1)">+</span>
+        </section>
+      </div>
+      <div class="content">
+        {{#if errorMessage}}
+          <div class="error">{{errorMessage}}</div>
+        {{/if}}
+        <div class="forms-container">
+          <div div="form1" class="content-1-passenger">
+
             <label class="label1" for="firstName">First Name</label>
-               <input class="form-selection" autofocus type="text" name="firstName" placeholder="Letters only" required />
-              <br>
+            <input
+              class="form-selection"
+              autofocus
+              type="text"
+              name="firstName"
+              placeholder="Letters only"
+              required
+            />
+            <br />
+            <label for="middleName">Middle Name</label>
+            <input
+              class="form-selection"
+              type="text"
+              name="middleName"
+              placeholder="Letters only"
+              required
+            />
+            <br />
+            <label for="lastName">Last Name</label>
+            <input
+              class="form-selection"
+              type="text"
+              name="lastName"
+              placeholder="Letters only"
+              required
+            />
+            <br />
+            <label for="birthDate">Date of Birth</label>
+            <input
+              class="form-selection"
+              type="date"
+              name="birthDate"
+              required
+            />
+            <br />
+            <label for="address">Address</label>
+            <input
+              class="form-selection"
+              type="text"
+              name="address"
+              placeholder="Your address"
+              required
+            />
+            <br />
+            <label for="dateFrom">Leaving From</label>
+            <input
+              class="form-selection"
+              type="date"
+              name="travelDates"
+              required
+            />
+            <br />
+            <label for="dateTo">Coming Back on</label>
+            <input
+              class="form-selection"
+              type="date"
+              name="travelDates"
+              required
+            />
+            <br />
+            <label for="departure">Flying out from </label>
+            <input
+              class="form-selection"
+              type="text"
+              name="departure"
+              required
+            />
+            <br />
+            <label for="passportNumber">Passport No.</label>
+            <input
+              class="form-selection"
+              type="text"
+              name="passportNumber"
+              required
+            />
+            <br />
+            <br />
+            {{! create the POST route }}
+            <form action="/auth/passenger-info" method="POST">
+              <button type="submit" class="btn">Next</button>
+              <br />
+            </form>
+          </div>
+        </div>
+
+        <div id="form2" class="content2" style="display:none">
+          {{#if errorMessage}}
+            <div class="error">{{errorMessage}}</div>
+          {{/if}}
+          <div class="content-1-passenger">
+            <section>
+              <label class="label1" for="firstName">First Name</label>
+              <input
+                class="form-selection"
+                autofocus
+                type="text"
+                name="firstName"
+                placeholder="Letters only"
+                required
+              />
+              <br />
               <label for="middleName">Middle Name</label>
-              <input class="form-selection" type="text" name="middleName" placeholder="Letters only" required />
-              <br>
+              <input
+                class="form-selection"
+                type="text"
+                name="middleName"
+                placeholder="Letters only"
+                required
+              />
+              <br />
               <label for="lastName">Last Name</label>
-              <input class="form-selection" type="text" name="lastName" placeholder="Letters only" required />
-              <br>
+              <input
+                class="form-selection"
+                type="text"
+                name="lastName"
+                placeholder="Letters only"
+                required
+              />
+              <br />
               <label for="birthDate">Date of Birth</label>
-              <input class="form-selection" type="date" name="birthDate" required />
-              <br>
+              <input
+                class="form-selection"
+                type="date"
+                name="birthDate"
+                required
+              />
+              <br />
               <label for="address">Address</label>
-              <input class="form-selection" type="text" name="address" placeholder="Your address" required />
-              <br>
+              <input
+                class="form-selection"
+                type="text"
+                name="address"
+                placeholder="Your address"
+                required
+              />
+              <br />
               <label for="dateFrom">Leaving From</label>
-              <input class="form-selection" type="date" name="travelDates" required />
-              <br>
+              <input
+                class="form-selection"
+                type="date"
+                name="travelDates"
+                required
+              />
+              <br />
               <label for="dateTo">Coming Back on</label>
-              <input class="form-selection" type="date" name="travelDates" required />
-              <br>
+              <input
+                class="form-selection"
+                type="date"
+                name="travelDates"
+                required
+              />
+              <br />
               <label for="departure">Flying out from </label>
-              <input class="form-selection" type="text" name="departure" required />
-              <br>
+              <input
+                class="form-selection"
+                type="text"
+                name="departure"
+                required
+              />
+              <br />
               <label for="passportNumber">Passport No.</label>
-              <input class="form-selection" type="text" name="passportNumber" required />
-              <br>
-              <br>
+              <input
+                class="form-selection"
+                type="text"
+                name="passportNumber"
+                required
+              />
+              <br />
+              <br />
             </section>
             <section>
               <label class="label1" for="firstName">First Name</label>
-               <input class="form-selection" autofocus type="text" name="firstName" placeholder="Letters only" required />
-              <br>
+              <input
+                class="form-selection"
+                autofocus
+                type="text"
+                name="firstName"
+                placeholder="Letters only"
+                required
+              />
+              <br />
               <label for="middleName">Middle Name</label>
-              <input class="form-selection" type="text" name="middleName" placeholder="Letters only" required />
-              <br>
+              <input
+                class="form-selection"
+                type="text"
+                name="middleName"
+                placeholder="Letters only"
+                required
+              />
+              <br />
               <label for="lastName">Last Name</label>
-              <input class="form-selection" type="text" name="lastName" placeholder="Letters only" required />
-              <br>
+              <input
+                class="form-selection"
+                type="text"
+                name="lastName"
+                placeholder="Letters only"
+                required
+              />
+              <br />
               <label for="birthDate">Date of Birth</label>
-              <input class="form-selection" type="date" name="birthDate" required />
-              <br>
+              <input
+                class="form-selection"
+                type="date"
+                name="birthDate"
+                required
+              />
+              <br />
               <label for="address">Address</label>
-              <input class="form-selection" type="text" name="address" placeholder="Your address" required />
-              <br>
+              <input
+                class="form-selection"
+                type="text"
+                name="address"
+                placeholder="Your address"
+                required
+              />
+              <br />
               <label for="dateFrom">Leaving From</label>
-              <input class="form-selection" type="date" name="travelDates" required />
-              <br>
+              <input
+                class="form-selection"
+                type="date"
+                name="travelDates"
+                required
+              />
+              <br />
               <label for="dateTo">Coming Back on</label>
-              <input class="form-selection" type="date" name="travelDates" required />
-              <br>
+              <input
+                class="form-selection"
+                type="date"
+                name="travelDates"
+                required
+              />
+              <br />
               <label for="departure">Flying out from </label>
-              <input class="form-selection" type="text" name="departure" required />
-              <br>
+              <input
+                class="form-selection"
+                type="text"
+                name="departure"
+                required
+              />
+              <br />
               <label for="passportNumber">Passport No.</label>
-              <input class="form-selection" type="text" name="passportNumber" required />
-              <br>
-              <br>
-              </section>
-                  {{!-- create the POST route --}}
-      <form action="/auth/passenger-info" method="POST">
-              <button type="submit" class="btn">Next</button> 
-              <br>
+              <input
+                class="form-selection"
+                type="text"
+                name="passportNumber"
+                required
+              />
+              <br />
+              <br />
+            </section>
+            {{! create the POST route }}
+            <form action="/auth/passenger-info" method="POST">
+              <button type="submit" class="btn">Next</button>
+              <br />
             </form>
-      </div>
-      
-      </div>
-      
-  </section>
+          </div>
+        </div>
+
+      </div> --}}
+
+    {{! </section> }}
     <script src="/js/passengerInfo.js"></script>
-</body>
+  </body>
 </html>
