@@ -25,19 +25,28 @@ html, body {
 section {
     display: inline-flex;
     justify-content: center;
-    margin-left: 40%;
+    margin-left: 36%;
     margin-top: 2%;
+    margin-bottom: 2%;
     gap: 30px;
     color: white;
 }
 
+.minus, .plus {
+    padding: 2px 5px;
+    
+}
 
+.passenger-selector span {
+    margin: 0 10px;
+   
 
+}
 .main-container {
     display: relative;
     height: 110vh;
     width: 100%;
-   margin-left: 10%;
+   margin-left: 9%;
     padding: 0;
     
 }
@@ -51,7 +60,7 @@ section {
     backdrop-filter: blur(5px); 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    height: 85%;
+    height: 95%;
     width: 80%;
     
 }
@@ -62,8 +71,9 @@ section {
    
 
 .form1, .form2{
-    padding-top: 1%;
+    padding-top: 7%;
     margin-left: 5%;
+    margin-bottom: 5%;
     margin-right: 10%;
    
 }
@@ -87,8 +97,7 @@ label {
     justify-content: center;
     gap: 50px;
     padding: 3%;
-    margin-top: -9%;
-   
+    margin-top: -2%;
    
    
    

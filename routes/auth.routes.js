@@ -26,12 +26,12 @@ router.get("/signup", (req, res, next) => {
 });
 
 
-router.get("/profile", (req, res, next) => {
-  const loggedUser = req.session.currentUser;
+// router.get("/profile", (req, res, next) => {
+//   const loggedUser = req.session.currentUser;
 
-  console.log("loggedUser:", loggedUser);
-    res.render("/profile", { loggedUser});
-});
+//   console.log("loggedUser:", loggedUser);
+//     res.render("/profile", { loggedUser});
+// });
 
 router.get("/booking", (req, res, next) => {
   res.render("auth/booking");
