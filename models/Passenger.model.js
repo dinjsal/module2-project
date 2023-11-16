@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
+const departureSchema = require("./Departure.model");
+const destinationSchema = require("./Destination.model");
 
 const passengerSchema = new Schema(
   {
@@ -21,20 +23,41 @@ const passengerSchema = new Schema(
 
     birthDate: {
       type: Date,
-      required: [true, "Please enter your birthdate"],
+      required: [true, "Please select your date of birth"],
     },
 
-    email: {
+    address: {
       type: String,
-      required: true,
-      unique: true,
-      match: [/^\S+@\S+\.\S+$/, "Please enter a valid email address"],
+      required: [true, "Please enter your address"],
+      // alphanumeric and special characters key in
+      match: [/^[A-Za-z0-9_@./#&+-]*$/],
     },
 
-    password: {
+    dateFrom: {
+      type: Date,
+      required: [true, "Please select your departure date"],
+    },
+
+    dateTo: {
+      type: Date,
+      required: [true, "Please select your return date"],
+    },
+
+    departure: {
+      type: String[departureSchema],
+      required: [true, "Please select your departure location"],
+    },
+
+    destination: {
+      type: String[destinationSchema],
+      required: [true, "Please select your departure location"],
+    },
+
+    passportNumber: {
       type: String,
-      required: [true, "Please enter a password"],
-      minlength: [2, "Your password must be at least 8 characters long"],
+      required: [true, "Please enter your passport number"],
+      // alphanumeric and special characters key in
+      match: [/^[A-Za-z0-9_@./#&+-]*$/],
     },
   },
   {

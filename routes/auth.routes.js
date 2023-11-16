@@ -5,10 +5,6 @@ const User = require("../models/User.model");
 const session = require("express-session");
 const { isLoggedOut } = require("../middleware/route.guard");
 
-
-
-
-
 // GET routes
 
 // isLoggedOut: auth user shouldn't see the profile page
@@ -24,7 +20,6 @@ router.get("/login", isLoggedOut, (req, res, next) => {
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
-
 
 // router.get("/profile", (req, res, next) => {
 //   const loggedUser = req.session.currentUser;
@@ -122,18 +117,17 @@ router.post("/login", async (req, res, next) => {
         user.password
       );
 
-    
       if (passwordCorrect) {
         // add the user to the session object
         req.session.currentUser = user;
 
         req.session.save((err) => {
           if (err) {
-              next(err);
-      } else {
-        console.log ("Session is saved", req.session);
-        res.redirect("/profile");
-      }
+            next(err);
+          } else {
+            console.log("Session is saved", req.session);
+            res.redirect("/profile");
+          }
         });
       } else {
         res.render("auth/login", {
@@ -146,13 +140,9 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-
-
 router.post("/passenger-info", (req, res, next) => {
   res.render("auth/booking-confirmation");
 });
-
-
 
 // logout route
 router.post("/logout", (req, res, next) => {
