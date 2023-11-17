@@ -6,12 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const departureSelect = document.getElementById('departureSelect');
     const destinationSelect = document.getElementById('destinationSelect');
 
-    // let travelValue = {
-    //     departure: undefined,
-    //     destination: undefined,
-    //     departureDate: undefined,
-    //     returnDate: undefined
-    // }
+    
 
 
     //converting the destination select options into a list
@@ -119,17 +114,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //to submit the booking form and render the passenger info page
+
 document.getElementById('submitBtn').addEventListener('click', function () {
+
     const departureValue = document.getElementById('departureSelect').value;
     const destinationValue = document.getElementById('destinationSelect').value;
+    const departureDateValue = document.getElementById('departureDate').value;
+    const returnDateValue = document.getElementById('returnDate').value;
+    
+    
 
-    localStorage.setItem('departureValue', JSON.stringify(departureValue));
-    localStorage.setItem('destinationValue', JSON.stringify(destinationValue));
-
-
+    localStorage.setItem('departureValue', departureValue);
+    localStorage.setItem('destinationValue', destinationValue);
+    localStorage.setItem('departureDateValue', departureDateValue);
+    localStorage.setItem('returnDateValue', returnDateValue);
+    
+    
     document.getElementById('bookingForm').submit();
 
-    // localStorage.setItem('travelValue', JSON.stringify(travelValue));
 
     //to redirect to the passenger info page
     window.location.href = '/auth/passenger-info';

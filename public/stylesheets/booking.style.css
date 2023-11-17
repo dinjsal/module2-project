@@ -28,7 +28,7 @@ h1{
 
 .images-container img{
     position:absolute;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 #earth {
@@ -57,7 +57,7 @@ h1{
 #depUsa {
     width: 470px;
     height: auto;
-    margin-left: 9%;
+  
 }
 
 #moon {
@@ -85,7 +85,7 @@ h1{
     top:100%;
     left:50%;
     transform: translate(-50%, -50%);
-    width: 1500px;
+    width: 1600px;
     height: 230px;
     border: 1px solid light;
     display: flex;
@@ -115,9 +115,9 @@ h1{
 
 
 
-#departureLabel, #depDate, #destLabel, #returnDate {
+#departureLabel, #depDate, #destLabel, #retDate{
     color: rgb(244, 238, 238);
-    margin-left: 33%;
+    margin-left: 35%;
     margin-top: 3%;
     font-size: 200%;
     text-transform:lowercase;
@@ -126,8 +126,8 @@ h1{
 }
 
 
-#depDate, #returnDate {
-    margin-left: -12%;
+#depDate, #retDate {
+    margin-left: -10%;
     margin-top: 6.5%;
     font-size: 120%;
     text-transform: uppercase;
@@ -138,8 +138,8 @@ h1{
     margin-left: 7%;
 }
 
-#returnDate {
-    margin-left: -13.5%;
+#returnDate, #DepartureDate {
+    margin-left: -19%;
 }
 
 #departureLabel:hover, 
@@ -166,18 +166,19 @@ h1{
     font-weight: 600;
     line-height: 1;
     padding: 10px 20px;
-    margin-top: 77%;
+    margin-top: 55%;
     margin-left: 77%;
     text-align: center;
     text-decoration: none #0d172a solid;
     transition: all .1s cubic-bezier(.4, 0, .2, 1);
     border-radius: 60px;
     text-transform: uppercase;
-}
+    z-index: 10;
+} 
 
 #backBtn {
     margin-left: 12%;
-    margin-top: 37%;
+    margin-top: 27%;
 }
 
 #submitBtn:hover, #backBtn:hover {

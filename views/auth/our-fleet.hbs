@@ -1,1 +1,54 @@
-<h1>Here is the list of all our fleets</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Fleet</title>
+    <link href="../stylesheets/our-fleet.style.css" rel="stylesheet" />
+  </head>
+  <body class="background-image">
+
+    {{! horizontal navbar for user profile dashboard }}
+    <nav>
+      <div class="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="/profile"
+          >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Destinations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="auth/crew">Crew</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="auth/our-fleet">Our Fleet</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="logoutLink"
+            href="#"
+            onclick="performLogout(event)"
+          >Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-line">
+
+      <h1>Our Fleet</h1>
+      <span class="line"></span>
+    </div>
+
+  </body>
+</html>
