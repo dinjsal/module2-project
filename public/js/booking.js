@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const departureSelect = document.getElementById('departureSelect');
     const destinationSelect = document.getElementById('destinationSelect');
 
+    // let travelValue = {
+    //     departure: undefined,
+    //     destination: undefined,
+    //     departureDate: undefined,
+    //     returnDate: undefined
+    // }
+
 
     //converting the destination select options into a list
     destLabel.addEventListener('click', () => {
@@ -111,11 +118,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//to submit the booking form
+//to submit the booking form and render the passenger info page
 document.getElementById('submitBtn').addEventListener('click', function () {
+    const departureValue = document.getElementById('departureSelect').value;
+    const destinationValue = document.getElementById('destinationSelect').value;
+
+    localStorage.setItem('departureValue', JSON.stringify(departureValue));
+    localStorage.setItem('destinationValue', JSON.stringify(destinationValue));
+
+
     document.getElementById('bookingForm').submit();
+
+    // localStorage.setItem('travelValue', JSON.stringify(travelValue));
+
     //to redirect to the passenger info page
-    window.location.href = 'http://localhost:3000/auth/passenger-info';
+    window.location.href = '/auth/passenger-info';
 
 });
 

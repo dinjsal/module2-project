@@ -1,4 +1,14 @@
 
+// const travelValue = localStorage.getItem("travelValue");
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const departure = localStorage.getItem("departure");
+    const destination = localStorage.getItem("destination");
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   let counter = 1; 
 
@@ -18,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 
-  //  to update the form display and apply styles
+  //  to update the form display and also apply styles
   function updateFormDisplay(counterValue) {
       document.getElementById('passengerNum').textContent = counterValue;
 

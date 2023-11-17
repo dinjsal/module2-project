@@ -80,14 +80,16 @@ h1{
     backdrop-filter: blur(2px); 
     box-shadow: 0 2px 4px rgba(253, 252, 252, 0.1);
     position: absolute;
-    margin: 33% auto;
-    top:2000%;
+    margin-top: 25%;
+    margin-right: 25%;
+    top:100%;
     left:50%;
     transform: translate(-50%, -50%);
-    width: 1250px;
+    width: 1500px;
     height: 230px;
     border: 1px solid light;
     display: flex;
+    z-index: 10;
     
 }
 
