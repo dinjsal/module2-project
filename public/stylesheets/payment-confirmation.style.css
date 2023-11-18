@@ -1,0 +1,22 @@
+.background-image {
+    background-image: url('../images/starry.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+    overflow-y: auto;
+  }
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+html, body {
+    width: 100%;
+}
