@@ -1,8 +1,5 @@
 const { Schema, model } = require("mongoose");
-const accommSchema = require('./Accomm.model');
-
-
-
+const accommSchema = require("./Accomm.model");
 
 // TODO: Please make sure you edit the model to whatever makes sense in this case
 const destinationSchema = new Schema(
@@ -28,11 +25,11 @@ const destinationSchema = new Schema(
       required: true,
     },
 
-    attractions: [{
-      type: String,
-      
-    }],
-
+    attractions: [
+      {
+        type: String,
+      },
+    ],
 
     imageUrl: {
       type: String,
@@ -48,9 +45,11 @@ const destinationSchema = new Schema(
       type: String,
     },
 
-    accommodation:[accommSchema]
+    accommodation: [accommSchema],
 
-
+    price: {
+      type: Number,
+    },
   },
   {
     timestamps: true,
@@ -59,4 +58,3 @@ const destinationSchema = new Schema(
 
 const Destination = model("Destination", destinationSchema);
 module.exports = Destination;
-
