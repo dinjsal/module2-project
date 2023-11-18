@@ -18,10 +18,12 @@
     </section>
     <div class="payment-top">
     <section class="form-container image1">
-        <img class="images" src="/images/creditCard.png" alt="creditCard">
+        <a href="/auth/payment">
+          <img class="images credit-card" src="/images/creditCard.png" alt="creditCard">
+        </a>
     </section>
     <section class="form-container">
-        <img class="images" src="/images/bitcoin.png" alt="creditCard">
+          <img class="images bitcoin" src="/images/bitcoin.png" alt="bitcoin">
     </section>
     </div>
     <div class="payment-info">
@@ -78,6 +80,36 @@
             </div>     
     </div>
     <a href="/auth/payment-confirmation" id="submitForm" class="btn confirmPayment" style="display:none">Confirm Payment</a>
+
+        <div class="payment-bitcoin" style="display:none">
+                <section>
+                    <h3>PAYMENT INFORMATION</h3>
+                </section>
+                <br>
+                <div class="form-group row">
+                        <label for="cardNumber" class="col-sm-5 col-form-label">No. of Bitcoins</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control bitcoinNum" id="inputPassword3" placeholder="1">
+                        </div>
+                    </div>    
+        </div>
+        <form action="/auth/payment">
+            <input type="button" id="submitForm" value="Complete Payment" class="btn completePaymentBit" style="display:none"></input>  
+        </form>
+        
+        <div class="payment-bitcoin2" style="display:none">
+        <section>
+            <h3>PAYMENT INFORMATION</h3>
+        </section>
+        <br>
+        <div class="form-group row">
+                <label for="cardName" class="col-sm-5 col-form-label">No. of Bitcoins</label>
+                <div class="col-sm-7">
+                <p class="form-control2 bitcoin-output"></p>
+                </div>
+        </div>
+        </div>
+    <a href="/auth/payment-confirmation" id="submitForm" class="btn confirmPaymentBit" style="display:none">Confirm Payment</a>
 </div>
 <script src="/js/payment.js"></script>
 </body>
