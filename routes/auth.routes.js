@@ -32,12 +32,21 @@ router.get("/booking", (req, res, next) => {
   res.render("auth/booking");
 });
 
+//User can Update and Delete the booking here + create a post route
+router.get("/booking-confirmation", (req, res, next) => {
+  res.render("auth/booking-confirmation");
+});
+
 router.get("/passenger-info", (req, res, next) => {
   res.render("auth/passenger-info");
 });
 
 router.get("/payment", (req, res, next) => {
   res.render("auth/payment");
+});
+
+router.get("/payment-confirmation", (req, res, next) => {
+  res.render("auth/payment-confirmation");
 });
 
 router.get("/crew", (req, res, next) => {

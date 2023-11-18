@@ -25,6 +25,10 @@ const departureSchema = new Schema(
     },
 
     destination: [destinationSchema],
+
+    price: {
+      type: Number,
+    },
   },
   {
     timestamps: true,

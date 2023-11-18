@@ -1,1 +1,116 @@
-hello payment!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="../stylesheets/payment.style.css" rel="stylesheet" />
+</head>
+<body class="background-image">
+    <div class="total">
+    <section>
+    <h3>PAYMENT OPTIONS</h3>
+    </section>
+    <div class="payment-top">
+    <section class="form-container image1">
+        <a href="/auth/payment">
+          <img class="images credit-card" src="/images/creditCard.png" alt="creditCard">
+        </a>
+    </section>
+    <section class="form-container">
+          <img class="images bitcoin" src="/images/bitcoin.png" alt="bitcoin">
+    </section>
+    </div>
+    <div class="payment-info">
+        <section>
+            <h3>PAYMENT INFORMATION</h3>
+        </section>
+        <br>
+        <section>
+            <div class="form-group row">
+                <label for="cardName" class="col-sm-5 col-form-label">Name on the Card</label>
+                <div class="col-sm-7">
+                <input type="text" class="form-control cardName" id="inputEmail3" placeholder="John Smith">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="cardNumber" class="col-sm-5 col-form-label">Credit Card No.</label>
+                <div class="col-sm-7">
+                <input type="text" class="form-control cardNumber" id="inputPassword3" placeholder="1234567890">
+                </div>
+            </div>    
+            <div class="form-group row">
+                <label for="expDate" class="col-sm-5 col-form-label">Expiration Date</label>
+                <div class="col-sm-7">
+                <input type="date" class="form-control expDate" id="inputPassword3">
+            </div>
+            </div>     
+        </section>     
+    </div>
+    <form action="/auth/payment">
+        <input type="button" id="submitForm" value="Complete Payment" class="btn completePayment"></input>  
+    </form> 
+    <div class="payment-display" style="display:none">
+        <section>
+            <h3>PAYMENT INFORMATION</h3>
+        </section>
+        <br>
+        <div class="form-group row">
+                <label for="cardName" class="col-sm-5 col-form-label">Name on the Card</label>
+                <div class="col-sm-7">
+                <p class="form-control2 cardNameOutput"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="cardNumber" class="col-sm-5 col-form-label">Credit Card No.</label>
+                <div class="col-sm-7">
+                <p class="form-control2 cardNumberOutput"></p>
+                </div>
+            </div>    
+            <div class="form-group row">
+                <label for="expDate" class="col-sm-5 col-form-label">Expiration Date</label>
+                <div class="col-sm-7">
+               <p class="form-control2 expDateOutput"></p>
+            </div>
+            </div>     
+    </div>
+    <a href="/auth/payment-confirmation" id="submitForm" class="btn confirmPayment" style="display:none">Confirm Payment</a>
+
+        <div class="payment-bitcoin" style="display:none">
+                <section>
+                    <h3>PAYMENT INFORMATION</h3>
+                </section>
+                <br>
+                <div class="form-group row">
+                        <label for="cardNumber" class="col-sm-5 col-form-label">No. of Bitcoins</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control bitcoinNum" id="inputPassword3" placeholder="1">
+                        </div>
+                    </div>    
+        </div>
+        <form action="/auth/payment">
+            <input type="button" id="submitForm" value="Complete Payment" class="btn completePaymentBit" style="display:none"></input>  
+        </form>
+        
+        <div class="payment-bitcoin2" style="display:none">
+        <section>
+            <h3>PAYMENT INFORMATION</h3>
+        </section>
+        <br>
+        <div class="form-group row">
+                <label for="cardName" class="col-sm-5 col-form-label">No. of Bitcoins</label>
+                <div class="col-sm-7">
+                <p class="form-control2 bitcoin-output"></p>
+                </div>
+        </div>
+        </div>
+    <a href="/auth/payment-confirmation" id="submitForm" class="btn confirmPaymentBit" style="display:none">Confirm Payment</a>
+</div>
+<script src="/js/payment.js"></script>
+</body>
+</html>
