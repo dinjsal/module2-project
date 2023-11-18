@@ -12,16 +12,60 @@
     <link href="../stylesheets/payment-confirmation.style.css" rel="stylesheet" />
 </head>
 <body class="background-image">
-    <div>
-        <section>
-            <img src="/public/images/" alt="">
+    <div class="heading"> 
+        <section class="top">
+            <p><h1>
+            <span>You've</span>
+            <span>just</span>
+            <span>purchased</span>
+            <span>a</span>
+            <span>once-in-a-lifetime</span>
+            <span>adventure!</span>
+            </h1></p>
         </section>
-        <p><h1>You've just purchased a once-in-a-lifetime adventure.</h1></p>
-        <p>Now the universe is at your fingertips.</p>
-        <p>We're extremely excited as you embark on this journey.</p>
-        <p>See you in [number of days] days! </p>
+        <hr>
+
+<div class="container">
+        <div class="row line-up1">
+    <div class="col video-container">
+      <section class="">
+          <video autoplay muted loop plays-inline>
+            <source src="/images/fingertips.mp4" type="video/mp4">
+          </video>
+        </section> 
+        <br>
+        <section>
+            <p>Now, the universe is at your fingertips.</p>
+            <p>We're extremely excited as you embark on this journey.</p>
+        </section>
     </div>
-    <a href="/profile" id="submitForm" class="btn">Confirm Payment</a>
+    <div class="col video-container line-up1">
+      <section>
+          <img src="/images/customerService.png" />
+        </section> 
+        <br>
+        <section>
+            <p>Call or text the D&D Space Help Desk at 1-800-DNDSPACE (1-800-363-77223) or visit <a href="#">clientservices@ddspace.com</a> for assistance.</p>
+        </section>
+    </div>
+    <div class="col video-container line-up1">
+      <section>
+          <video autoplay muted loop plays-inline>
+            <source src="/images/spaceshipLaunch.mp4" type="video/mp4">
+          </video>
+        </section> 
+        <br>
+        <section>
+            <p>For any concerns, don't hesitate to reach out to us.</p>
+            <p>Can't wait to see you in space!</p>
+        </section>
+    </div>
+  </div>
+</div>
+</div> 
+<div class="center">
+<a href="/profile" id="submitForm" class="btn">Back to Profile Page</a>
 {{!-- <script src="/js/payment-confirmation.js"></script> --}}
+</div>
 </body>
 </html>
