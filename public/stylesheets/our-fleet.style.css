@@ -123,16 +123,20 @@
 .fleet-container1{
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     margin: 5% 0;
 } 
 
 
 
-.fleet2 video, .fleet3 video, .fleet4 video, .fleet5 img{
+.fleet2 video, .fleet3 video, .fleet4 video,
+.fleet5 img{
     height: 500px;
     width: auto;
 
 }
+
+
 
 .fleet2 video:hover, .fleet3 video:hover, .fleet4 video:hover, .fleet5 img:hover{
     transform: scale(1.1);
@@ -147,54 +151,63 @@
     position:relative;
 }
 
-#about5{
-    margin-left: 30%;
-}
-
-#about4{
-    margin-left: 40%;
-}
 
 
-#info2 {
-    background-color: #ffffff78;
+
+#info2, #info3, #info4, #info5{
+    background-color: #0b0b0b78;
     border: 0 solid #e2e8f0;
-    color: #0d172a;
+    color: white;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 35%;
 }
 
-.fleet2{
+.fleet2, .fleet3, .fleet4, .fleet5{
     position: relative;
+   
+    
+}
+
+.fleet-5 img{
+    margin-right: 50%;
+
 }
 
 
-.info-fleet2{
+
+.info-fleet2, .info-fleet3, .info-fleet4, .info-fleet5{
     position: absolute;
     top: 0;
     left:0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    color: white; 
+    color:rgba(255, 255, 255, 0.441); 
     padding: 20px; 
     display: none; 
     z-index: 2;
 
 }
 
-.about-fleet2 {
+.info-fleet4{
+    width: 70%;
+    margin-left:20%;
+}
+
+
+.fleet2:hover .info-fleet2,
+.fleet3:hover .info-fleet3,
+.fleet4:hover .info-fleet4,
+.fleet5:hover .info-fleet5{
+    display: block;  
+}
+
+
+.about-fleet2, 
+.about-fleet3,
+.about-fleet4,
+.about-fleet5{
     z-index: 1; 
     cursor: pointer; 
 }
 
-
-
-.closeBtn2 {
-    color: white;
-    position: absolute;
-    top:10%;
-    right:20%;
-    cursor: pointer;
-    
-}
 
