@@ -30,29 +30,55 @@
         </section>
         <br>
         <section>
-            <form>
             <div class="form-group row">
                 <label for="cardName" class="col-sm-5 col-form-label">Name on the Card</label>
                 <div class="col-sm-7">
-                <input type="text" class="form-control" id="inputEmail3" placeholder="John Smith">
+                <input type="text" class="form-control cardName" id="inputEmail3" placeholder="John Smith">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="cardNumber" class="col-sm-5 col-form-label">Credit Card No.</label>
                 <div class="col-sm-7">
-                <input type="text" class="form-control" id="inputPassword3" placeholder="1234567890">
+                <input type="text" class="form-control cardNumber" id="inputPassword3" placeholder="1234567890">
                 </div>
             </div>    
             <div class="form-group row">
                 <label for="expDate" class="col-sm-5 col-form-label">Expiration Date</label>
                 <div class="col-sm-7">
-                <input type="date" class="form-control" id="inputPassword3">
-                </div>
-            </div>        
-            </form>
-        </section>
+                <input type="date" class="form-control expDate" id="inputPassword3">
+            </div>
+            </div>     
+        </section>     
     </div>
-    <a href="/auth/payment-confirmation" id="submitForm" class="btn">Complete Payment</a>     
+    <form action="/auth/payment">
+        <input type="button" id="submitForm" value="Complete Payment" class="btn completePayment"></input>  
+    </form> 
+    <div class="payment-display" style="display:none">
+        <section>
+            <h3>PAYMENT INFORMATION</h3>
+        </section>
+        <br>
+        <div class="form-group row">
+                <label for="cardName" class="col-sm-5 col-form-label">Name on the Card</label>
+                <div class="col-sm-7">
+                <p class="form-control2 cardNameOutput"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="cardNumber" class="col-sm-5 col-form-label">Credit Card No.</label>
+                <div class="col-sm-7">
+                <p class="form-control2 cardNumberOutput"></p>
+                </div>
+            </div>    
+            <div class="form-group row">
+                <label for="expDate" class="col-sm-5 col-form-label">Expiration Date</label>
+                <div class="col-sm-7">
+               <p class="form-control2 expDateOutput"></p>
+            </div>
+            </div>     
+    </div>
+    <a href="/auth/payment-confirmation" id="submitForm" class="btn confirmPayment" style="display:none">Confirm Payment</a>
 </div>
+<script src="/js/payment.js"></script>
 </body>
 </html>
