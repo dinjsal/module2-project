@@ -1,4 +1,3 @@
-
 .background-image {
     background-image: url('../images/starry.jpg');
     background-size: cover;
@@ -19,6 +18,11 @@ html, body {
     width: 100%;
 }
 
+h3 {
+    text-align: center;
+}
+
+
 .btn {
     background-color: rgba(255, 255, 255, 0.3);
     border: 0 solid #e2e8f0;
@@ -27,9 +31,9 @@ html, body {
     cursor: pointer;
     display: flex;
     justify-content: center;
-    width: auto;
-    margin: auto;
-    width: 200px;
+    height: auto;
+    margin: 30px;
+    width: 300px;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1.1rem;
@@ -38,7 +42,8 @@ html, body {
     text-align: center;
     text-decoration: none #0d172a solid;
     transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    border-radius: 60px ;
+    border-radius: 60px;
+    padding: 15px 10px;
 }
 
 .btn:hover {
@@ -48,7 +53,7 @@ html, body {
 }
 
 .images {
-    height: 80px;
+    height: 50px;
 }
 
 .total {
@@ -56,26 +61,60 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: white;
+    margin: 50px;
 }
 
 .payment-top {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 30px 10px;
+}
+
+.image1 {
+    margin-right: 20px;
 }
 
 .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
     gap: 50px;
     background-color:rgba(255, 255, 255, 0.095); 
     backdrop-filter: blur(5px); 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     height: 200px;
-    width: 80%;
-    
+    width: 200px;
+    line-height: 1.5px;
 }
+
+.payment-info {
+    background-color:rgba(255, 255, 255, 0.095); 
+    backdrop-filter: blur(5px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 150%;
+    width: 45%;
+    padding: 55px 60px;
+    margin:30px 0px;
+}
+
+form {
+    line-height: 1.5;
+}
+
+label {
+    color: white;
+    width: 200px;
+    display: inline-block;
+}
+
+.form-control {
+    color: black;
+    background-color: #f8fbffa4;
+    margin-bottom: 20px;
+}
+
