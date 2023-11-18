@@ -52,12 +52,18 @@ html, body {
     transform: scale(1.15);
 }
 
-video, img {
+video {
     border-width: 5px;
     border-color:rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    height: 93px;
-    width: auto;
+    height: 103px;
+}
+
+img {
+    border-width: 5px;
+    border-color:rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    height: 103px;
 }
 
 
@@ -175,4 +181,5 @@ span {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
