@@ -118,3 +118,62 @@
         transition: all 0.3s ease;
     }
 }
+
+
+.fleet-container1{
+    display: flex;
+    flex-direction: row;
+    margin: 5% 0;
+} 
+
+
+
+.fleet2 video, .fleet3 video, .fleet4 video, .fleet5 img{
+    height: 500px;
+    width: auto;
+
+}
+
+.fleet2 video:hover, .fleet3 video:hover, .fleet4 video:hover, .fleet5 img:hover{
+    transform: scale(1.1);
+    cursor: zoom-in;
+}
+
+#name2, #name3, #name4, #name5{
+    color:aliceblue;
+    font-size: 25px;
+    margin-left: 30%;
+    z-index: 10;
+    position:relative;
+}
+
+#about5{
+    margin-left: 30%;
+}
+
+#about4{
+    margin-left: 40%;
+}
+
+
+#info2 {
+    background-color: #ffffff78;
+    border: 0 solid #e2e8f0;
+    color: #0d172a;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.info-fleet2{
+    position: relative;
+}
+
+.closeBtn2 {
+    color: white;
+    position: absolute;
+    top:10%;
+    right:20%;
+    cursor: pointer;
+    
+}
+
