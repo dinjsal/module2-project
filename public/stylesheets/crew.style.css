@@ -8,10 +8,28 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
   }
   
 body, html {
     margin: 0;
     padding: 0;
 }
+
+.crew-photos {
+    height: 350px;
+}
+
+.logo {
+    height: 10px;
+}
+
+.carousel-photo {
+    height: 300px;
+}
+
+/* .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
