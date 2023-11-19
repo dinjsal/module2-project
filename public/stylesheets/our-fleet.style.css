@@ -151,6 +151,9 @@
     position:relative;
 }
 
+#name5 {
+margin-left: 7%;
+}
 
 
 
@@ -169,7 +172,7 @@
 }
 
 .fleet-5 img{
-    margin-right: 50%;
+    margin-right: 20%;
 
 }
 
