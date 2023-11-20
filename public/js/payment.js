@@ -58,3 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
   bitcoinPayment.addEventListener("click", payWithBitcoin);
   completePaymentBit.addEventListener("click", capturePaymentBitcoin);
 });
+
+
+// event listener for the confirm Payment button
+//to update flight status, to enable buttons from the profile page
+document.getElementById('submitForm').addEventListener('click', () => {
+  localStorage.setItem('flightBooked', 'true');
+
+});

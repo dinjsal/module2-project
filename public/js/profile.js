@@ -20,11 +20,12 @@ document.querySelector('.hamburger-menu').addEventListener('click', () =>{docume
 
 //disable vertical navbar buttons if no flight booked. 
 document.addEventListener('DOMContentLoaded', () => {
-  const flightBooked = false; 
+  const flightBooked = localStorage.getItem('flightBooked') === 'true';
 
-  if (!flightBooked) {
+  const updateUI = () => {
+
+    if (!flightBooked) {
       // disabling specific buttons
-    
       document.getElementById('trainStat').classList.add('disabled');
       document.getElementById('flightInfo').classList.add('disabled');
       document.getElementById('manageFlight').classList.add('disabled');
@@ -32,7 +33,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // disabling main dashboard
       document.querySelector('.main-grid').style.display = 'none';
+
+      //to display no flight booked message
+      document.getElementById('noFlightBooked').style.display = 'block';
+    } else {
+      // to enable back specific buttons
+      document.getElementById('trainStat').classList.remove('disabled');
+      document.getElementById('flightInfo').classList.remove('disabled');
+      document.getElementById('manageFlight').classList.remove('disabled');
+      document.getElementById('yourSuit').classList.remove('disabled');
+
+      // to enable main dashboard
+      document.querySelector('.main-grid').style.display = 'grid';
+
+      // to hide the 'noFlightBooked' div if there is a booked flight
+      document.getElementById('noFlightBooked').style.display = 'none';
   }
+
+  }
+
+  updateUI();
+
+
 });
 
 
