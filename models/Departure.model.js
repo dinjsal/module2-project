@@ -24,7 +24,9 @@ const departureSchema = new Schema(
       required: true,
     },
 
-    destination: [destinationSchema],
+    destination: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Destination'}],
 
     price: {
       type: Number,

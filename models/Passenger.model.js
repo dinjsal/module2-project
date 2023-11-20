@@ -8,54 +8,51 @@ const passengerSchema = new Schema(
   {
     firstName: {
       type: String,
-      required: [true, "Please enter your first name"],
+      required: true,
     },
 
-    middleName: {
-      type: String,
-      required: [true, "Please enter your middle name"],
-    },
 
     lastName: {
       type: String,
-      required: [true, "Please enter your last name"],
+      required: true,
     },
 
     birthDate: {
       type: Date,
-      required: [true, "Please select your date of birth"],
+      required: true,
     },
 
     address: {
       type: String,
-      required: [true, "Please enter your address"],
+      required: true,
       // alphanumeric and special characters key in
       match: [/^[A-Za-z0-9_@./#&+-]*$/],
     },
 
-    dateFrom: {
-      type: Date,
-      required: [true, "Please select your departure date"],
-    },
-
-    dateTo: {
-      type: Date,
-      required: [true, "Please select your return date"],
-    },
-
     departure: {
-      type: String[departureSchema],
-      required: [true, "Please select your departure location"],
+      type: String,
+      required: true,
     },
 
-    destination: {
-      type: String[destinationSchema],
-      required: [true, "Please select your departure location"],
+    destination: [{
+        type: Schema.Types.ObjectId,
+        ref: 'destinationSchema'
+      }],
+
+
+    departureDate: {
+      type: Date,
+      required: true,
+    },
+
+    returnDate: {
+      type: Date,
+      required: true,
     },
 
     passportNumber: {
       type: String,
-      required: [true, "Please enter your passport number"],
+      required: true,
       // alphanumeric and special characters key in
       match: [/^[A-Za-z0-9_@./#&+-]*$/],
     },

@@ -2,6 +2,7 @@ const router = require("express").Router();
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const User = require("../models/User.model");
+const Passenger = require("../models/Passenger.model");
 const session = require("express-session");
 const { isLoggedOut } = require("../middleware/route.guard");
 
@@ -41,13 +42,21 @@ router.get("/passenger-info", (req, res, next) => {
   res.render("auth/passenger-info");
 });
 
+
 router.get("/payment", (req, res, next) => {
   res.render("auth/payment");
+
+
 });
+
+
 
 router.get("/payment-confirmation", (req, res, next) => {
   res.render("auth/payment-confirmation");
 });
+
+
+
 
 router.get("/crew", (req, res, next) => {
   res.render("auth/crew");
@@ -171,4 +180,37 @@ router.post("/logout", (req, res, next) => {
   });
 });
 
+
+
+//To create a new passenger
+router.post("/passenger-info", async (req, res, next) => {
+  try {
+    const newPassenger = new Passenger({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      birthDate: req.body.birthDate,
+      address: req.body.address,
+      departure: req.body.departure,
+      destination: req.body.destination,
+      departureDate: req.body.departureDate,
+      returnDate: req.body.returnDate,
+      passportNumber: req.body.passportNumber,
+    });
+
+    await newPassenger.save();
+    res.redirect('auth/booking-confirmation');
+  } catch (err) {
+    console.error("Error saving new passenger:", err);
+  }
+  
+
+});
+
+
+
+
+
 module.exports = router;
+
+
+

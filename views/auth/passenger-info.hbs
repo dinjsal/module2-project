@@ -29,7 +29,7 @@
 
       <div class="form-container">
         <div id="form1" class="form1">
-          <form>
+          <form id="formA" action="/auth/passenger-info" method="post">
             <div class="form-row">
               <div class="col-12">
                 <label for="firstName">First Name</label>
@@ -102,7 +102,7 @@
         </div>
 
         <div id="form2" class="form2">
-          <form>
+          <form id="formB" action="/auth/passenger-info" method="post">
             <div class="form-row">
               <div class="col-12">
                 <label for="firstName">First Name</label>
@@ -167,6 +167,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Passport No."
+                  required
                 />
               </div>
             </div>
@@ -178,7 +179,8 @@
     </div>
     <div class="buttons">
       <a href="/auth/booking" id="backBtn"> Back </a>
-      <a href="/auth/booking-confirmation" id="submitForm">Confirm Booking</a>
+      <a href="/auth/booking-confirmation" type="submit" id="submitForm">Confirm
+        Booking</a>
       <a href="" id="cancelBooking">Cancel</a>
     </div>
 

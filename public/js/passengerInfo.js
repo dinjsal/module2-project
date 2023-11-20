@@ -23,6 +23,42 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("returnDate").value = returnDate;
     }
 
+
+    //to check if the form is completed
+    function isFormCompleted(formId) {
+        const form = document.getElementById(formId);
+        let isCompleted = true;
+
+        form.querySelectorAll('input').forEach(input => {
+            if (input.type !== 'submit' && input.value.trim() !== '') {
+                isCompleted = false;
+            }
+        });
+
+        return isCompleted;
+    }
+
+
+    //action for submit button
+    document.getElementById('submitForm').addEventListener('click', function() {
+        
+        // to check if any of the forms is completed
+        if (isFormCompleted('formA')) {
+            document.getElementById('formA').submit();
+            window.location.href = 'auth/booking-confirmation'; 
+            
+            // to redirect after submission
+        } else if (isFormCompleted('formB')) {
+            document.getElementById('formB').submit();
+            
+            
+        } else {
+            alert('Please complete the form before confirming the booking.');
+        }
+    });
+
+
+
 });
 
 
@@ -77,7 +113,25 @@ document.addEventListener('DOMContentLoaded', function() {
         form1.style.marginLeft = '25%';
         form1.style.marginRight = '25%';
     }
+
+
+    
+
+//action for confirm button
+    document.getElementById('submitForm').addEventListener('click', function() {
+        if (isFormCompleted('formA')) {
+            document.getElementById('formA').submit();
+        } else if (isFormCompleted('formB')) {
+            document.getElementById('formB').submit();
+        } else {
+            alert('Please complete at least one form before confirming the booking.');
+        }
+    });
+
   });
+
+  
+
   
 
 
