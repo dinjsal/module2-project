@@ -8,6 +8,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
   }
   
 body, html {
@@ -21,7 +22,6 @@ body, html {
 
 h3 {
     color: white;
-
 }
 
 .nav {
@@ -37,6 +37,66 @@ h3 {
 .nav li:hover {
     color: #182eb8;
     transform: scale(1.15);
+}
+
+.pilot1:hover {
+    color: #182eb8;
+    transform: scale(1.15);
+}
+
+.pilot2:hover {
+    color: #182eb8;
+    transform: scale(1.15);
+}
+
+.pilot3:hover {
+    color: #182eb8;
+    transform: scale(1.15);
+}
+
+#demo {
+    margin-left: 50px;
+    margin-right: 50px; 
+}
+
+.carousel-caption {
+    background-color:rgba(145, 139, 139, 0.095); 
+    backdrop-filter: blur(3px); 
+    border-radius: 10px;
+    padding: 20px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption > p {
+    font-size: 15px;
+}
+
+.total {
+    padding-bottom: 50px;
+}
+
+.carousel-photo { 
+    margin-left: 40%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    height: 450px;
+    width: 320px;
+}
+
+.carousel-photo1 {
+    margin-left: 40%;
+    height: 450px;
+    width: 320px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.carousel-photo2 {
+    margin-left: 40%;
+    height: 450px;
+    width: 320px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
 
 .adjust-hr {
@@ -74,9 +134,36 @@ h3 {
     }
   }
 
-/* .carousel-item {
+
+.button {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 0 solid #e2e8f0;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
     display: flex;
     justify-content: center;
+    height: auto;
+    margin: 30px;
+    width: 300px;
     align-items: center;
-    flex-direction: column;
-} */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    /* font-weight: 600; */
+    line-height: 1;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    border-radius: 60px;
+    padding: 15px 10px;
+}
+
+.button:hover {
+    background-color:#182eb8;
+    color: #fff;
+    transform: scale(1.15);
+}
+
+.btn {
+    font-size: 12px;
+}
