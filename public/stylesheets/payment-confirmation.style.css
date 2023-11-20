@@ -91,6 +91,10 @@ img:hover {
       transform: scale(1);
     }
   }
+
+  hr {
+    color: white;
+  }
   
 span {
     display: inline-block;
