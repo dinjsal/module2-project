@@ -24,20 +24,19 @@
           </div>
             <form action="/auth/signup" method="POST">
             <label for="firstName">FIRST NAME</label>
-              <input class="form-selection form-selection1" autofocus type="text" name="firstName" placeholder="Letters only" required />
+              <input class="form-selection form-selection1" autofocus type="text" name="firstName" placeholder="John" required />
               <br>
               <label for="lastName">LAST NAME</label>
-              <input class="form-selection" type="text" name="lastName" placeholder="Letters only" required />
+              <input class="form-selection" type="text" name="lastName" placeholder="Smith" required />
               <br>
               <label for="birthDate">DATE OF BIRTH</label>
               <input class="form-selection" type="date" name="birthDate" required />
               <br>
               <label for="email">EMAIL</label>
-              <input class="form-selection" type="email" name="email" placeholder="Your email" required />
+              <input class="form-selection" type="email" name="email" placeholder="user@email.com" required />
               <br>
               <label for="password">PASSWORD</label>
-              {{!-- 2 for now, will have to be changed to 8 * later on --}}
-              <input class="form-selection" type="password" name="password" placeholder="**" required />
+              <input class="form-selection" type="password" name="password" placeholder="********" required />
               <br>
               <br>
               <button type="submit" class="btn">Submit</button> 
