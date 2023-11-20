@@ -77,9 +77,13 @@ h3 {
 .carousel-photo { 
     margin-left: 40%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-    border-radius: 8px;
+    border-radius: 10px;
     height: 450px;
     width: 350px; 
+    border-width: 5px;
+    border-color:rgba(66, 64, 64, 0.095);
+    backdrop-filter: blur(3px);
+    box-shadow: 8px 8px 6px 6px rgba(82, 79, 79, 0.2)
 }
 
 .adjust-hr {

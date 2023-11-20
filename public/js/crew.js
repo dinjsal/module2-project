@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showPilot1() {
     if (description1.style.display === "none") {
-      description1.style.display === "block";
+      description1.style.display = "block";
       demo.style.display = "none";
     }
   }
