@@ -72,11 +72,11 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin: 30px 10px;
+    margin: 30px 50px;
 }
 
 .image1 {
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .form-container {
@@ -91,6 +91,7 @@ html, body {
     height: 200px;
     width: 200px;
     line-height: 1.5px;
+    box-shadow: 8px 8px 6px 6px rgba(82, 79, 79, 0.2)
 }
 
 .payment-info {
@@ -106,6 +107,7 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 8px 8px 6px 6px rgba(82, 79, 79, 0.2)
 }
 
 form {
@@ -122,6 +124,8 @@ label {
     color: black;
     background-color: #f8fbffa4;
     margin-bottom: 20px;
+    border-width: 2px;
+    border-color:rgba(236, 230, 230, 0.981);
 }
 
 .payment-display {
@@ -137,6 +141,9 @@ label {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 8px 8px 6px 6px rgba(82, 79, 79, 0.2);
+    border-width: 2px;
+    border-color:rgba(236, 230, 230, 0.981);
 }
 
 .form-control2 {
@@ -148,8 +155,8 @@ label {
     line-height: 2;
     border-width: 5px;
     min-height: 50px;
-    border-color: rgba(236, 230, 230, 0.981); ;
-    
+    border-color: rgba(236, 230, 230, 0.981);
+    border-width: 2px;    
 }
 
 .payment-bitcoin {
@@ -165,6 +172,9 @@ label {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 8px 8px 6px 6px rgba(82, 79, 79, 0.2);
+    border-width: 2px;
+    border-color:rgba(236, 230, 230, 0.981);
 }
 
 .payment-bitcoin2 {
@@ -180,5 +190,8 @@ label {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 8px 8px 6px 6px rgba(82, 79, 79, 0.2);
+    border-width: 2px;
+    border-color:rgba(236, 230, 230, 0.981);
 }
 
