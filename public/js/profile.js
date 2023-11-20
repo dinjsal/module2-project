@@ -58,3 +58,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.getElementById('yourSuit').addEventListener('click', function() {
+  // to toggle the main grid display
+  const mainGrid = document.querySelector('.main-grid');
+  if (mainGrid.style.display !== 'none') {
+    mainGrid.style.display = 'none';
+  } else {
+    mainGrid.style.display = 'grid';
+  }
+  
+  // to toggle the suit container display
+  const suitContainer = document.querySelector('.suit-container');
+  if (suitContainer.style.display === 'none') {
+    suitContainer.style.display = 'flex'; 
+  } else {
+    suitContainer.style.display = 'none';
+  }
+});

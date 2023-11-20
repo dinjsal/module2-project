@@ -209,10 +209,11 @@ body, html {
   
 h1 {
     margin: 0;
-    font-size: 1.15em;
+    font-size: 0.65em;
     color: white;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-align: center;
   }
 
 #usersName {
@@ -241,15 +242,7 @@ a {
     }
 }
   
-.time {
-    font-size: 1.8em;
-    font-family: mono;
-    margin-top: -30px;
-    margin-bottom: 25px;
-    color: pale;
-    background: white;
-    padding: 7px;
-}
+
   
 .main-grid {
     margin-top: 1%;
@@ -260,25 +253,7 @@ a {
     grid-gap: 10px;
 }
   
-.item {
-    border: 1px solid light;
-}
-  
-  
-.one {
-    grid-area: one;
-    grid-column: 1 / 2;
-    background: pale;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    p {
-      margin-bottom: -40px
-    }
-}
-  
- 
+
   
 .fill {
     background-color: pale;
@@ -328,3 +303,103 @@ a {
     transform: scale(1.15);
 }
 
+
+.flight-path, .distance, .travelTime, .timer  {
+    color:whitesmoke;
+}
+
+.destination-grid h1,
+.distance-grid h2,
+.travelTime-grid h2,
+.timer-grid h2 {
+  margin: 0; 
+}
+
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    margin-left: 110px;
+    width: 90%;
+
+}
+
+.destination-grid,
+.distance-grid,
+.travelTime-grid,
+.timer-grid {
+  background: #2c3e5096;
+  color: #fff; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 90%;
+}
+
+
+
+
+/* Your Suit Tab */
+
+.suit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+  }
+  
+.suit-image {
+    flex: 1;
+    text-align: center;
+    
+  }
+  
+.suit-image img {
+    max-width: 100%;
+    height: auto;
+    
+  }
+  
+.suit-details {
+    flex: 1;
+    padding: 0 20px;
+    
+  }
+  
+.suit-details h3 {
+    margin-bottom: 10px;
+    
+  }
+  
+.suit-details ul {
+    list-style: none;
+    padding: 0;
+    
+  }
+  
+.suit-details li {
+    margin-bottom: 5px;
+    color: whitesmoke;
+    text-align: center;
+    
+  }
+
+  h3 {
+    color: whitesmoke;
+    text-align: center;
+  }
+  
+
+
+@media (max-width: 768px) {
+    #dashboard-container {
+      flex-direction: column;
+    }
+    .main-grid {
+      width: 90%;
+      margin-left: 0;
+    }
+  }
