@@ -19,13 +19,60 @@ body, html {
     height: 350px;
 }
 
-.logo {
-    height: 10px;
+h3 {
+    color: white;
+
 }
 
-.carousel-photo {
-    height: 300px;
+.nav {
+    margin: 50px 50px 20px;
+    height: 10px;
+    position: relative;
 }
+
+.nav a {
+    color: white;
+}
+
+.nav li:hover {
+    color: #182eb8;
+    transform: scale(1.15);
+}
+
+.adjust-hr {
+    color: white;
+    padding-bottom: 40px;
+}
+
+.carousel-slide {
+    height: 500px;
+    width: auto;
+}
+
+.meet-our-crew {
+    margin: 0px 50px 30px;
+}
+
+.line-up1 {
+    animation: 5s anim-lineUp ease-out;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
 
 /* .carousel-item {
     display: flex;
