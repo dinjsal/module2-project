@@ -75,7 +75,7 @@
         </div>
 
         <div class="distance-grid">
-          <h1 class="grid2" class="distance">Kilometers Travel</h2>
+          <h1 class="grid2" class="distance">Kilometers Travel</h1>
         </div>
 
         <div class="travelTime-grid">
@@ -87,6 +87,7 @@
           </div>
       </div>
 
+          {{!-- Your Suit --}}
       <div class="suit-container" style="display: none;">
         
         <div class="suit-image" id="frontSuit">
@@ -107,18 +108,50 @@
           <img src="../images/suitBack.png" alt="Back side of the space suit" />
         </div>
       </div>
-    </div>
-  </div>
+    
+      {{!-- Training Status --}}
+      <div class="training-container">
+        <div class="tabs">
+          <div class="tab">
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+             <label for="tab-1" class="tab-label">Day 01</label>
+             <div class="tab-content">
+               <h4>Orientation and Spacecraft familiarization</h4>
+               <p>Layout and functionality of the spacecraft.</p>
+               <p>Location and use of safety equipment.</p>
+               <p>Communication protocols.</p>
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
+              <label for="tab-2" class="tab-label"> Day 02</label>
+              <div class="tab-content">
+                <h4>Microgravity Adaptation</h4>
+                <p>Adaptation to microgravity, including balance and movement.</p>
+                <p>Exercise regimens to strengthen muscles and cardiovascular fitness for withstanding G-forces during launch and re-entry</p>
+                <p>Parabolic flight training to experience short periods of weightlessness</p>
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" name="css-tabs" id="tab-3" class="tab-switch">
+               <label for="tab-3" class="tab-label">Day 03</label>
+               <div class="tab-content">
+                <h4>Spacewalk: Extravehicular Activity (EVA) Training</h4>
+                <p>Use of spacewalk suits and life support systems</p>
+                <p>Maneuvering with handrails and safety tethers.</p>
+                <p>Safe ingress and egress practices, especially in suits and with life support packs.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
         
-</div>
+      </div>
+    </div>
 
+    <script src="/js/profile.js"></script>
   
-  
-<script src="/js/profile.js"></script>
-<form id="logout" action="/auth/logout" method="post" style="display:none">
-<input type="submit" value="Logout"></input>
-</form>
-
+  <form id="logout" action="/auth/logout" method="post" style="display:none"><input type="submit" value="Logout"></input></form>
 </body>
 
 </html>

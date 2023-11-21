@@ -94,18 +94,11 @@ router.post("/signup", async (req, res, next) => {
 
       //create new user
       const newUser = new User({
-        firstName: {
-          type: String,
-          required: [true, "Please enter your first name"],
-        },
-
-        lastName: {
-          type: String,
-          required: [true, "Please enter your last name"],
-        },
+        firstName,
+        lastName,
         birthDate,
         email,
-        password: hashedPassword,
+        password: hashedPassword
       });
 
       //save this new user
@@ -162,9 +155,12 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-router.post("/passenger-info", (req, res, next) => {
-  res.render("auth/booking-confirmation");
-});
+// router.post("/passenger-info", (req, res, next) => {
+//   res.render("auth/booking-confirmation");
+// });
+
+
+
 
 // logout route
 router.post("/logout", (req, res, next) => {
@@ -185,26 +181,16 @@ router.post("/logout", (req, res, next) => {
 //To create a new passenger
 router.post("/passenger-info", async (req, res, next) => {
   try {
-    const newPassenger = new Passenger({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      birthDate: req.body.birthDate,
-      address: req.body.address,
-      departure: req.body.departure,
-      destination: req.body.destination,
-      departureDate: req.body.departureDate,
-      returnDate: req.body.returnDate,
-      passportNumber: req.body.passportNumber,
-    });
-
+    const newPassenger = new Passenger(req.body);
     await newPassenger.save();
     res.redirect('auth/booking-confirmation');
+
   } catch (err) {
     console.error("Error saving new passenger:", err);
+    
   }
-  
-
 });
+
 
 
 

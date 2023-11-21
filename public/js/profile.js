@@ -6,6 +6,16 @@ const makeActive = (element) => {
   };
 
 
+
+
+// Add event listeners to the vertical menu items
+document.querySelectorAll('.vertical-menu li').forEach(item => {
+  item.addEventListener('click', function() {
+    makeActive(this);
+  });
+});
+
+
   //to handle logout event from the navigation bar
   function performLogout(e){
     e.preventDefault();
@@ -58,20 +68,43 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.getElementById('yourSuit').addEventListener('click', function() {
-  // to toggle the main grid display
-  const mainGrid = document.querySelector('.main-grid');
-  if (mainGrid.style.display !== 'none') {
-    mainGrid.style.display = 'none';
-  } else {
-    mainGrid.style.display = 'grid';
-  }
+// // For suit display
+// document.getElementById('yourSuit').addEventListener('click', function() {
+//   // to toggle the main grid display
+//   const mainGrid = document.querySelector('.main-grid');
+//   if (mainGrid.style.display !== 'none') {
+//     mainGrid.style.display = 'none';
+//   } else {
+//     mainGrid.style.display = 'grid';
+//   }
   
-  // to toggle the suit container display
-  const suitContainer = document.querySelector('.suit-container');
-  if (suitContainer.style.display === 'none') {
-    suitContainer.style.display = 'flex'; 
-  } else {
-    suitContainer.style.display = 'none';
-  }
-});
+//   // to toggle the suit container display
+//   const suitContainer = document.querySelector('.suit-container');
+//   if (suitContainer.style.display === 'none') {
+//     suitContainer.style.display = 'flex'; 
+//   } else {
+//     suitContainer.style.display = 'none';
+//   }
+// });
+
+
+
+// // For training display
+// document.addEventListener('DOMContentLoaded', () => {
+//   // Select the Training Status button
+//   const trainingStatusButton = document.getElementById('trainStat');
+  
+//   // Function to toggle the training container display
+//   const toggleTrainingContainer = () => {
+//     const trainingContainer = document.querySelector('.training-container');
+//     if (trainingContainer.style.display === 'none' || trainingContainer.style.display === '') {
+//       trainingContainer.style.display = 'block'; // Show the training container
+//     } else {
+//       trainingContainer.style.display = 'none'; // Hide the training container
+//     }
+//   };
+
+//   // Add click event listener to the Training Status button
+//   trainingStatusButton.addEventListener('click', toggleTrainingContainer);
+// });
+

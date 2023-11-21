@@ -335,63 +335,213 @@ a {
   padding: 20px; 
   border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  width: 90%;
+  width: 95%;
 }
 
 
 
 
-/* Your Suit Tab */
+/* the Suit Tab */
 
 .suit-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
     
-  }
+}
   
 .suit-image {
     flex: 1;
     text-align: center;
     
-  }
+}
   
 .suit-image img {
     max-width: 100%;
     height: auto;
+    margin-left: 50px;
     
-  }
+}
+
+  #backSuit{
+    margin-right: 90px;
+}
   
 .suit-details {
     flex: 1;
-    padding: 0 20px;
+    z-index: 100;
+    margin-left: 10%;
     
-  }
+}
   
 .suit-details h3 {
     margin-bottom: 10px;
     
-  }
+}
   
 .suit-details ul {
     list-style: none;
     padding: 0;
     
-  }
+}
   
 .suit-details li {
     margin-bottom: 5px;
     color: whitesmoke;
     text-align: center;
     
-  }
+}
 
-  h3 {
+h3 {
     color: whitesmoke;
     text-align: center;
+}
+
+
+/* training status */
+
+.training-container {
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .tabs {
+    position: relative;
+    margin: 3rem 0;
+    background: #2c3e5096;
+    height: 14.75rem;
+  }
+  .tabs::before,
+  .tabs::after {
+    content: "";
+    display: table;
+  }
+  .tabs::after {
+    clear: both;
+  }
+  .tab {
+    float: left;
+  }
+  .tab-switch {
+    display: none;
+  }
+  .tab-label {
+    position: relative;
+    display: block;
+    line-height: 2.75em;
+    height: 3em;
+    padding: 0 1.618em;
+    background: #2c3e5096;
+    border-right: 0.125rem solid #16a085;
+    color: #fff;
+    cursor: pointer;
+    top: 0;
+    transition: all 0.25s;
+  }
+  .tab-label:hover {
+    top: -0.25rem;
+    transition: top 0.25s;
+  }
+  .tab-content {
+    height: 19rem;
+    position: absolute;
+    z-index: 1;
+    top: 2.75em;
+    left: 0;
+    padding: 1.618rem;
+    background: #fff;
+    color: #2c3e50;
+    border-bottom: 0.25rem solid #bdc3c7;
+    opacity: 0;
+    transition: all 0.35s;
+  }
+  .tab-switch:checked + .tab-label {
+    background: #fff;
+    color: #2c3e50;
+    border-bottom: 0;
+    border-right: 0.125rem solid #fff;
+    transition: all 0.35s;
+    z-index: 1;
+    top: -0.0625rem;
+  }
+  .tab-switch:checked + label + .tab-content {
+    z-index: 2;
+    opacity: 1;
+    transition: all 0.35s;
+  }
+
+
+
+
+/* .training-section {
+    display: none; 
+    margin-top: 20px;
   }
   
+.training-tabs button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    
+}
+  
+.training-tabs button:hover {
+    background-color: #555; 
+}
+  
+.training-info {
+    display: none; 
+}
+  
+.training-info h2 {
+    color:#e2e8f0
+    
+}
+  
+.training-info p {
+   color:#fff
+}
+  
+.training-completion {
+   color:#fff
+}
+  
+.switch {
+   color: #182eb8;
+}
+  
+.slider {
+   color: aliceblue;
+}
+  
+.completion-status {
+    margin-top: 20px;
+    
+}
+  
+.completion-status span {
+    font-weight: bold;
+}
+  
+  
+
+
+
+
+
+
+
+
+
+
+ */
+
+
+
 
 
 @media (max-width: 768px) {
@@ -402,4 +552,4 @@ a {
       width: 90%;
       margin-left: 0;
     }
-  }
+}

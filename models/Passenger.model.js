@@ -25,8 +25,6 @@ const passengerSchema = new Schema(
     address: {
       type: String,
       required: true,
-      // alphanumeric and special characters key in
-      match: [/^[A-Za-z0-9_@./#&+-]*$/],
     },
 
     departure: {
@@ -34,10 +32,10 @@ const passengerSchema = new Schema(
       required: true,
     },
 
-    destination: [{
-        type: Schema.Types.ObjectId,
-        ref: 'destinationSchema'
-      }],
+    destination: {
+        type: String,
+        required: true,
+    },
 
 
     departureDate: {
@@ -53,9 +51,9 @@ const passengerSchema = new Schema(
     passportNumber: {
       type: String,
       required: true,
-      // alphanumeric and special characters key in
-      match: [/^[A-Za-z0-9_@./#&+-]*$/],
     },
+
+    
   },
   {
     timestamps: true,

@@ -35,6 +35,7 @@
                 <label for="firstName">First Name</label>
                 <input
                   type="text"
+                  name="firstName"
                   class="form-control"
                   id="firstName"
                   placeholder="John"
@@ -44,6 +45,7 @@
                 <label for="lastName">Last Name</label>
                 <input
                   type="text"
+                  name="lastName"
                   class="form-control"
                   id="lastName"
                   placeholder="Smith"
@@ -51,12 +53,18 @@
               </div>
               <div class="col-12">
                 <label for="birthDate">Birthdate</label>
-                <input type="date" class="form-control" id="birthDate" />
+                <input
+                  type="date"
+                  class="form-control"
+                  id="birthDate"
+                  name="birthDate"
+                />
               </div>
               <div class="col-12">
                 <label for="address">Address</label>
                 <input
                   type="text"
+                  name="address"
                   class="form-control"
                   id="address"
                   placeholder="1234 Main St"
@@ -66,6 +74,7 @@
                 <label for="departure">Departure</label>
                 <input
                   type="text"
+                  name="departure"
                   class="form-control"
                   id="departure"
                   placeholder="Departure location"
@@ -75,6 +84,7 @@
                 <label for="departure">Destination</label>
                 <input
                   type="text"
+                  name="destination"
                   class="form-control"
                   id="destination"
                   placeholder="Destination"
@@ -82,16 +92,27 @@
               </div>
               <div class="col-6">
                 <label for="departureDate">Departure Date</label>
-                <input type="date" class="form-control" id="departureDate" />
+                <input
+                  type="date"
+                  class="form-control"
+                  name="departureDate"
+                  id="departureDate"
+                />
               </div>
               <div class="col-6">
                 <label for="returnDate">Return Date</label>
-                <input type="date" class="form-control" id="returnDate" />
+                <input
+                  type="date"
+                  class="form-control"
+                  id="returnDate"
+                  name="returnDate"
+                />
               </div>
               <div class="col-12">
                 <label for="passport">Passport No.</label>
                 <input
                   type="text"
+                  name="passportNumber"
                   class="form-control"
                   id="passport"
                   placeholder="Passport No."
@@ -101,7 +122,7 @@
           </form>
         </div>
 
-        <div id="form2" class="form2">
+        {{!-- <div id="form2" class="form2">
           <form id="formB" action="/auth/passenger-info" method="post">
             <div class="form-row">
               <div class="col-12">
@@ -170,6 +191,15 @@
                   required
                 />
               </div>
+            </div> --}}
+            <div class="buttons">
+              <a href="/auth/booking" id="backBtn"> Back </a>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="submitForm"
+              >Confirm Booking</button>
+              <a href="" id="cancelBooking">Cancel</a>
             </div>
           </form>
         </div>
@@ -177,14 +207,8 @@
       </div>
 
     </div>
-    <div class="buttons">
-      <a href="/auth/booking" id="backBtn"> Back </a>
-      <a href="/auth/booking-confirmation" type="submit" id="submitForm">Confirm
-        Booking</a>
-      <a href="" id="cancelBooking">Cancel</a>
-    </div>
 
-    {{!-- <div class="heading">
+    <div class="heading">
         <section>
           <h3>Number of Passengers</h3>
         </section>
@@ -445,7 +469,7 @@
           </div>
         </div>
 
-      </div> --}}
+      </div>
 
     {{! </section> }}
     <script src="/js/passengerInfo.js"></script>

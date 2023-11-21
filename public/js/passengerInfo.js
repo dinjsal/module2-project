@@ -28,15 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
     function isFormCompleted(formId) {
         const form = document.getElementById(formId);
         let isCompleted = true;
-
+    
         form.querySelectorAll('input').forEach(input => {
-            if (input.type !== 'submit' && input.value.trim() !== '') {
+            
+            if (input.type !== 'submit' && input.value.trim() === '') {
                 isCompleted = false;
             }
         });
-
+    
         return isCompleted;
     }
+    
+    
 
 
     //action for submit button
@@ -45,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // to check if any of the forms is completed
         if (isFormCompleted('formA')) {
             document.getElementById('formA').submit();
-            window.location.href = 'auth/booking-confirmation'; 
             
             // to redirect after submission
         } else if (isFormCompleted('formB')) {
