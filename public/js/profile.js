@@ -3,17 +3,15 @@ const makeActive = (element) => {
     document.querySelectorAll('.vertical-menu li').forEach(item => {item.classList.remove('active');
   });
   element.classList.add('active');
+
+  //to hide the displayed container when a new nav item is clicked
+  document.querySelector('.main-grid').style.display = 'none';
+  document.querySelector('.training-container').style.display = 'none';
+  document.querySelector('.suit-container').style.display = 'none';
   };
 
 
 
-
-// Add event listeners to the vertical menu items
-document.querySelectorAll('.vertical-menu li').forEach(item => {
-  item.addEventListener('click', function() {
-    makeActive(this);
-  });
-});
 
 
   //to handle logout event from the navigation bar
@@ -40,9 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('flightInfo').classList.add('disabled');
       document.getElementById('manageFlight').classList.add('disabled');
       document.getElementById('yourSuit').classList.add('disabled');
-
+      
+      
       // disabling main dashboard
       document.querySelector('.main-grid').style.display = 'none';
+      
 
       //to display no flight booked message
       document.getElementById('noFlightBooked').style.display = 'block';
@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // to enable main dashboard
       document.querySelector('.main-grid').style.display = 'grid';
+      document.querySelector('.training-container').style.display = 'none';
+      
 
       // to hide the 'noFlightBooked' div if there is a booked flight
       document.getElementById('noFlightBooked').style.display = 'none';
@@ -66,6 +68,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+
+
+// Add event listeners to the vertical menu items
+document.querySelectorAll('.vertical-menu li').forEach(item => {
+  item.addEventListener('click', function() {
+    makeActive(this);
+    toggleTrainingContainer(this);
+    toggleSuitContainer(this);
+    toggleFlightInfo(this);
+
+
+    // if (this.id === 'trainStat' || 'flightInfo' || 'manageFlight' || 'yourSuit') {
+    //   document.querySelector('.main-grid').style.display = 'none';
+    // }
+  });
+});
+
+
+//toggle training container
+function toggleTrainingContainer(element) {
+  if (element.id === 'trainStat') {
+    const container = document.querySelector('.training-container');
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+  }
+}
+
+//toggle suit container
+function toggleSuitContainer(element) {
+  if (element.id === 'yourSuit') {
+    const container = document.querySelector('.suit-container');
+    container.style.display = container.style.display === 'none' ? 'flex' : 'none';
+  }
+}
+
+
+function toggleFlightInfo(element) {
+  if (element.id === 'flightInfo') {
+    const container = document.querySelector('.main-grid');
+    container.style.display = container.style.display === 'none' ? 'grid' : 'none';
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // // For suit display
