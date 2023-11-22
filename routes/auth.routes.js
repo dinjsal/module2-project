@@ -183,7 +183,7 @@ router.post("/passenger-info", async (req, res, next) => {
   try {
     const newPassenger = new Passenger(req.body);
     await newPassenger.save();
-    res.redirect('auth/booking-confirmation');
+    res.redirect("/auth/booking-confirmation");
 
   } catch (err) {
     console.error("Error saving new passenger:", err);
