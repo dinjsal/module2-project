@@ -51,6 +51,14 @@ section {
     
 }
 
+.capture-container {
+    display: relative;
+    height: 130vh;
+    width: 100%;
+   margin-left: 9%;
+    padding: 0;
+}
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -130,7 +138,7 @@ label {
     justify-content: center;
     width: auto;
     margin: auto;
-    max-width: 200px;
+    max-width: 250px;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;

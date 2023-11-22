@@ -4,6 +4,8 @@ const bcrypt = require("bcryptjs");
 const User = require("../models/User.model");
 const Passenger = require("../models/Passenger.model");
 const session = require("express-session");
+const { isLoggedIn } = require("../middleware/route.guard");
+
 const { isLoggedOut } = require("../middleware/route.guard");
 
 // GET routes
@@ -38,25 +40,17 @@ router.get("/booking-confirmation", (req, res, next) => {
   res.render("auth/booking-confirmation");
 });
 
-router.get("/passenger-info", (req, res, next) => {
+router.get("/passenger-info", isLoggedIn, (req, res, next) => {
   res.render("auth/passenger-info");
 });
 
-
 router.get("/payment", (req, res, next) => {
   res.render("auth/payment");
-
-
 });
-
-
 
 router.get("/payment-confirmation", (req, res, next) => {
   res.render("auth/payment-confirmation");
 });
-
-
-
 
 router.get("/crew", (req, res, next) => {
   res.render("auth/crew");
@@ -98,7 +92,7 @@ router.post("/signup", async (req, res, next) => {
         lastName,
         birthDate,
         email,
-        password: hashedPassword
+        password: hashedPassword,
       });
 
       //save this new user
@@ -159,9 +153,6 @@ router.post("/login", async (req, res, next) => {
 //   res.render("auth/booking-confirmation");
 // });
 
-
-
-
 // logout route
 router.post("/logout", (req, res, next) => {
   //wrap this in a try catch
@@ -176,27 +167,15 @@ router.post("/logout", (req, res, next) => {
   });
 });
 
-
-
 //To create a new passenger
 router.post("/passenger-info", async (req, res, next) => {
   try {
     const newPassenger = new Passenger(req.body);
     await newPassenger.save();
     res.redirect("/auth/booking-confirmation");
-
   } catch (err) {
     console.error("Error saving new passenger:", err);
-    
   }
 });
 
-
-
-
-
-
 module.exports = router;
-
-
-
