@@ -116,20 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
         form1.style.marginRight = '25%';
     }
 
-
-    
-
-//action for confirm button
-    document.getElementById('submitForm').addEventListener('click', function() {
-        if (isFormCompleted('formA')) {
-            document.getElementById('formA').submit();
-        } else if (isFormCompleted('formB')) {
-            document.getElementById('formB').submit();
-        } else {
-            alert('Please complete at least one form before confirming the booking.');
-        }
-    });
-
   });
 
   
