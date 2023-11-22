@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
-const departureSchema = require("./Departure.model");
-const destinationSchema = require("./Destination.model");
+
 
 const passengerSchema = new Schema(
   {
@@ -53,7 +52,7 @@ const passengerSchema = new Schema(
       required: true,
     },
 
-    
+
   },
   {
     timestamps: true,
