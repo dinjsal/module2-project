@@ -107,16 +107,13 @@ label {
     background-color: #f8fbffa4;
 }
 
-.buttons{
+.buttons, .capture-buttons{
     
     display: flex;
     justify-content: center;
     gap: 50px;
     padding: 3%;
     margin-top: -2%;
-   
-   
-   
 }
 
 
@@ -125,6 +122,14 @@ label {
     margin-bottom: 10%;
     z-index: 10;
 }
+
+.capture-buttons button, #backBtn, #cancelBooking{
+    flex: 1 1 auto;
+    margin-bottom: 10%;
+    z-index: 10;
+}
+
+
 
 
 #submitForm, #cancelBooking, #backBtn{

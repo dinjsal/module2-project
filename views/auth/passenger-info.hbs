@@ -39,7 +39,7 @@
                   name="firstName"
                   class="form-control first-name"
                   id="firstName"
-                  placeholder="John"
+                  placeholder="John" required
                 />
               </div>
               <div class="col-12">
@@ -49,7 +49,7 @@
                   name="lastName"
                   class="form-control last-name"
                   id="lastName"
-                  placeholder="Smith"
+                  placeholder="Smith" required
                 />
               </div>
               <div class="col-12">
@@ -58,7 +58,7 @@
                   type="date"
                   class="form-control birth-date"
                   id="birthDate"
-                  name="birthDate"
+                  name="birthDate" required
                 />
               </div>
               <div class="col-12">
@@ -68,7 +68,7 @@
                   name="address"
                   class="form-control address"
                   id="address"
-                  placeholder="1234 Main St"
+                  placeholder="1234 Main St" required
                 />
               </div>
               <div class="col-12">
@@ -78,7 +78,7 @@
                   name="departure"
                   class="form-control departure"
                   id="departure"
-                  placeholder="Departure location"
+                  placeholder="Departure location" required
                 />
               </div>
               <div class="col-12">
@@ -88,7 +88,7 @@
                   name="destination"
                   class="form-control destination"
                   id="destination"
-                  placeholder="Destination"
+                  placeholder="Destination" required
                 />
               </div>
               <div class="col-6">
@@ -97,7 +97,7 @@
                   type="date"
                   class="form-control departure-date"
                   name="departureDate"
-                  id="departureDate"
+                  id="departureDate" required
                 />
               </div>
               <div class="col-6">
@@ -106,7 +106,7 @@
                   type="date"
                   class="form-control return-date"
                   id="returnDate"
-                  name="returnDate"
+                  name="returnDate" required
                 />
               </div>
               <div class="col-12">
@@ -116,7 +116,7 @@
                   name="passportNumber"
                   class="form-control passport"
                   id="passport"
-                  placeholder="Passport No."
+                  placeholder="Passport No." required
                 />
               </div>
             </div>
@@ -209,13 +209,13 @@
       </div>
     </div>
           <div class="buttons main-buttons">
-              <a href="/auth/booking" id="backBtn"> Back </a>
+              <a href="/auth/booking" id="backBtn"> Back to Booking </a>
               <button
                 type="submit"
                 class="btn btn-primary capture-info"
                 id="submitForm"
               >Complete Booking</button>
-              <a href="" id="cancelBooking">Cancel</a>
+              <a href="/profile" id="cancelBooking">Back to Profile</a>
             </div>
 
 
@@ -356,13 +356,8 @@
       </div>
     </div>
           <div class="buttons capture-buttons" style="display: none">
-              <a href="/auth/booking" id="backBtn"> Edit </a>
-              <button
-                type="submit"
-                class="btn btn-primary capture-confirm"
-                id="submitForm"
-              >Confirm Booking</button>
-              <a href="" id="cancelBooking">Delete</a>
+              <a href="/auth/passenger-info" id="backBtn">Edit Passenger Info</a>
+              <a href="/profile" id="cancelBooking">Back to Profile</a>
             </div>
 
     {{!-- <div class="heading">

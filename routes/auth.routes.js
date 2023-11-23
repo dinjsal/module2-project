@@ -36,11 +36,11 @@ router.get("/booking", (req, res, next) => {
 });
 
 //User can Update and Delete the booking here + create a post route
-router.get("/booking-confirmation", (req, res, next) => {
-  res.render("auth/booking-confirmation");
-});
+// router.get("/booking-confirmation", (req, res, next) => {
+//   res.render("auth/booking-confirmation");
+// });
 
-router.get("/passenger-info", isLoggedIn, (req, res, next) => {
+router.get("/passenger-info", (req, res, next) => {
   res.render("auth/passenger-info");
 });
 
@@ -106,8 +106,6 @@ router.post("/signup", async (req, res, next) => {
   }
 });
 
-// delete a booking/passenger
-
 // Login POST route, when existing User logs in
 router.post("/login", async (req, res, next) => {
   // console.log("SESSION =====> ", req.session);
@@ -151,10 +149,6 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-// router.post("/passenger-info", (req, res, next) => {
-//   res.render("auth/booking-confirmation");
-// });
-
 // logout route
 router.post("/logout", (req, res, next) => {
   //wrap this in a try catch
@@ -174,10 +168,12 @@ router.post("/passenger-info", async (req, res, next) => {
   try {
     const newPassenger = new Passenger(req.body);
     await newPassenger.save();
-    res.redirect("/auth/booking-confirmation");
+    res.redirect("/auth/payment");
   } catch (err) {
     console.error("Error saving new passenger:", err);
   }
 });
+
+// delete a booking/passenger
 
 module.exports = router;

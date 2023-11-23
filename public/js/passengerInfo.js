@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("formA").submit();
 
       // to redirect after submission
-    } else if (isFormCompleted("formB")) {
-      document.getElementById("formB").submit();
+      // } else if (isFormCompleted("formB")) {
+      //   document.getElementById("formB").submit();
     } else {
       alert("Please complete the form before confirming the booking.");
     }
