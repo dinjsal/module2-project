@@ -40,7 +40,7 @@ h3 {
   }
 }
 
-.btn {
+.btn{
     background-color: rgba(255, 255, 255, 0.3);
     border: 0 solid #e2e8f0;
     box-sizing: border-box;
@@ -62,10 +62,16 @@ h3 {
     border-radius: 60px ;
 }
 
+
+
 .btn:hover {
     background-color:#182eb8;
     color: #fff;
     transform: scale(1.15);
+}
+
+button {
+    margin-top: 50px!important;
 }
 
 .showcase {
@@ -143,9 +149,18 @@ h3 {
     border-color:rgba(236, 230, 230, 0.981);
 }
 
+.addPic{
+    width: 240px;
+    font-size: small;
+    text-align: center;
+}
+
+
 label {
     width: 240px;
     display: inline-block;
     text-align: left;
 }
+
+
 

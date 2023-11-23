@@ -44,7 +44,7 @@ section {
 }
 .main-container {
     display: relative;
-    height: 110vh;
+    height: 80vh;
     width: 100%;
    margin-left: 9%;
     padding: 0;
@@ -73,8 +73,9 @@ section {
     backdrop-filter: blur(5px); 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin-left: 5%;
     height: 98%;
-    width: 80%;
+    width: 70%;
     
 }
 

@@ -50,7 +50,17 @@
       <div class="leftside-menu">
         <div class="avatar">
           <div class="icon">
-            <p></p></div>
+            {{#if loggedInUser.profilePic}}
+            <img src="{{loggedInUser.profilePic}}" alt="Profile Picture" />
+          {{else}}
+            <!-- Display a default image -->
+            <img
+              src="../images/image_icon.jpg"
+              alt="Default Profile Picture"
+              class="default-image"
+            />
+          {{/if}}
+          </div>
           <p id="usersName">{{loggedInUser.firstName}} {{loggedInUser.lastName}}</p>
           <hr>
         </div>

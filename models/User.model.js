@@ -31,7 +31,13 @@ const userSchema = new Schema(
       required: [true, "Please enter a password"],
       minlength: [2, "Your password must be at least 8 characters long"],
     },
+
+    profilePic: {
+      type: String,
+    },
+
   },
+  
   {
     timestamps: true,
   }

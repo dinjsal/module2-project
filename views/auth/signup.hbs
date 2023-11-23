@@ -7,46 +7,82 @@
       href="https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400"
       rel="stylesheet"
     />
-    <link href="../stylesheets/signup.style.css" rel="stylesheet"/>
-    
+    <link href="../stylesheets/signup.style.css" rel="stylesheet" />
+
   </head>
   <body>
-      <section class="showcase">
-        <div class="img-container">
-            <img src="/images/universe-4609408_1280.webp" />
+    <section class="showcase">
+      <div class="img-container">
+        <img src="/images/universe-4609408_1280.webp" />
+      </div>
+      <div class="content">
+        <div class="wrapper">
+          <h3 class="typing">EXPERIENCE WHAT MOST CAN ONLY DREAM OF</h3>
+          {{#if errorMessage}}
+            <div class="error">{{errorMessage}}</div>
+          {{/if}}
+
         </div>
-        <div class="content">
-          <div class="wrapper">
-            <h3 class="typing">EXPERIENCE WHAT MOST CAN ONLY DREAM OF</h3>
-            {{#if errorMessage}}
-              <div class="error">{{errorMessage}}</div>
-            {{/if}}
-          </div>
-            <form action="/auth/signup" method="POST">
-            <label for="firstName">FIRST NAME</label>
-              <input class="form-selection form-selection1" autofocus type="text" name="firstName" placeholder="John" required />
-              <br>
-              <label for="lastName">LAST NAME</label>
-              <input class="form-selection" type="text" name="lastName" placeholder="Smith" required />
-              <br>
-              <label for="birthDate">DATE OF BIRTH</label>
-              <input class="form-selection" type="date" name="birthDate" required />
-              <br>
-              <label for="email">EMAIL</label>
-              <input class="form-selection" type="email" name="email" placeholder="user@email.com" required />
-              <br>
-              <label for="password">PASSWORD</label>
-              <input class="form-selection" type="password" name="password" placeholder="********" required />
-              <br>
-              <br>
-              <button type="submit" class="btn">Submit</button> 
-              <br>
-              <a href="/" class="btn">Home</a>
-              <br>
-            </form>
-        </div>       
-      </section>
+        <form action="/auth/signup" method="POST" enctype="multipart/form-data">
+          <label for="firstName">FIRST NAME</label>
+          <input
+            class="form-selection form-selection1"
+            autofocus
+            type="text"
+            name="firstName"
+            placeholder="John"
+            required
+          />
+          <br />
+          <label for="lastName">LAST NAME</label>
+          <input
+            class="form-selection"
+            type="text"
+            name="lastName"
+            placeholder="Smith"
+            required
+          />
+          <br />
+          <label for="birthDate">DATE OF BIRTH</label>
+          <input class="form-selection" type="date" name="birthDate" required />
+          <br />
+          <label for="email">EMAIL</label>
+          <input
+            class="form-selection"
+            type="email"
+            name="email"
+            placeholder="user@email.com"
+            required
+          />
+          <br />
+          <label for="password">PASSWORD</label>
+          <input
+            class="form-selection"
+            type="password"
+            name="password"
+            placeholder="********"
+            required
+          />
+          <br />
+          <br />
+          <label>ADD YOUR PROFILE HERE
+            <input
+              type="file"
+              name="imageUrl"
+              class="addPic"
+              accept="image/png, image/jpg"
+            />
+          </label>
+          <br />
+          <br />
+
+          <button type="submit" class="btn">Submit</button>
+          <br />
+          <a href="/" class="btn">Home</a>
+          <br />
+
+        </form>
+      </div>
+    </section>
   </body>
 </html>
-
-

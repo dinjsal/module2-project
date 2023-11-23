@@ -8,6 +8,9 @@ const { isLoggedIn } = require("../middleware/route.guard");
 
 const { isLoggedOut } = require("../middleware/route.guard");
 
+const uploader = require("../middleware/cloudinary.config");
+
+
 // GET routes
 
 // isLoggedOut: auth user shouldn't see the profile page
@@ -61,11 +64,11 @@ router.get("/our-fleet", (req, res, next) => {
 });
 
 // POST routes
-router.post("/signup", async (req, res, next) => {
+router.post("/signup", uploader.single('imageUrl'),async (req, res, next) => {
   const { firstName, lastName, birthDate, email, password } = req.body;
+  console.log('file is:', req.file)
   try {
     // regex test for passwords
-
     const regex = /(?=(.*\d){2})/;
     // const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
     if (!regex.test(req.body.password)) {
@@ -75,6 +78,15 @@ router.post("/signup", async (req, res, next) => {
       });
       return;
     }
+
+    if (!req.file) {
+      console.log("there was an error uploading the file")
+      next(new Error('No file uploaded!'));
+    
+      return;
+    }
+
+    const imageUrl = req.file.path;
 
     //check if user exists in the database
     const userExists = await User.findOne({ email: req.body.email });
@@ -93,6 +105,7 @@ router.post("/signup", async (req, res, next) => {
         birthDate,
         email,
         password: hashedPassword,
+        profilePic: imageUrl,
       });
 
       //save this new user
@@ -127,8 +140,13 @@ router.post("/login", async (req, res, next) => {
       );
 
       if (passwordCorrect) {
+        const userObject = user.toObject();
         // add the user to the session object
-        req.session.currentUser = user;
+        //ellipsis is a spread operator, for the object to be expanded into individual elements
+        req.session.currentUser = {
+          ...userObject,
+          profilePic: userObject.profilePic
+        }
 
         req.session.save((err) => {
           if (err) {

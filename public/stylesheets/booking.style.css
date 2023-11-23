@@ -61,9 +61,10 @@ h1{
 }
 
 #moon {
-    width: 430px;
+    width: 450px;
+    margin-left: 10%;
     height: auto;
-    margin-top: 1.5%;
+    margin-top: 0.5%;
 }
 
 #mars, #venus, #jupiter, #lo, #sun {
@@ -135,17 +136,26 @@ h1{
 }
 
 #destLabel {
-    margin-left: 7%;
+    margin-left: 9%;
 }
 
 #returnDate, #DepartureDate {
     margin-left: -19%;
 }
 
+#retDate {
+    margin-left: -11%;
+}
+
+
 #departureLabel:hover, 
 #destLabel:hover {
     color: rgb(26, 26, 220);
     cursor: pointer;
+}
+
+#departureDate{
+    margin-left: -12%;
 }
 
 
