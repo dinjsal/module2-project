@@ -60,6 +60,32 @@ router.get("/our-fleet", (req, res, next) => {
   res.render("auth/our-fleet");
 });
 
+router.get("/passenger-details", (req, res, next) => {
+  Passenger.find()
+    .then((response) => {
+      res.render("auth/passenger-details", { details: response });
+    })
+    .catch((err) => console.log(err));
+});
+
+router.get("/passenger-details/:passengerId", async (req, res) => {
+  try {
+    const passenger = await Passenger.findById(req.params.passengerId);
+    console.log(passenger);
+    if (passenger) {
+      res.render("auth/passenger-details", { passenger: passenger });
+    } else {
+      res.send("Passenger not found");
+    }
+  } catch (error) {
+    res.send("Error retrieving passenger information");
+  }
+});
+
+router.get("/passenger-details/:id/delete", (req, res, next) => {
+  res.render("auth/delete-booking");
+});
+
 // POST routes
 router.post("/signup", async (req, res, next) => {
   const { firstName, lastName, birthDate, email, password } = req.body;
@@ -175,5 +201,13 @@ router.post("/passenger-info", async (req, res, next) => {
 });
 
 // delete a booking/passenger
+router.post("/passenger-details/:id/delete", (req, res, next) => {
+  const passengerId = req.params.id;
+  Passenger.findByIdAndDelete(passengerId)
+    .then(() => res.redirect("/passenger-details"))
+    .catch((error) => next(error));
+});
+
+// update passenger info page
 
 module.exports = router;

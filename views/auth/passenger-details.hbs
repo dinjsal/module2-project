@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passenger Info</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="../stylesheets/passenger-details.style.css" rel="stylesheet" />
+  </head>
+  <body class="background-image">
+    
+    <section>
+      <h3>Edit Booking Details</h3>
+    </section>
+
+<div class="capture-container">
+
+      <div class="form-container">
+        <div id="form1" class="form1">
+          <form id="formA" action="/auth/passenger-info" method="post">
+            <div class="form-row">
+              <div class="col-12">
+                <label for="firstName">First Name</label>
+                <p class="form-control color-capture first-name-output">
+                  {{details.firstName}}
+                </p>
+              </div>
+              <div class="col-12">
+                <label for="lastName">Last Name</label>
+                <p class="form-control color-capture last-name-output">
+                  {{details.lastName}}
+                </p>
+              </div>
+              <div class="col-12">
+                <label for="birthDate">Birthdate</label>
+                 <p class="form-control color-capture birth-date-output"></p>
+              </div>
+              <div class="col-12">
+                <label for="address">Address</label>
+                <p class="form-control color-capture address-output"></p>
+              </div>
+              <div class="col-12">
+                <label for="departure">Departure</label>
+                <p class="form-control color-capture departure-output"></p>
+              </div>
+              <div class="col-12">
+                <label for="destination">Destination</label>
+                <p class="form-control color-capture destination-output"></p>
+              </div>
+              <div class="col-6">
+                <label for="departureDate">Departure Date</label>
+                <p class="form-control color-capture departure-date-output"></p>
+              </div>
+              <div class="col-6">
+                <label for="returnDate">Return Date</label>
+               <p class="form-control color-capture return-date-output"></p>
+              </div>
+              <div class="col-12">
+                <label for="passport">Passport No.</label>
+                <p class="form-control color-capture passport-output"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+     </div>   
+          <div id="capture">
+            <div class="buttons">
+              <a href="/auth/passenger-info" id="backBtn">Edit Booking</a>
+              <a href="/profile" id="cancelBooking">Delete Booking</a>
+            </div>
+            </div>
+  </body>
+</html>
