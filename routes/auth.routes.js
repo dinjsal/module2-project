@@ -106,6 +106,8 @@ router.post("/signup", async (req, res, next) => {
   }
 });
 
+// delete a booking/passenger
+
 // Login POST route, when existing User logs in
 router.post("/login", async (req, res, next) => {
   // console.log("SESSION =====> ", req.session);

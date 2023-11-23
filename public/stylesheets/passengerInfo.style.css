@@ -119,6 +119,7 @@ label {
    
 }
 
+
 .buttons button, #backBtn, #cancelBooking{
     flex: 1 1 auto;
     margin-bottom: 10%;

@@ -53,24 +53,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const captureInfoButton = document.querySelector(".capture-info");
   const mainContainer = document.querySelector(".main-container");
   const mainButtons = document.querySelector(".main-buttons");
-  const returnDateOutput = document.querySelector(".return-date-output");
-  const returningDate = document.querySelector(".return-date");
+  const firstName = document.querySelector(".first-name");
+  const lastName = document.querySelector(".last-name");
+  const birthDate = document.querySelector(".birth-date");
+  const address = document.querySelector(".address");
+  const departure1 = document.querySelector(".departure");
+  const destination1 = document.querySelector(".destination");
+  const departureDate1 = document.querySelector(".departure-date");
+  const returnDate1 = document.querySelector(".return-date");
+  const passport = document.querySelector(".passport");
   const captureConfirm = document.querySelector(".capture-confirm");
 
-  function hideShowContainers() {
+  function hideShowCapture() {
     if (captureContainer.style.display === "none") {
       captureContainer.style.display = "block";
       captureButtons.style.display = "block";
       mainContainer.style.display = "none";
       mainButtons.style.display = "none";
+      document.querySelector(".first-name-output").innerText = firstName.value;
+      document.querySelector(".last-name-output").innerText = lastName.value;
+      document.querySelector(".birth-date-output").innerText = birthDate.value;
+      document.querySelector(".address-output").innerText = address.value;
+      document.querySelector(".departure-output").innerText = departure1.value;
+      document.querySelector(".destination-output").innerText =
+        destination1.value;
+      document.querySelector(".departure-date-output").innerText =
+        departureDate1.value;
+      document.querySelector(".return-date-output").innerText =
+        returnDate1.value;
+      document.querySelector(".passport-output").innerText = passport.value;
     }
   }
-  captureInfoButton.addEventListener("click", hideShowContainers);
-
-  function captureInfo() {
-    returnDateOutput.innerHTML = returningDate.value;
-  }
-  captureConfirm.addEventListener("click", captureInfo);
+  captureInfoButton.addEventListener("click", hideShowCapture);
 });
 
 document.addEventListener("DOMContentLoaded", function () {

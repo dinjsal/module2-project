@@ -2,14 +2,12 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-
 const passengerSchema = new Schema(
   {
     firstName: {
       type: String,
       required: true,
     },
-
 
     lastName: {
       type: String,
@@ -32,10 +30,9 @@ const passengerSchema = new Schema(
     },
 
     destination: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
-
 
     departureDate: {
       type: Date,
@@ -51,8 +48,6 @@ const passengerSchema = new Schema(
       type: String,
       required: true,
     },
-
-
   },
   {
     timestamps: true,
