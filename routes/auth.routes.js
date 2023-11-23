@@ -204,7 +204,7 @@ router.post("/passenger-info", async (req, res, next) => {
 router.post("/passenger-details/:id/delete", (req, res, next) => {
   const passengerId = req.params.id;
   Passenger.findByIdAndDelete(passengerId)
-    .then(() => res.redirect("/passenger-details"))
+    .then(() => res.redirect("/auth/booking"))
     .catch((error) => next(error));
 });
 

@@ -16,8 +16,9 @@
   </head>
   <body class="background-image">
     
-    <section>
-      <h3>Edit Booking Details</h3>
+<div class="total">
+    <section class="top">
+    <h3>Edit Booking Details</h3>
     </section>
 
 <div class="capture-container">
@@ -70,11 +71,16 @@
           </form>
         </div>
      </div>   
-          <div id="capture">
-            <div class="buttons">
-              <a href="/auth/passenger-info" id="backBtn">Edit Booking</a>
-              <a href="/profile" id="cancelBooking">Delete Booking</a>
-            </div>
-            </div>
+    </div>
+</div>
+    <div class="buttons">
+        <form action="/auth/edit-booking" method="POST">
+            <input type="submit" id="backBtn" value="Edit Booking"></input>
+        </form>
+        {{!-- /auth/passenger-details/:id/delete --}}
+        <form action="" method="POST">
+            <input type="submit" id="cancelBooking" value="Delete Booking"></input>
+        </form>
+    </div>
   </body>
 </html>
