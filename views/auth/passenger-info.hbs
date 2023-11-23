@@ -37,9 +37,9 @@
                 <input
                   type="text"
                   name="firstName"
-                  class="form-control first-name"
+                  class="form-control grey-form first-name"
                   id="firstName"
-                  placeholder="John" required
+                  placeholder="John"
                 />
               </div>
               <div class="col-12">
@@ -47,18 +47,18 @@
                 <input
                   type="text"
                   name="lastName"
-                  class="form-control last-name"
+                  class="form-control grey-form last-name"
                   id="lastName"
-                  placeholder="Smith" required
+                  placeholder="Smith"
                 />
               </div>
               <div class="col-12">
                 <label for="birthDate">Birthdate</label>
                 <input
                   type="date"
-                  class="form-control birth-date"
+                  class="form-control grey-form birth-date"
                   id="birthDate"
-                  name="birthDate" required
+                  name="birthDate" 
                 />
               </div>
               <div class="col-12">
@@ -66,9 +66,9 @@
                 <input
                   type="text"
                   name="address"
-                  class="form-control address"
+                  class="form-control grey-form address"
                   id="address"
-                  placeholder="1234 Main St" required
+                  placeholder="1234 Main St" 
                 />
               </div>
               <div class="col-12">
@@ -76,9 +76,9 @@
                 <input
                   type="text"
                   name="departure"
-                  class="form-control departure"
+                  class="form-control grey-form departure"
                   id="departure"
-                  placeholder="Departure location" required
+                  placeholder="Departure location" 
                 />
               </div>
               <div class="col-12">
@@ -86,27 +86,27 @@
                 <input
                   type="text"
                   name="destination"
-                  class="form-control destination"
+                  class="form-control grey-form destination"
                   id="destination"
-                  placeholder="Destination" required
+                  placeholder="Destination" 
                 />
               </div>
               <div class="col-6">
                 <label for="departureDate">Departure Date</label>
                 <input
                   type="date"
-                  class="form-control departure-date"
+                  class="form-control grey-form departure-date"
                   name="departureDate"
-                  id="departureDate" required
+                  id="departureDate" 
                 />
               </div>
               <div class="col-6">
                 <label for="returnDate">Return Date</label>
                 <input
                   type="date"
-                  class="form-control return-date"
+                  class="form-control grey-form return-date"
                   id="returnDate"
-                  name="returnDate" required
+                  name="returnDate" 
                 />
               </div>
               <div class="col-12">
@@ -114,9 +114,9 @@
                 <input
                   type="text"
                   name="passportNumber"
-                  class="form-control passport"
+                  class="form-control grey-form passport"
                   id="passport"
-                  placeholder="Passport No." required
+                  placeholder="Passport No." 
                 />
               </div>
             </div>
@@ -227,44 +227,44 @@
             <div class="form-row">
               <div class="col-12">
                 <label for="firstName">First Name</label>
-                <p class="form-control first-name-output">
+                <p class="form-control color-capture first-name-output">
                   {{loggedInUser.firstName}}
                 </p>
               </div>
               <div class="col-12">
                 <label for="lastName">Last Name</label>
-                <p class="form-control last-name-output">
-                <p class="form-control2 bitcoin-output"></p>
+                <p class="form-control color-capture last-name-output">
+                <p class="form-control2 color-capture bitcoin-output"></p>
                   {{loggedInUser.lastName}}
                 </p>
               </div>
               <div class="col-12">
                 <label for="birthDate">Birthdate</label>
-                 <p class="form-control birth-date-output"></p>
+                 <p class="form-control color-capture birth-date-output"></p>
               </div>
               <div class="col-12">
                 <label for="address">Address</label>
-                <p class="form-control address-output"></p>
+                <p class="form-control color-capture address-output"></p>
               </div>
               <div class="col-12">
                 <label for="departure">Departure</label>
-                <p class="form-control departure-output"></p>
+                <p class="form-control color-capture departure-output"></p>
               </div>
               <div class="col-12">
                 <label for="destination">Destination</label>
-                <p class="form-control destination-output"></p>
+                <p class="form-control color-capture destination-output"></p>
               </div>
               <div class="col-6">
                 <label for="departureDate">Departure Date</label>
-                <p class="form-control departure-date-output"></p>
+                <p class="form-control color-capture departure-date-output"></p>
               </div>
               <div class="col-6">
                 <label for="returnDate">Return Date</label>
-               <p class="form-control return-date-output"></p>
+               <p class="form-control color-capture return-date-output"></p>
               </div>
               <div class="col-12">
                 <label for="passport">Passport No.</label>
-                <p class="form-control passport-output"></p>
+                <p class="form-control color-capture passport-output"></p>
               </div>
             </div>
           </form>
@@ -355,9 +355,11 @@
         </div> --}}
       </div>
     </div>
-          <div class="buttons capture-buttons" style="display: none">
+            <div style="display: none" id="capture">
+            <div class="buttons">
               <a href="/auth/passenger-info" id="backBtn">Edit Passenger Info</a>
               <a href="/profile" id="cancelBooking">Back to Profile</a>
+            </div>
             </div>
 
     {{!-- <div class="heading">

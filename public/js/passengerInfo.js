@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   // capture passenger info for rendering
   const captureContainer = document.querySelector(".capture-container");
-  const captureButtons = document.querySelector(".capture-buttons");
+  const captureButtons = document.querySelector("#capture");
   const captureInfoButton = document.querySelector(".capture-info");
   const mainContainer = document.querySelector(".main-container");
   const mainButtons = document.querySelector(".main-buttons");
