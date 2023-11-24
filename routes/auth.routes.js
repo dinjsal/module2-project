@@ -10,7 +10,6 @@ const { isLoggedOut } = require("../middleware/route.guard");
 
 const uploader = require("../middleware/cloudinary.config");
 
-
 // GET routes
 
 // isLoggedOut: auth user shouldn't see the profile page
@@ -90,9 +89,9 @@ router.get("/passenger-details/:id/delete", (req, res, next) => {
 });
 
 // POST routes
-router.post("/signup", uploader.single('imageUrl'),async (req, res, next) => {
+router.post("/signup", uploader.single("imageUrl"), async (req, res, next) => {
   const { firstName, lastName, birthDate, email, password } = req.body;
-  console.log('file is:', req.file)
+  console.log("file is:", req.file);
   try {
     // regex test for passwords
     const regex = /(?=(.*\d){2})/;
@@ -106,9 +105,9 @@ router.post("/signup", uploader.single('imageUrl'),async (req, res, next) => {
     }
 
     if (!req.file) {
-      console.log("there was an error uploading the file")
-      next(new Error('No file uploaded!'));
-    
+      console.log("there was an error uploading the file");
+      next(new Error("No file uploaded!"));
+
       return;
     }
 
@@ -171,8 +170,8 @@ router.post("/login", async (req, res, next) => {
         //ellipsis is a spread operator, for the object to be expanded into individual elements
         req.session.currentUser = {
           ...userObject,
-          profilePic: userObject.profilePic
-        }
+          profilePic: userObject.profilePic,
+        };
 
         req.session.save((err) => {
           if (err) {
