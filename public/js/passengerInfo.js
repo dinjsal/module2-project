@@ -40,13 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isFormCompleted("formA")) {
       document.getElementById("formA").submit();
 
-      // to redirect after submission
-      // } else if (isFormCompleted("formB")) {
-      //   document.getElementById("formB").submit();
+      
     } else {
       alert("Please complete the form before confirming the booking.");
     }
   });
+
   // capture passenger info for rendering
   const captureContainer = document.querySelector(".capture-container");
   const captureButtons = document.querySelector("#capture");

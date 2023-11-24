@@ -71,23 +71,53 @@ router.get("/passenger-details", (req, res, next) => {
     .catch((err) => console.log(err));
 });
 
-router.get("/passenger-details/:passengerId", async (req, res) => {
-  try {
-    const passenger = await Passenger.findById(req.params.passengerId);
-    console.log(passenger);
-    if (passenger) {
-      res.render("auth/passenger-details", { passenger: passenger });
-    } else {
-      res.send("Passenger not found");
-    }
-  } catch (error) {
-    res.send("Error retrieving passenger information");
-  }
+// router.get("/passenger-details/:passengerId", async (req, res) => {
+//   try {
+//     const passenger = await Passenger.findById(req.params.passengerId);
+//     console.log(passenger);
+//     if (passenger) {
+//       res.render("auth/passenger-details", { passenger: passenger });
+//     } else {
+//       res.send("Passenger not found");
+//     }
+//   } catch (error) {
+//     res.send("Error retrieving passenger information");
+//   }
+// });
+
+// router.get("/passenger-details/:id/delete", (req, res, next) => {
+//   res.render("auth/delete-booking");
+// });
+
+
+
+router.get('/profile', (req, res) => {
+  const userId = req.session.currentUser._id;
+
+  Passenger.findOne({ userId: userId })
+    .then(passengerData => {
+      console.log('Fetched passenger data:', passengerData);
+
+      if (passengerData) {
+        res.render("/profile", { passenger: passengerData });
+      } else {
+        res.render("error", { message: "No passenger data found for this user." });
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching passenger data:", error);
+      res.status(500).send('Server Error');
+    });
 });
 
-router.get("/passenger-details/:id/delete", (req, res, next) => {
-  res.render("auth/delete-booking");
-});
+
+
+
+
+
+
+
+
 
 // POST routes
 router.post("/signup", uploader.single('imageUrl'),async (req, res, next) => {
@@ -193,6 +223,9 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
+
+
+
 // logout route
 router.post("/logout", (req, res, next) => {
   //wrap this in a try catch
@@ -210,13 +243,24 @@ router.post("/logout", (req, res, next) => {
 //To create a new passenger
 router.post("/passenger-info", async (req, res, next) => {
   try {
-    const newPassenger = new Passenger(req.body);
+
+    //to link the passenger to the user
+    const newPassengerData = {
+      ...req.body,
+      userId: req.session.currentUser._id
+    };
+
+    const newPassenger = new Passenger(newPassengerData);
     await newPassenger.save();
     res.redirect("/auth/payment");
+
   } catch (err) {
     console.error("Error saving new passenger:", err);
   }
 });
+
+
+
 
 // delete a booking/passenger
 router.post("/passenger-details/:id/delete", (req, res, next) => {

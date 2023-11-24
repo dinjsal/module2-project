@@ -73,6 +73,7 @@ h3 {
 
 .total {
     padding-bottom: 50px;
+    
 }
 
 .carousel-photo { 
@@ -100,6 +101,8 @@ h3 {
 .meet-our-crew {
     margin: 0px 50px 30px;
 }
+
+
 
 .line-up1 {
     animation: 5s anim-lineUp ease-out;

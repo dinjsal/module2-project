@@ -82,6 +82,7 @@
 
         <div class="destination-grid">
           <h1 id="grid1" class="flight-path">Your Flight Path</h1>
+          <p>Destination: {{passenger.destination}}</p>
         </div>
 
         <div class="distance-grid">
@@ -152,11 +153,33 @@
                 <p>Safe ingress and egress practices, especially in suits and with life support packs.</p>
               </div>
             </div>
-          </div>
-
         </div>
+         
+         {{!-- manage flight section --}}
+        </div>
+          <div class="flightManagementSection" style="display: none;">
+          <h2>Manage Your Flight</h2>
+          <form id="flightUpdateForm" action="/update-passenger/{{passenger._id}}" method="post">
+
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" value="{{passenger.firstName}}" readonly>
+          
+           <label for="lastName">Last Name</label>
+           <input type="text" id="lastName" name="lastName" value="{{passenger.lastName}}" readonly>
+           
+            <label for="bookingNo">Booking No.</label>
+            <input type="text" id="bookingNo" name="bookingNo" value="{{passenger._id}}" readonly>
+             <button type="button" id="updateButton" onclick="">Update</button>
+             </form>
+
+          <button type="button" onclick="confirmAndDelete('{{passenger._id}}')">Delete</button>
+        </div>
+
+
         
       </div>
+        
+
     </div>
 
     <script src="/js/profile.js"></script>
