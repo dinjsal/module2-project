@@ -38,10 +38,14 @@ router.get("/booking", (req, res, next) => {
   res.render("auth/booking");
 });
 
-//User can Update and Delete the booking here + create a post route
-// router.get("/booking-confirmation", (req, res, next) => {
-//   res.render("auth/booking-confirmation");
-// });
+
+// User can Update and Delete the booking here + create a post route
+
+router.get("/booking-confirmation", (req, res, next) => {
+  res.render("auth/booking-confirmation");
+});
+
+
 
 router.get("/passenger-info", (req, res, next) => {
   res.render("auth/passenger-info");
@@ -71,23 +75,25 @@ router.get("/passenger-details", (req, res, next) => {
     .catch((err) => console.log(err));
 });
 
-// router.get("/passenger-details/:passengerId", async (req, res) => {
-//   try {
-//     const passenger = await Passenger.findById(req.params.passengerId);
-//     console.log(passenger);
-//     if (passenger) {
-//       res.render("auth/passenger-details", { passenger: passenger });
-//     } else {
-//       res.send("Passenger not found");
-//     }
-//   } catch (error) {
-//     res.send("Error retrieving passenger information");
-//   }
-// });
 
-// router.get("/passenger-details/:id/delete", (req, res, next) => {
-//   res.render("auth/delete-booking");
-// });
+
+router.get("/passenger-details/:passengerId", async (req, res) => {
+  try {
+    const passenger = await Passenger.findById(req.params.passengerId);
+    console.log(passenger);
+    if (passenger) {
+      res.render("auth/passenger-details", { passenger: passenger });
+    } else {
+      res.send("Passenger not found");
+    }
+  } catch (error) {
+    res.send("Error retrieving passenger information");
+  }
+});
+
+router.get("/passenger-details/:id/delete", (req, res, next) => {
+  res.render("auth/delete-booking");
+});
 
 
 
