@@ -349,6 +349,10 @@ a {
   width: 95%;
 }
 
+.destination-grid p {
+    color: whitesmoke;
+}
+
 
 
 
@@ -486,77 +490,36 @@ h3 {
   }
 
 
-
-
-
-/* .training-section {
-    display: none; 
-    margin-top: 20px;
-  }
-  
-.training-tabs button {
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    
+h2{
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 15%;
 }
-  
-.training-tabs button:hover {
-    background-color: #555; 
+
+.flightManagementSection label{
+    color: whitesmoke;
 }
-  
-.training-info {
-    display: none; 
+
+
+.flightManagementSection input{
+    color: black;
 }
-  
-.training-info h2 {
-    color:#e2e8f0
-    
+
+.flightManagementSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 30%;
 }
-  
-.training-info p {
-   color:#fff
+
+.flightManagementSection label,
+.flightManagementSection input {
+  display: block; 
+  margin-bottom: 10px; 
 }
-  
-.training-completion {
-   color:#fff
-}
-  
-.switch {
-   color: #182eb8;
-}
-  
-.slider {
-   color: aliceblue;
-}
-  
-.completion-status {
-    margin-top: 20px;
-    
-}
-  
-.completion-status span {
-    font-weight: bold;
-}
-  
-  
-
-
-
-
-
-
-
-
-
-
- */
-
-
-
 
 
 @media (max-width: 768px) {

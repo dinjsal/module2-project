@@ -8,6 +8,7 @@ const makeActive = (element) => {
   document.querySelector('.main-grid').style.display = 'none';
   document.querySelector('.training-container').style.display = 'none';
   document.querySelector('.suit-container').style.display = 'none';
+  document.querySelector('.flightManagementSection').style.display = 'none';
   };
 
 
@@ -78,11 +79,7 @@ document.querySelectorAll('.vertical-menu li').forEach(item => {
     toggleTrainingContainer(this);
     toggleSuitContainer(this);
     toggleFlightInfo(this);
-
-
-    // if (this.id === 'trainStat' || 'flightInfo' || 'manageFlight' || 'yourSuit') {
-    //   document.querySelector('.main-grid').style.display = 'none';
-    // }
+    toggleManageBooking(this);
   });
 });
 
@@ -103,7 +100,7 @@ function toggleSuitContainer(element) {
   }
 }
 
-
+//toggle flight info container
 function toggleFlightInfo(element) {
   if (element.id === 'flightInfo') {
     const container = document.querySelector('.main-grid');
@@ -111,6 +108,14 @@ function toggleFlightInfo(element) {
   }
 }
 
+
+//toggle manage booking container
+function toggleManageBooking(element) {
+  if (element.id === 'manageFlight') {
+    const container = document.querySelector('.flightManagementSection');
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+  }
+}
 
 
 
