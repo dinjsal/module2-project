@@ -74,13 +74,12 @@
     </div>
 </div>
     <div class="buttons">
-        <form action="/auth/edit-booking" method="POST">
-            <input type="submit" id="backBtn" value="Edit Booking"></input>
-        </form>
+        {{!-- <form action="/auth/edit-booking" method="POST">
+            <input type="submit" id="backBtn" value="Update Booking"></input>
+        </form> --}}
+        <a href="#" id="backBtn">Update Booking</a>
         {{!-- /auth/passenger-details/:id/delete --}}
-        <form action="" method="POST">
-            <input type="submit" id="cancelBooking" value="Delete Booking"></input>
-        </form>
+        <a href="/profile" id="cancelBooking">Back to Profile</a>
     </div>
   </body>
 </html>
