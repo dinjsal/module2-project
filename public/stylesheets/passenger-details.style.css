@@ -3,9 +3,9 @@
 
 .background-image {
     background-image: url('../images/starry.jpg');
-    background-size: cover;
+    background-size: covers;
     background-position: center;
-    background-repeat: repeat-x;
+    background-repeat: repeat-x repeat-y;
     overflow-y: auto;
   }
 
@@ -43,7 +43,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 130vh;
+    height: 120vh;
     width: 80%;
     padding: 0;
 }
