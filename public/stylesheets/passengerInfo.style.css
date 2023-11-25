@@ -25,10 +25,9 @@ html, body {
 section {
     display: inline-flex;
     justify-content: center;
-    margin-left: 36%;
+    margin-left: 40%;
     margin-top: 2%;
     margin-bottom: 2%;
-    gap: 30px;
     color: white;
 }
 
@@ -44,9 +43,9 @@ section {
 }
 .main-container {
     display: relative;
-    height: 80vh;
+    height: 110vh;
     width: 100%;
-   margin-left: 9%;
+   margin-left: 10%;
     padding: 0;
     
 }
@@ -60,7 +59,7 @@ section {
 }
 
 .color-capture {
-    background-color: rgba(24, 46, 185, 0.2);
+    background-color: rgba(24, 46, 185, 0.15);
     color: white;
 }
 
