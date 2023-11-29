@@ -1,41 +1,31 @@
 const { Schema, model } = require("mongoose");
 const destinationSchema = require("./Destination.model");
 
-const departureSchema = new Schema(
-  {
-    name: {
-      type: String,
-      unique: true,
-      required: true,
-    },
+const { Schema, model } = require("mongoose");
 
-    description: {
-      type: String,
-      required: true,
-    },
 
-    location: {
-      type: String,
-      required: true,
-    },
 
-    imageUrl: {
-      type: String,
-      required: true,
-    },
 
-    destination: [{
-      type: Schema.Types.ObjectId,
-      ref: 'Destination'}],
 
-    price: {
-      type: Number,
-    },
-  },
-  {
-    timestamps: true,
-  }
-);
+
+const departureSchema = new Schema({
+  name: String,
+  distance: Number 
+});
+
+const destinationSchema = new Schema({
+  name: String,
+  image: String,
+  departures: [departureSchema] 
+});
+
+
+
+
+
+const Destination = model("Destination", destinationSchema);
+module.exports = Destination;
+
 
 const Departure = model("Departure", departureSchema);
 module.exports = Departure;
