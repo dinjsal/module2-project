@@ -117,13 +117,26 @@ function toggleManageBooking(element) {
   }
 }
 
+//to enable form edit when updatebutton is clicked
+function enableFormEdit () {
+  document.getElementById('firstName').readOnly = false;
+  document.getElementById('lastName').readOnly = false
+  document.getElementById('bookingNo').readOnly = false
+  document.getElementById('depart').readOnly = false;
+  document.getElementById('dest').readOnly = false;
+}
+
+document.getElementById('updateButton').onclick = enableFormEdit;
 
 
 
 
-
-
-
+function confirmAndDelete(passengerId) {
+  if (confirm('Are you sure you want to delete this booking?')) {
+      window.location.href = `/delete-passenger/${passengerId}`;
+      localStorage.clear();
+  }
+}
 
 
 

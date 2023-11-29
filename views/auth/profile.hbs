@@ -82,7 +82,7 @@
 
         <div class="destination-grid">
           <h1 id="grid1" class="flight-path">Your Flight Path</h1>
-          <p>Destination: {{passenger.destination}}</p>
+          <p>{{passenger.destination}}</p>
         </div>
 
         <div class="distance-grid">
@@ -169,7 +169,18 @@
            
             <label for="bookingNo">Booking No.</label>
             <input type="text" id="bookingNo" name="bookingNo" value="{{passenger._id}}" readonly>
-             <button type="button" id="updateButton" onclick="">Update</button>
+            
+            <label for="departure">Departure</label>
+            <input type="text" id="depart" name="departure" value="{{passenger.departure}}" readonly>
+
+            <label for="destination">Destination</label>
+            <input type="text" id="dest" name="destination" value="{{passenger.destination}}" readonly>
+
+            <br>
+
+
+             <button type="button" id="updateButton" onclick="enableFormEdit">Update</button>
+             <button type="submit" id="saveButton">Save Changes</button>
              </form>
 
           <button type="button" onclick="confirmAndDelete('{{passenger._id}}')">Delete</button>

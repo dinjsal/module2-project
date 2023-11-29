@@ -96,24 +96,30 @@ router.get("/passenger-details/:id/delete", (req, res, next) => {
 
 
 
-router.get('/profile', (req, res) => {
-  const userId = req.session.currentUser._id;
+// //to fetch the passenger info
+// router.get('/profile', async (req, res, next) => {
 
-  Passenger.findOne({ userId: userId })
-    .then(passengerData => {
-      console.log('Fetched passenger data:', passengerData);
+//   try {
+//     prompt("hello");
+//     const userId = req.session.currentUser._id;
+//     console.log("Logged in User ID:", userId);
 
-      if (passengerData) {
-        res.render("/profile", { passenger: passengerData });
-      } else {
-        res.render("error", { message: "No passenger data found for this user." });
-      }
-    })
-    .catch(error => {
-      console.error("Error fetching passenger data:", error);
-      res.status(500).send('Server Error');
-    });
-});
+
+//     // Ensure this query matches how the data is structured in your database
+//     const passenger = await Passenger.findOne({ userId: userId });
+//     console.log("Fetched Passenger:", passenger);
+
+//     // If the passenger is found, render the profile page with the passenger data
+//     if (passenger) {
+//       res.render("auth/profile", { passenger: passenger });
+//     } else {
+//       res.status(404).send('Passenger not found');
+//     }
+//   } catch (err) {
+//     console.error('Error fetching passenger information:', err);
+//     res.status(500).send('Error loading profile page');
+//   }
+// });
 
 
 
@@ -245,11 +251,16 @@ router.post("/logout", (req, res, next) => {
   });
 });
 
-//To create a new passenger
+
+
+//to create a new passenger
 router.post("/passenger-info", async (req, res, next) => {
   try {
+    if (!req.session.currentUser) {
+      //for whatever reason, the user is not logged in
+      return res.status(401).send("Sorry, you are not logged in.");
+    }
 
-    //to link the passenger to the user
     const newPassengerData = {
       ...req.body,
       userId: req.session.currentUser._id
@@ -258,22 +269,20 @@ router.post("/passenger-info", async (req, res, next) => {
     const newPassenger = new Passenger(newPassengerData);
     await newPassenger.save();
     res.redirect("/auth/payment");
-
+    
   } catch (err) {
     console.error("Error saving new passenger:", err);
+    res.status(500).send("Internal Server Error");
   }
 });
 
 
 
 
-// delete a booking/passenger
-router.post("/passenger-details/:id/delete", (req, res, next) => {
-  const passengerId = req.params.id;
-  Passenger.findByIdAndDelete(passengerId)
-    .then(() => res.redirect("/auth/booking"))
-    .catch((error) => next(error));
-});
+
+
+
+
 
 // update passenger info page
 
